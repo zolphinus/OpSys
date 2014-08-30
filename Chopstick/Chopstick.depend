@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1409444610 source:c:\users\zolphinus\documents\github\opsys\chopstick\main.cpp
+	"ChopSystem.h"
+
+1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
+
+1409444368 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+	"ChopSystem.h"
+
+1409444916 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+	"DataStruct.h"
+
+1409444906 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+
