@@ -25,7 +25,8 @@ void CommandManager::enterCommand(Global_Data& system_data){
     commandError = parseCommand(commandLine);
 
     if(commandError == true){
-        std::cout << std::endl << "Invalid command. Please use the help command for more options." << std::endl;
+        std::cout << std::endl << "Invalid command. Please use the help command for more options."
+                  << std::endl << std::endl;
     }
     else{
         command->execute(system_data);
@@ -35,8 +36,11 @@ void CommandManager::enterCommand(Global_Data& system_data){
 bool CommandManager::parseCommand(std::string newCommand){
     newCommand = stringToUpper(newCommand);
 
+    if(command != NULL)
+    {
+        delete command;
+    }
 
-    delete command;
     if(newCommand == "EXIT"){
         command = new ExitCommand(operatingReciever);
         return false;

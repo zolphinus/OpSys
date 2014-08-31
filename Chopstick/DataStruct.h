@@ -10,6 +10,7 @@ enum ACTION_LIST
     DISPLAY_VERSION,
     HELP,
     LIST_DIR_CONTENTS,
+    GET_DATE,
     EXIT
 };
 
@@ -19,6 +20,10 @@ struct Global_Data{
         bool isRunning;
         std::string versionInfo;
         std::string currentDirectory;
+        std::string month;
+        std::string day;
+        std::string year;
+        std::string date;
         std::vector <std::string> directoryList;
 };
 

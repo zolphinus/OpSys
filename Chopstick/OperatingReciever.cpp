@@ -20,6 +20,8 @@ void OperatingReciever::performAction(Global_Data& system_data)
 
         getAllFilesInFolder(system_data);
         printInformation(system_data.directoryList);
+    }else if(currentAction == GET_DATE){
+        std::cout << std::endl << system_data.date << std::endl << std::endl;
     }
 
 }
@@ -35,7 +37,11 @@ void OperatingReciever::printInformation(std::vector <std::string>& currentData)
                 {
                     std::cout << std::endl;
                     std::cout << "Press Enter to continue...";
+                    std::cin.ignore();
                     std::cin.get();
+                    std::cout << std::endl;
+                    lineCounter += 3;
                 }
             }
+            std::cout << std::endl;
 }

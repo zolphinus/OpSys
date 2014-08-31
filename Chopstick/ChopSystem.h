@@ -14,6 +14,7 @@ private:
     CommandManager commandManager;
 
     void initializeData();
+    void getCurrentDate();
     void welcomeScreen();
     bool isRunning();
     std::string getWorkingDirectory();

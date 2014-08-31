@@ -1,5 +1,9 @@
 #include "ChopSystem.h"
 #include <iostream>
+#include <time.h>
+#include <stdio.h>
+
+#include "GeneralFunctions.h"
 
 #define OSname "Chopsticks "
 #define VERSION "0.2"
@@ -35,6 +39,7 @@ void ChopSystem::initializeData(){
     std::string tempVersion = VERSION;
     system_data.versionInfo = tempName + tempVersion;
     system_data.currentDirectory = getWorkingDirectory();
+    getCurrentDate();
 }
 
 std::string ChopSystem::getWorkingDirectory(){
@@ -49,4 +54,28 @@ std::string ChopSystem::getWorkingDirectory(){
 
      std::string workingDirectory(filePath);
     return workingDirectory;
+}
+
+
+void ChopSystem::getCurrentDate(){
+    time_t* tempTime;
+    //std::stringstream ss;
+
+    tm* timeGetter;
+    time(tempTime);
+
+    timeGetter = localtime(tempTime);
+//    out << timeGetter->tm_mon;
+    //sprintf(strConvert, "%c", timeGetter->tm_mday);
+    //system_data.day = strConvert;
+
+    //sprintf(strConvert, "%c", timeGetter->tm_mon + 1);
+    //system_data.month = strConvert;
+
+    //sprintf(strConvert, "%c", timeGetter->tm_year - 100);
+    //system_data.year = strConvert;
+    //system_data.year = timeGetter->tm_year;
+
+    //std::cout << system_data.day << "/" << system_data.month<< "/" << system_data.year << std::endl;
+
 }
