@@ -15,6 +15,7 @@ private:
 
     void initializeData();
     bool isRunning();
+    std::string getWorkingDirectory();
 };
 
 

@@ -5,29 +5,39 @@
 #include <vector>
 #include <string>
 #include <stdio.h>
+#include "DataStruct.h"
 
 
-std::vector<std::string> get_all_files_names_within_folder(std::string folder)
+void getAllFilesInFolder(Global_Data& system_data)
 {
-    std::vector<std::string> names;
+
     char search_path[200];
-    sprintf(search_path, "%s*.*", folder.c_str());
+    system_data.directoryList.resize(0);
+    std::cout << system_data.currentDirectory << std::endl;
+
+    sprintf(search_path, "*.*", system_data.currentDirectory.c_str());
     WIN32_FIND_DATA fd;
     HANDLE hFind = ::FindFirstFile(search_path, &fd);
+
     if(hFind != INVALID_HANDLE_VALUE)
     {
         do
         {
             // read all (real) files in current folder
             // , delete '!' read other 2 default folder . and ..
-            if(! (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) )
+            if( !(fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+               && fd.cFileName != "."
+               && fd.cFileName != ".." )
             {
-                names.push_back(fd.cFileName);
+                std::cout << "filename is : " << fd.cFileName << std::endl;
+                system_data.directoryList.push_back(fd.cFileName);
             }
         }while(::FindNextFile(hFind, &fd));
         ::FindClose(hFind);
     }
-    return names;
+    else{
+        std::cout << "There was an error obtaining directory files." << std::endl;
+    }
 }
 
 #endif // DIRECTORY_COMMANDS

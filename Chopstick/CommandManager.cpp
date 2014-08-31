@@ -44,7 +44,12 @@ bool CommandManager::parseCommand(std::string newCommand){
     else if(newCommand == "VERSION"){
         command = new VersionInfoCommand(operatingReciever);
         return false;
-    }else{
+    }
+    else if(newCommand == "LIST"){
+        command = new DisplayDirectoryCommand(operatingReciever);
+        return false;
+    }
+    else{
         command = new AwaitCommand(operatingReciever);
         return true;
     }
