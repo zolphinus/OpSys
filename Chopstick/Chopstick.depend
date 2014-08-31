@@ -12,7 +12,7 @@
 	"DataStruct.h"
 	"CommandManager.h"
 
-1409460131 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1409465703 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 
 1409459925 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
@@ -23,7 +23,7 @@
 	<string>
 	<algorithm>
 
-1409460007 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+1409465816 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
 	"Command.h"
 	"DataStruct.h"
 	"Reciever.h"
@@ -43,6 +43,6 @@
 	"OperatingReciever.h"
 	<iostream>
 
-1409459916 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1409460404 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 

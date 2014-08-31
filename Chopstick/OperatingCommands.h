@@ -49,5 +49,18 @@ public:
     }
 };
 
+class DisplayDirectoryCommand : public Command{
+public:
+    DisplayDirectoryCommand(Reciever* reciever)
+    : Command(reciever){
+
+    }
+
+    void execute(Global_Data& system_data){
+        myReciever->setAction(LIST_DIR_CONTENTS);
+        myReciever->performAction(system_data);
+    }
+};
+
 
 #endif // OPERATING_COMMANDS

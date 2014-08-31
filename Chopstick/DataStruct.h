@@ -7,6 +7,7 @@ enum ACTION_LIST
 {
     AWAIT_INPUT,
     DISPLAY_VERSION,
+    HELP,
     LIST_DIR_CONTENTS,
     EXIT
 };
