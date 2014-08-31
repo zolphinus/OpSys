@@ -13,7 +13,6 @@ void getAllFilesInFolder(Global_Data& system_data)
 
     char search_path[200];
     system_data.directoryList.resize(0);
-    std::cout << system_data.currentDirectory << std::endl;
 
     sprintf(search_path, "*.*", system_data.currentDirectory.c_str());
     WIN32_FIND_DATA fd;
@@ -25,11 +24,8 @@ void getAllFilesInFolder(Global_Data& system_data)
         {
             // read all (real) files in current folder
             // , delete '!' read other 2 default folder . and ..
-            if( !(fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
-               && fd.cFileName != "."
-               && fd.cFileName != ".." )
+            if( !(fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
             {
-                std::cout << "filename is : " << fd.cFileName << std::endl;
                 system_data.directoryList.push_back(fd.cFileName);
             }
         }while(::FindNextFile(hFind, &fd));

@@ -1,6 +1,8 @@
 #ifndef OPERATING_RECIEVER
 #define OPERATING_RECIEVER
 #include "Reciever.h"
+#include <vector>
+#include <string>
 
 
 class OperatingReciever : public Reciever{
@@ -10,6 +12,7 @@ public:
 
 private:
     ACTION_LIST currentAction;
+    void printInformation(std::vector <std::string>&);
 };
 
 

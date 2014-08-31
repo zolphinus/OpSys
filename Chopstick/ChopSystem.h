@@ -14,8 +14,10 @@ private:
     CommandManager commandManager;
 
     void initializeData();
+    void welcomeScreen();
     bool isRunning();
     std::string getWorkingDirectory();
+
 };
 
 

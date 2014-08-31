@@ -1,6 +1,9 @@
 #include "ChopSystem.h"
 #include <iostream>
 
+#define OSname "Chopsticks "
+#define VERSION "0.2"
+
 #ifdef _WIN32
     #include "direct.h"
     #define GetCurrentDir _getcwd
@@ -11,10 +14,14 @@ ChopSystem::ChopSystem(){
 }
 
 void ChopSystem::runOS(){
-
+    welcomeScreen();
     while(this->isRunning() == true){
             commandManager.enterCommand(system_data);
     }
+}
+
+void ChopSystem::welcomeScreen(){
+    std::cout << "Welcome to " << system_data.versionInfo << " !" << std::endl << std::endl;
 }
 
 bool ChopSystem::isRunning(){
@@ -24,7 +31,9 @@ bool ChopSystem::isRunning(){
 
 void ChopSystem::initializeData(){
     system_data.isRunning = true;
-    system_data.versionInfo = "Chopsticks Version 0.1";
+    std::string tempName = OSname;
+    std::string tempVersion = VERSION;
+    system_data.versionInfo = tempName + tempVersion;
     system_data.currentDirectory = getWorkingDirectory();
 }
 

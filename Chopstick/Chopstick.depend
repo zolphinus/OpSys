@@ -4,12 +4,12 @@
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409496622 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1409509124 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 	"direct.h"
 
-1409495527 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+1409508562 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
 	"DataStruct.h"
 	"CommandManager.h"
 
@@ -35,8 +35,10 @@
 	"DataStruct.h"
 	"Reciever.h"
 
-1409459440 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
+1409509616 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
 	"Reciever.h"
+	<vector>
+	<string>
 
 1409458473 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
@@ -49,7 +51,7 @@
 1409497035 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 
-1409504025 c:\users\zolphinus\documents\github\opsys\chopstick\directorycommands.h
+1409505984 c:\users\zolphinus\documents\github\opsys\chopstick\directorycommands.h
 	<Windows.h>
 	<vector>
 	<string>
