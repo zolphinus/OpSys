@@ -1,5 +1,6 @@
 #ifndef RECIEVER_H
 #define RECIEVER_H
+#include "DataStruct.h"
 
 namespace TYPES
 {
@@ -16,7 +17,7 @@ namespace TYPES
 class Reciever(){
 public:
     virtual void setAction(TYPES::ACTION_LIST action) = 0;
-    virtual void performAction() = 0;
+    virtual void performAction(Global_Data&) = 0;
 };
 
 #endif // RECIEVER_H
