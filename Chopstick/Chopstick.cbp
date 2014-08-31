@@ -37,6 +37,8 @@
 		<Unit filename="CommandManager.cpp" />
 		<Unit filename="CommandManager.h" />
 		<Unit filename="DataStruct.h" />
+		<Unit filename="DirectoryCommands.h" />
+		<Unit filename="GeneralFunctions.h" />
 		<Unit filename="OperatingCommands.h" />
 		<Unit filename="OperatingReciever.cpp" />
 		<Unit filename="OperatingReciever.h" />

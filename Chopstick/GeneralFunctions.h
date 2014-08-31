@@ -1,19 +1,12 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
 
-#include <sstream>
+
 #include <iostream>
+#include <string>
 
-
-std::string intToString(int intValue){
-    std::string stringValue;
-    std::stringstream out;
-    out << intValue;
-    stringValue = out.str();
-
-    std::cout << "TEST" << std::endl;
-
-    return stringValue;
-};
+void formatDate(Global_Data& system_data){
+    system_data.date = system_data.day + "/" + system_data.month + "/" + system_data.year;
+}
 
 #endif // FUNCTIONS

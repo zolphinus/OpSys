@@ -2,7 +2,7 @@
 #define CHOPSTICK_SYSTEM
 #include "DataStruct.h"
 #include "CommandManager.h"
-
+#include <time.h>
 
 class ChopSystem{
 public:
@@ -12,6 +12,7 @@ public:
 private:
     Global_Data system_data;
     CommandManager commandManager;
+    time_t tempTime;
 
     void initializeData();
     void getCurrentDate();

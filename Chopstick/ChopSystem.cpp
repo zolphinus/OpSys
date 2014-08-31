@@ -1,12 +1,12 @@
 #include "ChopSystem.h"
 #include <iostream>
 #include <time.h>
-#include <stdio.h>
-
+#include <string>
+#include <sstream>
 #include "GeneralFunctions.h"
 
 #define OSname "Chopsticks "
-#define VERSION "0.2"
+#define VERSION "0.2.1"
 
 #ifdef _WIN32
     #include "direct.h"
@@ -39,6 +39,7 @@ void ChopSystem::initializeData(){
     std::string tempVersion = VERSION;
     system_data.versionInfo = tempName + tempVersion;
     system_data.currentDirectory = getWorkingDirectory();
+    time(&tempTime);
     getCurrentDate();
 }
 
@@ -58,24 +59,23 @@ std::string ChopSystem::getWorkingDirectory(){
 
 
 void ChopSystem::getCurrentDate(){
-    time_t* tempTime;
-    //std::stringstream ss;
+    std::ostringstream strout;
 
-    tm* timeGetter;
-    time(tempTime);
+    tm* timeGetter = localtime(&tempTime);
 
-    timeGetter = localtime(tempTime);
-//    out << timeGetter->tm_mon;
-    //sprintf(strConvert, "%c", timeGetter->tm_mday);
-    //system_data.day = strConvert;
+    int temp = timeGetter->tm_year - 100; //year from 2000
+    strout << temp;
+    system_data.year = strout.str();
+    strout.str(""); //clears buffer
 
-    //sprintf(strConvert, "%c", timeGetter->tm_mon + 1);
-    //system_data.month = strConvert;
+    temp = timeGetter->tm_mon + 1; //months are 1 -12
+    strout << temp;
+    system_data.month = strout.str();
+    strout.str(""); //clears buffer
 
-    //sprintf(strConvert, "%c", timeGetter->tm_year - 100);
-    //system_data.year = strConvert;
-    //system_data.year = timeGetter->tm_year;
-
-    //std::cout << system_data.day << "/" << system_data.month<< "/" << system_data.year << std::endl;
-
+    temp = timeGetter->tm_mday; //months are 1 -12
+    strout << temp;
+    system_data.day = strout.str();
+    strout.str(""); //clears buffer
+    formatDate(system_data);
 }
