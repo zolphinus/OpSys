@@ -1,15 +1,48 @@
 # depslib dependency file v1.0
-1409444610 source:c:\users\zolphinus\documents\github\opsys\chopstick\main.cpp
+1409457438 source:c:\users\zolphinus\documents\github\opsys\chopstick\main.cpp
 	"ChopSystem.h"
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409444695 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1409460280 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 
-1409444916 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+1409457536 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+	"DataStruct.h"
+	"CommandManager.h"
+
+1409460131 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+	<string>
+
+1409459925 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
+	"OperatingCommands.h"
+	"OperatingReciever.h"
+	"DataStruct.h"
+	<iostream>
+	<string>
+	<algorithm>
+
+1409460007 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+	"Command.h"
+	"DataStruct.h"
+	"Reciever.h"
+	<iostream>
+
+1409459213 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
+	"DataStruct.h"
+	"Reciever.h"
+
+1409459440 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
+	"Reciever.h"
+
+1409458473 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
 
-1409444906 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1409460269 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
+	"OperatingReciever.h"
+	<iostream>
+
+1409459916 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+	"CommandManager.h"
 

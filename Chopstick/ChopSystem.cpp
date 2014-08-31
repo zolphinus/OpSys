@@ -8,7 +8,7 @@ ChopSystem::ChopSystem(){
 void ChopSystem::runOS(){
 
     while(this->isRunning() == true){
-            std::cout << "L" << std::endl;
+            commandManager.enterCommand(system_data);
     }
 }
 
@@ -19,5 +19,6 @@ bool ChopSystem::isRunning(){
 
 void ChopSystem::initializeData(){
     system_data.isRunning = true;
+    system_data.versionInfo = "Chopsticks Version 0.1";
 }
 

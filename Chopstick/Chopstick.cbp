@@ -33,7 +33,13 @@
 		</Compiler>
 		<Unit filename="ChopSystem.cpp" />
 		<Unit filename="ChopSystem.h" />
+		<Unit filename="Command.h" />
+		<Unit filename="CommandManager.cpp" />
+		<Unit filename="CommandManager.h" />
 		<Unit filename="DataStruct.h" />
+		<Unit filename="OperatingCommands.h" />
+		<Unit filename="OperatingReciever.cpp" />
+		<Unit filename="OperatingReciever.h" />
 		<Unit filename="Reciever.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

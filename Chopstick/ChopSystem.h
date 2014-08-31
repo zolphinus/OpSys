@@ -1,6 +1,7 @@
 #ifndef CHOPSTICK_SYSTEM
 #define CHOPSTICK_SYSTEM
 #include "DataStruct.h"
+#include "CommandManager.h"
 
 
 class ChopSystem{
@@ -10,6 +11,8 @@ public:
 
 private:
     Global_Data system_data;
+    CommandManager commandManager;
+
     void initializeData();
     bool isRunning();
 };

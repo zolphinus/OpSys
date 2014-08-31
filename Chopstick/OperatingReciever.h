@@ -5,24 +5,12 @@
 
 class OperatingReciever : public Reciever{
 public:
-    void setAction(TYPES::ACTION_LIST);
+    void setAction(ACTION_LIST);
     void performAction(Global_Data&);
 
 private:
-    TYPES::ACTION_LIST currentAction;
+    ACTION_LIST currentAction;
 };
 
-void setAction(TYPES::ACTION_LIST newAction){
-    currentAction = newAction;
-}
-
-void performAction(Global_Data& system_data)
-{
-    if(currentAction == EXIT)
-    {
-        systemData.isRunning = false;
-    }
-
-}
 
 #endif
