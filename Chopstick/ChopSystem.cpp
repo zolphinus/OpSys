@@ -50,7 +50,7 @@ std::string ChopSystem::getWorkingDirectory(){
      // get current directory
      if(!GetCurrentDir(filePath, sizeof(filePath)))
      {
-          std::cout<<"** ERROR - Unable to locate current file directory." << std::endl;;
+          std::cout<< "Unable to locate current file directory." << std::endl;;
      }
 
      std::string workingDirectory(filePath);
