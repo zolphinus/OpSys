@@ -13,6 +13,7 @@ public:
 private:
     ACTION_LIST currentAction;
     void printInformation(std::vector <std::string>&);
+    void setDate(Global_Data&);
 };
 
 

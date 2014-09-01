@@ -62,5 +62,44 @@ public:
     }
 };
 
+class GetDateCommand : public Command{
+public:
+    GetDateCommand(Reciever* reciever)
+    : Command(reciever){
+
+    }
+
+    void execute(Global_Data& system_data){
+        myReciever->setAction(GET_DATE);
+        myReciever->performAction(system_data);
+    }
+};
+
+class SetDateCommand : public Command{
+public:
+    SetDateCommand(Reciever* reciever)
+    : Command(reciever){
+
+    }
+
+    void execute(Global_Data& system_data){
+        myReciever->setAction(SET_DATE);
+        myReciever->performAction(system_data);
+    }
+};
+
+class HelpCommand : public Command{
+public:
+    HelpCommand(Reciever* reciever)
+    : Command(reciever){
+
+    }
+
+    void execute(Global_Data& system_data){
+        myReciever->setAction(HELP);
+        myReciever->performAction(system_data);
+    }
+};
+
 
 #endif // OPERATING_COMMANDS

@@ -1,6 +1,9 @@
 #include "OperatingReciever.h"
 #include <iostream>
 #include "DirectoryCommands.h"
+#include "GeneralFunctions.h"
+#include <time.h>
+#include <stdio.h>
 
 #define SCREEN_PRINT_LIMIT 22
 
@@ -21,7 +24,10 @@ void OperatingReciever::performAction(Global_Data& system_data)
         getAllFilesInFolder(system_data);
         printInformation(system_data.directoryList);
     }else if(currentAction == GET_DATE){
+        formatDate(system_data);
         std::cout << std::endl << system_data.date << std::endl << std::endl;
+    }else if(currentAction == SET_DATE){
+        setDate(system_data);
     }
 
 }
@@ -44,4 +50,49 @@ void OperatingReciever::printInformation(std::vector <std::string>& currentData)
                 }
             }
             std::cout << std::endl;
+}
+
+void OperatingReciever::setDate(Global_Data& system_data){
+
+    int dateIsValid = false;
+
+    std::string tempDay;
+    std::string tempMonth;
+    std::string tempYear;
+
+    std::cout << "Please enter the date." << std::endl;
+    std::cout << "Day (integer): ";
+    std::cin >> tempDay;
+    std::cin.ignore();
+
+    std::cout << "Month (integer): ";
+    std::cin >> tempMonth;
+    std::cin.ignore();
+
+    std::cout << "Year (integer, last two digits): ";
+    std::cin >> tempYear;
+    std::cin.ignore();
+
+    dateIsValid = validateDate(atoi(tempDay.c_str()),
+                               atoi(tempMonth.c_str()),
+                               atoi(tempYear.c_str()));
+
+
+
+
+
+    if(dateIsValid == FALSE)
+    {
+        std::cout << "Not a valid date. Date unchanged. " << std::endl;
+    }
+    else{
+        std::cout << "Changing date to ";
+        system_data.day = tempDay;
+        system_data.month = tempMonth;
+        system_data.year = tempYear;
+        formatDate(system_data);
+        std::cout << system_data.date << std::endl << std::endl;
+
+    }
+
 }

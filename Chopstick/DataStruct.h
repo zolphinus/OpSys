@@ -11,7 +11,9 @@ enum ACTION_LIST
     HELP,
     LIST_DIR_CONTENTS,
     GET_DATE,
-    EXIT
+    SET_DATE,
+    EXIT,
+    TOTAL_COMMANDS
 };
 
 

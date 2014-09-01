@@ -18,7 +18,7 @@ CommandManager::~CommandManager(){
 
 
 void CommandManager::enterCommand(Global_Data& system_data){
-    std::cout << "Type a command and press enter. Type help for more options" << std::endl;
+    std::cout << std::endl << "Type a command and press enter. Type help for more options" << std::endl;
     std::cout << "Enter a command: ";
     std::cin >> commandLine;
 
@@ -51,6 +51,15 @@ bool CommandManager::parseCommand(std::string newCommand){
     }
     else if(newCommand == "LIST"){
         command = new DisplayDirectoryCommand(operatingReciever);
+        return false;
+    }
+    else if(newCommand == "GDATE")
+    {
+        command = new GetDateCommand(operatingReciever);
+        return false;
+    }
+    else if(newCommand == "SDATE"){
+        command = new SetDateCommand(operatingReciever);
         return false;
     }
     else{
