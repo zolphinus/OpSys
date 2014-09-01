@@ -37,9 +37,13 @@ void OperatingReciever::performAction(Global_Data& system_data)
         std::cout << std::endl << system_data.date << std::endl << std::endl;
     }else if(currentAction == SET_DATE){
         setDate(system_data);
+    }else if(currentAction == HELP)
+    {
+        printInformation(system_data.keywordList);
     }
 
 }
+
 
 void OperatingReciever::printInformation(std::vector <std::string>& currentData){
     int lineCounter = 0;

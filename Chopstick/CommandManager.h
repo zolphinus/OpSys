@@ -14,24 +14,16 @@ public:
     CommandManager();
     ~CommandManager();
     void enterCommand(Global_Data& system_data);
+    void initCommandList(Global_Data& system_data);
 
 private:
-
-    struct CommandStruct{
-        std::vector <std::string> keywordList;
-        std::vector <Command*> commandList;
-
-    };
-
-    CommandStruct command_data;
     std::string commandLine;
     bool commandError;
 
     Reciever* operatingReciever;
     Command* command;
 
-    bool parseCommand(std::string);
-    void initCommandList(CommandStruct&);
+    bool parseCommand(std::string, Global_Data&);
 };
 
 

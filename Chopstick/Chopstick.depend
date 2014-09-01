@@ -4,7 +4,7 @@
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409549626 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1409604019 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 	<time.h>
@@ -13,16 +13,16 @@
 	"GeneralFunctions.h"
 	"direct.h"
 
-1409531227 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+1409604037 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
 	"DataStruct.h"
 	"CommandManager.h"
 	<time.h>
 
-1409590662 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1409604055 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 	<vector>
 
-1409591423 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
+1409604115 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
 	"OperatingCommands.h"
 	"OperatingReciever.h"
 	"DataStruct.h"
@@ -31,7 +31,7 @@
 	<algorithm>
 	<vector>
 
-1409600158 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+1409603598 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
 	"Command.h"
 	"DataStruct.h"
 	"Reciever.h"
@@ -44,15 +44,15 @@
 	<algorithm>
 	"GeneralFunctions.h"
 
-1409532803 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
+1409602360 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
 	"Reciever.h"
 	<vector>
 	<string>
 
-1409458473 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
+1409603619 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
 
-1409598839 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
+1409603163 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
 	"OperatingReciever.h"
 	<iostream>
 	"DirectoryCommands.h"
@@ -60,7 +60,7 @@
 	<time.h>
 	<stdio.h>
 
-1409599717 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1409604207 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 	<fstream>
 

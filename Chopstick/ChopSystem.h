@@ -7,6 +7,7 @@
 class ChopSystem{
 public:
     ChopSystem();
+    ~ChopSystem();
     void runOS();
 
 private:

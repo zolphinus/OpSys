@@ -17,6 +17,16 @@ ChopSystem::ChopSystem(){
     initializeData();
 }
 
+ChopSystem::~ChopSystem()
+{
+    for(int i = 0; i < TOTAL_COMMANDS; i++){
+        delete system_data.commandList[i];
+    }
+
+    system_data.commandList.resize(0);
+    system_data.keywordList.resize(0);
+}
+
 void ChopSystem::runOS(){
     welcomeScreen();
     while(this->isRunning() == true){
@@ -41,6 +51,7 @@ void ChopSystem::initializeData(){
     system_data.currentDirectory = getWorkingDirectory();
     time(&tempTime);
     getCurrentDate();
+    commandManager.initCommandList(system_data);
 }
 
 std::string ChopSystem::getWorkingDirectory(){

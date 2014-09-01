@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+class Command;
 
 enum ACTION_LIST
 {
@@ -32,8 +33,9 @@ struct Global_Data{
         std::string year;
         std::string date;
         std::vector <std::string> directoryList;
+        std::vector <std::string> keywordList;
+        std::vector <Command*> commandList;
 };
-
 
 
 

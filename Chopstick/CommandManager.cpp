@@ -8,7 +8,6 @@ CommandManager::CommandManager(){
     commandError = false;
     commandLine = "";
     command = new AwaitCommand(operatingReciever);
-    initCommandList(command_data);
 }
 
 CommandManager::~CommandManager(){
@@ -18,12 +17,6 @@ CommandManager::~CommandManager(){
     delete operatingReciever;
     operatingReciever = NULL;
 
-    for(int i = 0; i < TOTAL_COMMANDS; i++){
-        delete command_data.commandList[i];
-    }
-
-    command_data.commandList.resize(0);
-    command_data.keywordList.resize(0);
 }
 
 
@@ -32,7 +25,7 @@ void CommandManager::enterCommand(Global_Data& system_data){
     std::cout << "Enter a command: ";
     std::cin >> commandLine;
 
-    commandError = parseCommand(commandLine);
+    commandError = parseCommand(commandLine, system_data);
 
     if(commandError == true){
         std::cout << std::endl << "Invalid command. Please use the help command for more options."
@@ -43,57 +36,57 @@ void CommandManager::enterCommand(Global_Data& system_data){
     }
 }
 
-bool CommandManager::parseCommand(std::string newCommand){
+bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_data){
     newCommand = stringToUpper(newCommand);
 
-    if(newCommand == "EXIT"){
-        command = command_data.commandList[EXIT];
+    if(newCommand == system_data.keywordList[EXIT]){
+        command = system_data.commandList[EXIT];
         return false;
     }
-    else if(newCommand == "VERSION"){
-        command = command_data.commandList[DISPLAY_VERSION];
+    else if(newCommand == system_data.keywordList[DISPLAY_VERSION]){
+        command = system_data.commandList[DISPLAY_VERSION];
         return false;
     }
-    else if(newCommand == "LIST"){
-        command = command_data.commandList[LIST_DIR_CONTENTS];
+    else if(newCommand == system_data.keywordList[LIST_DIR_CONTENTS]){
+        command = system_data.commandList[LIST_DIR_CONTENTS];
         return false;
     }
-    else if(newCommand == "GDATE")
+    else if(newCommand == system_data.keywordList[GET_DATE])
     {
-        command = command_data.commandList[GET_DATE];
+        command = system_data.commandList[GET_DATE];
         return false;
     }
-    else if(newCommand == "SDATE"){
-        command = command_data.commandList[SET_DATE];;
+    else if(newCommand == system_data.keywordList[SET_DATE]){
+        command = system_data.commandList[SET_DATE];;
         return false;
     }
-    else if(newCommand == "HELP"){
-        command = command_data.commandList[HELP];
+    else if(newCommand == system_data.keywordList[HELP]){
+        command = system_data.commandList[HELP];
         return false;
     }
     else{
-        command = command_data.commandList[AWAIT_INPUT];
+        command = system_data.commandList[AWAIT_INPUT];
         return true;
     }
 }
 
 
-void CommandManager::initCommandList(CommandStruct& command_data){
+void CommandManager::initCommandList(Global_Data& system_data){
 
     std::ifstream readFile("Help/help.txt");
 
 
-    command_data.commandList.resize(TOTAL_COMMANDS);
-    command_data.keywordList.resize(TOTAL_COMMANDS);
+    system_data.commandList.resize(TOTAL_COMMANDS);
+    system_data.keywordList.resize(TOTAL_COMMANDS);
 
     //Add commands to avoid NULL pointers.
-    command_data.commandList[AWAIT_INPUT] = new AwaitCommand(operatingReciever);
-    command_data.commandList[HELP] = new HelpCommand(operatingReciever);
-    command_data.commandList[DISPLAY_VERSION] = new VersionInfoCommand(operatingReciever);
-    command_data.commandList[LIST_DIR_CONTENTS] = new DisplayDirectoryCommand(operatingReciever);
-    command_data.commandList[GET_DATE] = new GetDateCommand(operatingReciever);
-    command_data.commandList[SET_DATE] = new SetDateCommand(operatingReciever);
-    command_data.commandList[EXIT] = new ExitCommand(operatingReciever);
+    system_data.commandList[AWAIT_INPUT] = new AwaitCommand(operatingReciever);
+    system_data.commandList[HELP] = new HelpCommand(operatingReciever);
+    system_data.commandList[DISPLAY_VERSION] = new VersionInfoCommand(operatingReciever);
+    system_data.commandList[LIST_DIR_CONTENTS] = new DisplayDirectoryCommand(operatingReciever);
+    system_data.commandList[GET_DATE] = new GetDateCommand(operatingReciever);
+    system_data.commandList[SET_DATE] = new SetDateCommand(operatingReciever);
+    system_data.commandList[EXIT] = new ExitCommand(operatingReciever);
 
     if(readFile.is_open())
     {
@@ -103,7 +96,7 @@ void CommandManager::initCommandList(CommandStruct& command_data){
     else{
             for(int i = 0; i < TOTAL_COMMANDS; i++)
             {
-                command_data.keywordList[i] = command_data.commandList[i]->getKeyword();
+                system_data.keywordList[i] = system_data.commandList[i]->getKeyword();
             }
     }
 

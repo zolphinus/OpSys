@@ -33,6 +33,7 @@
 		</Compiler>
 		<Unit filename="ChopSystem.cpp" />
 		<Unit filename="ChopSystem.h" />
+		<Unit filename="Command.cpp" />
 		<Unit filename="Command.h" />
 		<Unit filename="CommandManager.cpp" />
 		<Unit filename="CommandManager.h" />
