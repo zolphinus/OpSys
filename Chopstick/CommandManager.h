@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <vector>
 
 class CommandManager{
 public:
@@ -15,6 +16,14 @@ public:
     void enterCommand(Global_Data& system_data);
 
 private:
+
+    struct CommandStruct{
+        std::vector <std::string> keywordList;
+        std::vector <Command*> commandList;
+
+    };
+
+    CommandStruct command_data;
     std::string commandLine;
     bool commandError;
 
@@ -22,7 +31,7 @@ private:
     Command* command;
 
     bool parseCommand(std::string);
-    std::string stringToUpper(std::string);
+    void initCommandList(CommandStruct&);
 };
 
 

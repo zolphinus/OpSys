@@ -4,7 +4,7 @@
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409532536 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1409549626 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 	<time.h>
@@ -18,27 +18,31 @@
 	"CommandManager.h"
 	<time.h>
 
-1409533518 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1409590662 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 	<vector>
 
-1409459925 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
+1409591423 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
 	"OperatingCommands.h"
 	"OperatingReciever.h"
 	"DataStruct.h"
 	<iostream>
 	<string>
 	<algorithm>
+	<vector>
 
-1409535480 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+1409600158 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
 	"Command.h"
 	"DataStruct.h"
 	"Reciever.h"
 	<iostream>
 
-1409459213 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
+1409588927 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
 	"DataStruct.h"
 	"Reciever.h"
+	<string>
+	<algorithm>
+	"GeneralFunctions.h"
 
 1409532803 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
 	"Reciever.h"
@@ -48,7 +52,7 @@
 1409458473 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
 
-1409542929 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
+1409598839 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
 	"OperatingReciever.h"
 	<iostream>
 	"DirectoryCommands.h"
@@ -56,8 +60,9 @@
 	<time.h>
 	<stdio.h>
 
-1409535799 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1409599717 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
+	<fstream>
 
 1409505984 c:\users\zolphinus\documents\github\opsys\chopstick\directorycommands.h
 	<Windows.h>
@@ -66,11 +71,15 @@
 	<stdio.h>
 	"DataStruct.h"
 
-1409540843 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
+1409588599 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
 	"DataStruct.h"
 	<iostream>
 	<string>
 
-1409543076 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
+1409588665 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
 	"GeneralFunctions.h"
+	<algorithm>
+
+1409588717 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
+	"Command.h"
 

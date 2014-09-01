@@ -1,4 +1,6 @@
 #include "CommandManager.h"
+#include <fstream>
+
 
 CommandManager::CommandManager(){
 
@@ -6,6 +8,7 @@ CommandManager::CommandManager(){
     commandError = false;
     commandLine = "";
     command = new AwaitCommand(operatingReciever);
+    initCommandList(command_data);
 }
 
 CommandManager::~CommandManager(){
@@ -14,6 +17,13 @@ CommandManager::~CommandManager(){
 
     delete operatingReciever;
     operatingReciever = NULL;
+
+    for(int i = 0; i < TOTAL_COMMANDS; i++){
+        delete command_data.commandList[i];
+    }
+
+    command_data.commandList.resize(0);
+    command_data.keywordList.resize(0);
 }
 
 
@@ -36,41 +46,65 @@ void CommandManager::enterCommand(Global_Data& system_data){
 bool CommandManager::parseCommand(std::string newCommand){
     newCommand = stringToUpper(newCommand);
 
-    if(command != NULL)
-    {
-        delete command;
-    }
-
     if(newCommand == "EXIT"){
-        command = new ExitCommand(operatingReciever);
+        command = command_data.commandList[EXIT];
         return false;
     }
     else if(newCommand == "VERSION"){
-        command = new VersionInfoCommand(operatingReciever);
+        command = command_data.commandList[DISPLAY_VERSION];
         return false;
     }
     else if(newCommand == "LIST"){
-        command = new DisplayDirectoryCommand(operatingReciever);
+        command = command_data.commandList[LIST_DIR_CONTENTS];
         return false;
     }
     else if(newCommand == "GDATE")
     {
-        command = new GetDateCommand(operatingReciever);
+        command = command_data.commandList[GET_DATE];
         return false;
     }
     else if(newCommand == "SDATE"){
-        command = new SetDateCommand(operatingReciever);
+        command = command_data.commandList[SET_DATE];;
+        return false;
+    }
+    else if(newCommand == "HELP"){
+        command = command_data.commandList[HELP];
         return false;
     }
     else{
-        command = new AwaitCommand(operatingReciever);
+        command = command_data.commandList[AWAIT_INPUT];
         return true;
     }
 }
 
-std::string CommandManager::stringToUpper(std::string strToConvert)
-{
-    std::transform(strToConvert.begin(), strToConvert.end(), strToConvert.begin(), ::toupper);
 
-    return strToConvert;
+void CommandManager::initCommandList(CommandStruct& command_data){
+
+    std::ifstream readFile("Help/help.txt");
+
+
+    command_data.commandList.resize(TOTAL_COMMANDS);
+    command_data.keywordList.resize(TOTAL_COMMANDS);
+
+    //Add commands to avoid NULL pointers.
+    command_data.commandList[AWAIT_INPUT] = new AwaitCommand(operatingReciever);
+    command_data.commandList[HELP] = new HelpCommand(operatingReciever);
+    command_data.commandList[DISPLAY_VERSION] = new VersionInfoCommand(operatingReciever);
+    command_data.commandList[LIST_DIR_CONTENTS] = new DisplayDirectoryCommand(operatingReciever);
+    command_data.commandList[GET_DATE] = new GetDateCommand(operatingReciever);
+    command_data.commandList[SET_DATE] = new SetDateCommand(operatingReciever);
+    command_data.commandList[EXIT] = new ExitCommand(operatingReciever);
+
+    if(readFile.is_open())
+    {
+        std::cout << "SUP BRO" << std::endl;
+        readFile.close();
+    }
+    else{
+            for(int i = 0; i < TOTAL_COMMANDS; i++)
+            {
+                command_data.keywordList[i] = command_data.commandList[i]->getKeyword();
+            }
+    }
+
 }

@@ -13,9 +13,18 @@ void OperatingReciever::setAction(ACTION_LIST newAction){
 
 void OperatingReciever::performAction(Global_Data& system_data)
 {
+    char tempChar;
     if(currentAction == EXIT)
     {
-        system_data.isRunning = false;
+        std::cout << std::endl << "Do you wish to exit? (Y/N) : ";
+        std::cin >> tempChar;
+        tempChar = toupper(tempChar);
+        std::cin.ignore();
+        if(tempChar == 'Y')
+        {
+            std::cout << "Now exiting..." << std::endl << std::endl;
+            system_data.isRunning = false;
+        }
     }else if(currentAction == DISPLAY_VERSION){
 
         std::cout << std::endl << system_data.versionInfo << std::endl << std::endl;

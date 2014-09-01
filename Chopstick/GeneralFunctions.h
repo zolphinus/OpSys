@@ -8,4 +8,8 @@
 void formatDate(Global_Data& system_data);
 bool validateDate(int, int, int);
 bool checkLeapYear(int);
+std::string stringToUpper(std::string);
+
+
+
 #endif // FUNCTIONS

@@ -1,4 +1,5 @@
 #include "GeneralFunctions.h"
+#include <algorithm>
 
 void formatDate(Global_Data& system_data){
     system_data.date = system_data.day + "/" + system_data.month + "/" + system_data.year;
@@ -67,4 +68,12 @@ bool checkLeapYear(int year){
          // leap year
     }
     return leapYear;
+}
+
+
+std::string stringToUpper(std::string strToConvert)
+{
+    std::transform(strToConvert.begin(), strToConvert.end(), strToConvert.begin(), ::toupper);
+
+    return strToConvert;
 }

@@ -6,13 +6,18 @@
 
 enum ACTION_LIST
 {
+    //These commands need to be in this order for algorithms.
     AWAIT_INPUT,
-    DISPLAY_VERSION,
     HELP,
+
+
+    DISPLAY_VERSION,
     LIST_DIR_CONTENTS,
     GET_DATE,
     SET_DATE,
     EXIT,
+
+    //Leave last for algorithms
     TOTAL_COMMANDS
 };
 
@@ -28,5 +33,8 @@ struct Global_Data{
         std::string date;
         std::vector <std::string> directoryList;
 };
+
+
+
 
 #endif // DATA_STRUCT_H
