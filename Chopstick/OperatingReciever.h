@@ -10,7 +10,6 @@ class OperatingReciever : public Reciever{
 public:
     void setAction(ACTION_LIST);
     void performAction(Global_Data&);
-    void performAction(CommandStruct&);
 
 private:
     ACTION_LIST currentAction;

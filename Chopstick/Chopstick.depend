@@ -4,7 +4,7 @@
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409604019 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1409672604 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 	<time.h>
@@ -37,14 +37,14 @@
 	"Reciever.h"
 	<iostream>
 
-1409665412 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
+1409669385 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
 	"DataStruct.h"
 	"Reciever.h"
 	<string>
 	<algorithm>
 	"GeneralFunctions.h"
 
-1409602360 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
+1409690677 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
 	"Reciever.h"
 	<vector>
 	<string>
@@ -71,7 +71,7 @@
 	<stdio.h>
 	"DataStruct.h"
 
-1409588599 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
+1409689879 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
 	"DataStruct.h"
 	<iostream>
 	<string>
