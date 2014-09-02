@@ -18,7 +18,7 @@
 	"CommandManager.h"
 	<time.h>
 
-1409604055 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1409665701 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 	<vector>
 
@@ -31,13 +31,13 @@
 	<algorithm>
 	<vector>
 
-1409603598 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+1409665961 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
 	"Command.h"
 	"DataStruct.h"
 	"Reciever.h"
 	<iostream>
 
-1409588927 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
+1409665412 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
 	"DataStruct.h"
 	"Reciever.h"
 	<string>
@@ -52,7 +52,7 @@
 1409603619 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
 
-1409603163 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
+1409665907 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
 	"OperatingReciever.h"
 	<iostream>
 	"DirectoryCommands.h"
@@ -60,7 +60,7 @@
 	<time.h>
 	<stdio.h>
 
-1409604207 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1409666050 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 	<fstream>
 
@@ -76,10 +76,10 @@
 	<iostream>
 	<string>
 
-1409588665 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
+1409667267 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
 	"GeneralFunctions.h"
 	<algorithm>
 
-1409588717 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
+1409665508 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
 	"Command.h"
 

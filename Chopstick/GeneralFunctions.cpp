@@ -24,7 +24,7 @@ bool validateDate(int day, int month, int year)
     }
 
     switch(month){
-    case '2':
+    case 2:
         if(isLeapYear == true){
             if(day > 29){
                 return false;
@@ -35,14 +35,15 @@ bool validateDate(int day, int month, int year)
             }
         }
         break;
-    case '1' : case '3' : case '5' : case '7' : case '8' : case '10' : case '12':
+    case 1 : case 3 : case 5 : case 7 : case 8 : case 10 : case 12:
         if(day > 31)
         {
             return false;
         }
         break;
 
-    case '4' : case '6' : case '9' : case '11':
+    case 4 :
+        case 6 : case 9 : case 11:
         if(day > 30)
         {
             return false;
@@ -51,7 +52,6 @@ bool validateDate(int day, int month, int year)
     default :
         return false;
     }
-
 
     return true;
 }

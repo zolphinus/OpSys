@@ -11,7 +11,6 @@ CommandManager::CommandManager(){
 }
 
 CommandManager::~CommandManager(){
-    delete command;
     command = NULL;
 
     delete operatingReciever;
@@ -78,6 +77,7 @@ void CommandManager::initCommandList(Global_Data& system_data){
 
     system_data.commandList.resize(TOTAL_COMMANDS);
     system_data.keywordList.resize(TOTAL_COMMANDS);
+    system_data.keywordHelpList.resize(TOTAL_COMMANDS);
 
     //Add commands to avoid NULL pointers.
     system_data.commandList[AWAIT_INPUT] = new AwaitCommand(operatingReciever);
@@ -90,13 +90,23 @@ void CommandManager::initCommandList(Global_Data& system_data){
 
     if(readFile.is_open())
     {
-        std::cout << "SUP BRO" << std::endl;
+        //obtain data from file and change i = 0 to i = DISPLAY_VERSION
+
+
+        for(int i = 0; i < TOTAL_COMMANDS; i++)
+            {
+                system_data.keywordList[i] = system_data.commandList[i]->getKeyword();
+                system_data.keywordHelpList[i] = system_data.keywordList[i] +
+                                                 system_data.commandList[i]->getKeywordInfo();
+            }
         readFile.close();
     }
     else{
             for(int i = 0; i < TOTAL_COMMANDS; i++)
             {
                 system_data.keywordList[i] = system_data.commandList[i]->getKeyword();
+                system_data.keywordHelpList[i] = system_data.keywordList[i] +
+                                                 system_data.commandList[i]->getKeywordInfo();
             }
     }
 

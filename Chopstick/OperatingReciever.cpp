@@ -39,7 +39,7 @@ void OperatingReciever::performAction(Global_Data& system_data)
         setDate(system_data);
     }else if(currentAction == HELP)
     {
-        printInformation(system_data.keywordList);
+        printInformation(system_data.keywordHelpList);
     }
 
 }

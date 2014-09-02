@@ -34,6 +34,8 @@ struct Global_Data{
         std::string date;
         std::vector <std::string> directoryList;
         std::vector <std::string> keywordList;
+        std::vector <std::string> keywordHelpList;
+
         std::vector <Command*> commandList;
 };
 

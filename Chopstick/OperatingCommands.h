@@ -16,6 +16,7 @@ public:
     ExitCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "EXIT";
+        keyWordInfo = " - Terminates the OS";
     }
 
     void execute(Global_Data& system_data){
@@ -29,6 +30,7 @@ public:
     VersionInfoCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "VERSION";
+        keyWordInfo = " - Displays current OS and Version number";
     }
 
     void execute(Global_Data& system_data){
@@ -43,6 +45,7 @@ public:
     AwaitCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "";
+        keyWordInfo = "";
     }
 
     void execute(Global_Data& system_data){
@@ -56,6 +59,7 @@ public:
     DisplayDirectoryCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "LIST";
+        keyWordInfo = " - Lists all files in the current directory";
     }
 
     void execute(Global_Data& system_data){
@@ -69,6 +73,7 @@ public:
     GetDateCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "GDATE";
+        keyWordInfo = " - Gets the Current Date";
     }
 
     void execute(Global_Data& system_data){
@@ -82,6 +87,7 @@ public:
     SetDateCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "SDATE";
+        keyWordInfo = " - Sets the Current Date";
     }
 
     void execute(Global_Data& system_data){
@@ -95,6 +101,7 @@ public:
     HelpCommand(Reciever* reciever)
     : Command(reciever){
         keyWord = "HELP"; //cannot map help command
+        keyWordInfo = " - Lists Keywords for Commands";
     }
 
     void execute(Global_Data& system_data){

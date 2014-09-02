@@ -14,12 +14,13 @@ protected:
 
     }
     std::string keyWord;
-
+    std::string keyWordInfo;
 
 public:
     virtual void execute(Global_Data&) = 0;
+
     std::string getKeyword();
-    void setKeyword(std::string);
+    std::string getKeywordInfo();
 };
 
 #endif // COMMAND

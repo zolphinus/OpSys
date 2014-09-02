@@ -22,9 +22,9 @@ ChopSystem::~ChopSystem()
     for(int i = 0; i < TOTAL_COMMANDS; i++){
         delete system_data.commandList[i];
     }
-
     system_data.commandList.resize(0);
     system_data.keywordList.resize(0);
+    system_data.keywordHelpList.resize(0);
 }
 
 void ChopSystem::runOS(){
