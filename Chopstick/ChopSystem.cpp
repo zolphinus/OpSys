@@ -6,7 +6,7 @@
 #include "GeneralFunctions.h"
 
 #define OSname "Chopsticks "
-#define VERSION "0.2.1"
+#define VERSION "0.3"
 
 #ifdef _WIN32
     #include "direct.h"
