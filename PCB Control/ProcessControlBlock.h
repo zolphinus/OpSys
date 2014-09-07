@@ -13,10 +13,12 @@ public:
     int getPriority();
     int getMemory();
 
+
     void setupPCB(std::string, int, ProcessClass);
     void setRunState(RunState);
     void testControlBlock();
     void printControlInfo(PrintMode);
+    void setPriority(int);
 
 private:
     std::string processName;

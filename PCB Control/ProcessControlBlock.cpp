@@ -38,6 +38,10 @@ void ProcessControlBlock::setRunState(RunState newRunState){
     runState = newRunState;
 }
 
+void ProcessControlBlock::setPriority(int newPriority){
+    priority = newPriority;
+}
+
 void ProcessControlBlock::printControlInfo(PrintMode printMode){
 
     if(printMode == FULL_PRINT){

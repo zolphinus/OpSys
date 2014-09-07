@@ -13,6 +13,16 @@ public:
 
     void testController();
     void createPCB();
+    void deletePCB();
+    void blockPCB();
+    void unblockPCB();
+    void suspendPCB();
+    void resumePCB();
+    void setPriority();
+    void showPCB();
+    void showAllPCB();
+    void showReady();
+    void showBlocked();
 
 private:
     PCB_Queue readyQueue;
