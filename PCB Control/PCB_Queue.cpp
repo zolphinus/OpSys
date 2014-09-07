@@ -58,9 +58,10 @@ void PCB_Queue::insertNode(ProcessControlBlock* PCB){
     }
 }
 
-PCB_Node* PCB_Queue::popNode(){
+ProcessControlBlock* PCB_Queue::popNode(){
 
     PCB_Node* tempNode = NULL;
+    ProcessControlBlock* tempPCB = NULL;
     if(head != NULL)
     {
         tempNode = head;
@@ -73,10 +74,91 @@ PCB_Node* PCB_Queue::popNode(){
             head = NULL;
             tail = head;
         }
-        return tempNode;
+        tempPCB = tempNode->getPCB();
+        delete tempNode;
+        tempNode = NULL;
+        return tempPCB;
     }
     else
         return NULL;
+}
+
+
+bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
+    PCB_Node* tempNode = head;
+    PCB_Node* placeholder = tempNode;
+    bool PCBisFound = false;
+
+
+    if(head != NULL){
+        if(head->getNext() != NULL){
+            while(tempNode != NULL){
+
+                if(tempNode->getPCB() == PCB)
+                {
+                    //the PCB was found, removes node and pcb from the queue
+                    if(tempNode->getPCB() == placeholder->getPCB()){
+                        //This case should only be true at the head node, if it points somewhere
+                        tempNode = tempNode->getNext();
+                        tempNode->setPrior(placeholder->getPrior());
+                        delete placeholder;
+
+                        head = tempNode;
+
+                        //exits the loop if the process is head process and found
+                        tempNode = NULL;
+                        PCBisFound = true;
+                    }
+                    else{
+                        //This case is if the process is found but not the head node
+                        if(tempNode->getPCB() == PCB)
+                        {
+                            if(tempNode->getNext() != NULL){
+                                //points to next node in queue
+                                placeholder->setNext(tempNode->getNext());
+
+                                //sets the next node to point to the last known not removed
+                                tempNode->getNext()->setPrior(placeholder);
+                                delete tempNode;
+
+                                //exits the loop if found
+                                tempNode = NULL;
+                                PCBisFound = true;
+                            }
+                            else{
+                                //This case is if the process is found at the tail node
+                                placeholder->setNext(NULL);
+                                tail = placeholder;
+                                delete tempNode;
+                                tempNode = NULL;
+
+                                PCBisFound = true;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+                else{
+                    //the PCB wasn't found, iterates to next node
+                    placeholder = tempNode;
+                    tempNode = tempNode->getNext();
+                }
+            }
+        }
+        else{
+            if(head->getPCB() == PCB)
+            {
+                delete head;
+                head = NULL;
+                tail = head;
+            }
+        }
+    }
+
+    return PCBisFound;
 }
 
 
@@ -100,6 +182,24 @@ void PCB_Queue::testQueue(){
     insertNode(tempFour);
     insertNode(tempFive);
 
+    printQueueContents();
+
+    removePCB(tempThree);
+
+    std::cout << std::endl << "Removing test 3 from queue" << std::endl;
+    std::cout << std::endl;
+    printQueueContents();
+
+    removePCB(tempOne);
+
+    std::cout << std::endl << "Removing test 1 from queue" << std::endl;
+    std::cout << std::endl;
+    printQueueContents();
+
+    removePCB(tempFive);
+
+    std::cout << std::endl << "Removing test 5 from queue" << std::endl;
+    std::cout << std::endl;
     printQueueContents();
 
     tempOne = NULL;

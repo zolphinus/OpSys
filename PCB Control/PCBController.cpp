@@ -121,7 +121,7 @@ void PCB_Controller::createPCB(){
                 }
         }
         else{
-            std::cout << std::endl << "The process is already running or the parameters are not valid" <<
+            std::cout << std::endl << "The process is already running or the parameters are not valid"
                       << std::endl << std::endl;
         }
 
@@ -150,6 +150,35 @@ void PCB_Controller::insertPCB(ProcessControlBlock* PCB){
     }
 }
 
+
+void PCB_Controller::removePCB(ProcessControlBlock* PCB){
+    bool PCBisFound = false;
+    PCBisFound = readyQueue.removePCB(PCB);
+
+    if(PCBisFound == false)
+    {
+        PCBisFound = suspendedReadyQueue.removePCB(PCB);
+    }
+
+    if(PCBisFound == false)
+    {
+        PCBisFound = blockedQueue.removePCB(PCB);
+    }
+
+    if(PCBisFound == false)
+    {
+        PCBisFound = suspendedBlockedQueue.removePCB(PCB);
+    }
+}
+
+
+void PCB_Controller::freePCB(ProcessControlBlock* PCB){
+
+    if(PCB != NULL){
+        delete PCB;
+        PCB = NULL;
+    }
+}
 
 void PCB_Controller::testController(){
 

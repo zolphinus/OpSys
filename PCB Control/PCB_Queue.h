@@ -13,7 +13,9 @@ public:
     ~PCB_Queue();
 
     void insertNode(ProcessControlBlock*);
-    PCB_Node* popNode();
+    ProcessControlBlock* popNode();
+
+    bool removePCB(ProcessControlBlock* PCB);
     void testQueue();
     void printQueueContents();
     ProcessControlBlock* FindPCB(std::string);

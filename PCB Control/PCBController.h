@@ -23,7 +23,9 @@ private:
     ProcessControlBlock* AllocatePCB();
     ProcessControlBlock* FindPCB(std::string);
     void insertPCB(ProcessControlBlock* PCB);
-    ProcessControlBlock* removePCB(ProcessControlBlock* PCB);
+
+    void removePCB(ProcessControlBlock* PCB);
+    void freePCB(ProcessControlBlock* PCB);
 
 
 
