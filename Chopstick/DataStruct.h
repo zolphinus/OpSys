@@ -18,12 +18,26 @@ enum ACTION_LIST
     GET_DATE,
     SET_DATE,
     EXIT,
+    CREATE_PCB,
+    DELETE_PCB,
+    BLOCK_PCB,
+    UNBLOCK_PCB,
+    SUSPEND_PCB,
+    RESUME_PCB,
+    SET_PRIORITY,
+    SHOW_PCB,
+    SHOW_ALL,
+    SHOW_READY,
+    SHOW_BLOCKED,
 
     //Leave last for command initialization
     TOTAL_COMMANDS
 };
 
-
+enum COMMAND_MODE{
+    SYSTEM_MODE,
+    PCB_MODE
+};
 
 struct Global_Data{
         bool isRunning;

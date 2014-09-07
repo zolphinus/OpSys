@@ -6,7 +6,7 @@
 #include "GeneralFunctions.h"
 
 #define OSname "Chopsticks "
-#define VERSION "0.3"
+#define VERSION "0.4"
 
 #ifdef _WIN32
     #include "direct.h"
@@ -29,8 +29,9 @@ ChopSystem::~ChopSystem()
 
 void ChopSystem::runOS(){
     welcomeScreen();
+
     while(this->isRunning() == true){
-            commandManager.enterCommand(system_data);
+            commandManager.enterCommand(system_data, pcbController);
     }
 }
 

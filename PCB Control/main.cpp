@@ -1,21 +1,19 @@
-#include "ChopSystem.h"
 #include "ProcessControlBlock.h"
 #include "PCB_Node.h"
 #include "PCB_Queue.h"
 #include "PCBController.h"
-
-
 
 void testPCB();
 void testNode();
 void testQueue();
 void testController();
 
-
 int main(){
-    ChopSystem Chopsticks;
+    //testPCB();
+    //testNode();
+    //testQueue();
+    //testController();
 
-    Chopsticks.runOS();
     return 0;
 }
 

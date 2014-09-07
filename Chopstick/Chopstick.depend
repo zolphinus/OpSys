@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1409526203 source:c:\users\zolphinus\documents\github\opsys\chopstick\main.cpp
+1410128553 source:c:\users\zolphinus\documents\github\opsys\chopstick\main.cpp
 	"ChopSystem.h"
+	"ProcessControlBlock.h"
+	"PCB_Node.h"
+	"PCB_Queue.h"
+	"PCBController.h"
 
 1409443045 c:\users\zolphinus\documents\github\opsys\chopstick\globalvar.h
 
-1409672604 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
+1410129738 source:c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.cpp
 	"ChopSystem.h"
 	<iostream>
 	<time.h>
@@ -13,46 +17,52 @@
 	"GeneralFunctions.h"
 	"direct.h"
 
-1409604037 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
+1410129712 c:\users\zolphinus\documents\github\opsys\chopstick\chopsystem.h
 	"DataStruct.h"
 	"CommandManager.h"
+	"PCBController.h"
 	<time.h>
 
-1409665701 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1410131997 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 	<vector>
 
-1409604115 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
+1410130589 c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.h
 	"OperatingCommands.h"
+	"PCB_Commands.h"
 	"OperatingReciever.h"
 	"DataStruct.h"
+	"PCBController.h"
 	<iostream>
 	<string>
 	<algorithm>
 	<vector>
 
-1409665961 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
+1410130446 c:\users\zolphinus\documents\github\opsys\chopstick\operatingcommands.h
 	"Command.h"
 	"DataStruct.h"
 	"Reciever.h"
 	<iostream>
 
-1409669385 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
+1410130194 c:\users\zolphinus\documents\github\opsys\chopstick\command.h
 	"DataStruct.h"
 	"Reciever.h"
+	"PCBController.h"
 	<string>
 	<algorithm>
 	"GeneralFunctions.h"
 
-1409690677 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
+1410129467 c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.h
 	"Reciever.h"
+	"PCBController.h"
 	<vector>
 	<string>
 
-1409603619 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
+1410129446 c:\users\zolphinus\documents\github\opsys\chopstick\reciever.h
 	"DataStruct.h"
+	"PCBController.h"
 
-1409665907 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
+1410132828 source:c:\users\zolphinus\documents\github\opsys\chopstick\operatingreciever.cpp
 	"OperatingReciever.h"
 	<iostream>
 	"DirectoryCommands.h"
@@ -60,26 +70,73 @@
 	<time.h>
 	<stdio.h>
 
-1409666050 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1410132375 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 	<fstream>
 
-1409505984 c:\users\zolphinus\documents\github\opsys\chopstick\directorycommands.h
+1409692410 c:\users\zolphinus\documents\github\opsys\chopstick\directorycommands.h
 	<Windows.h>
 	<vector>
 	<string>
 	<stdio.h>
 	"DataStruct.h"
 
-1409689879 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
+1409692410 c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.h
 	"DataStruct.h"
 	<iostream>
 	<string>
 
-1409667267 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
+1409692410 source:c:\users\zolphinus\documents\github\opsys\chopstick\generalfunctions.cpp
 	"GeneralFunctions.h"
 	<algorithm>
 
-1409665508 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
+1409692410 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
 	"Command.h"
+
+1410127132 c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.h
+	"PCB_Queue.h"
+	<string>
+
+1410117289 c:\users\zolphinus\documents\github\opsys\chopstick\pcb_queue.h
+	<string>
+
+1410123119 c:\users\zolphinus\documents\github\opsys\chopstick\processcontrolblock.h
+	"ProcessControlEnums.h"
+	<string>
+
+1410068537 c:\users\zolphinus\documents\github\opsys\chopstick\processcontrolenums.h
+
+1410071376 c:\users\zolphinus\documents\github\opsys\chopstick\pcb_node.h
+	<string>
+	"ProcessControlEnums.h"
+
+1410071342 source:c:\users\zolphinus\documents\github\opsys\chopstick\pcb_node.cpp
+	"PCB_Node.h"
+	"ProcessControlBlock.h"
+	"ProcessControlEnums.h"
+	<exception>
+	<iostream>
+
+1410117276 source:c:\users\zolphinus\documents\github\opsys\chopstick\pcb_queue.cpp
+	"PCB_Queue.h"
+	"PCB_Node.h"
+	"ProcessControlBlock.h"
+	<iostream>
+
+1410127676 source:c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.cpp
+	"PCBController.h"
+	"ProcessControlBlock.h"
+	"ProcessControlEnums.h"
+	<iostream>
+
+1410123166 source:c:\users\zolphinus\documents\github\opsys\chopstick\processcontrolblock.cpp
+	"ProcessControlBlock.h"
+	"ProcessControlEnums.h"
+	<iostream>
+
+1410132362 c:\users\zolphinus\documents\github\opsys\chopstick\pcb_commands.h
+	"Command.h"
+	"DataStruct.h"
+	"Reciever.h"
+	<iostream>
 

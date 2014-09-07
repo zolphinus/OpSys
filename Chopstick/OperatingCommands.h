@@ -11,10 +11,23 @@ class Reciever;
 
 //When you create a command, be sure to assign a default keyword string to autopopulate help menu/bindings.
 
-class ExitCommand : public Command{
+class OperatingCommand : public Command{
+public:
+    OperatingCommand(Reciever* reciever)
+    : Command(reciever){
+    }
+
+    void execute(Global_Data& system_data) = 0;
+    void execute(PCB_Controller&){
+    }
+};
+
+
+
+class ExitCommand : public OperatingCommand{
 public:
     ExitCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "EXIT";
         keyWordInfo = " - Terminates the OS";
     }
@@ -25,10 +38,10 @@ public:
     }
 };
 
-class VersionInfoCommand : public Command{
+class VersionInfoCommand : public OperatingCommand{
 public:
     VersionInfoCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "VERSION";
         keyWordInfo = " - Displays current OS and Version number";
     }
@@ -40,10 +53,10 @@ public:
 };
 
 
-class AwaitCommand : public Command{
+class AwaitCommand : public OperatingCommand{
 public:
     AwaitCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "";
         keyWordInfo = "";
     }
@@ -54,10 +67,10 @@ public:
     }
 };
 
-class DisplayDirectoryCommand : public Command{
+class DisplayDirectoryCommand : public OperatingCommand{
 public:
     DisplayDirectoryCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "LIST";
         keyWordInfo = " - Lists all files in the current directory";
     }
@@ -68,10 +81,10 @@ public:
     }
 };
 
-class GetDateCommand : public Command{
+class GetDateCommand : public OperatingCommand{
 public:
     GetDateCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "GDATE";
         keyWordInfo = " - Gets the Current Date";
     }
@@ -82,10 +95,10 @@ public:
     }
 };
 
-class SetDateCommand : public Command{
+class SetDateCommand : public OperatingCommand{
 public:
     SetDateCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "SDATE";
         keyWordInfo = " - Sets the Current Date";
     }
@@ -96,10 +109,10 @@ public:
     }
 };
 
-class HelpCommand : public Command{
+class HelpCommand : public OperatingCommand{
 public:
     HelpCommand(Reciever* reciever)
-    : Command(reciever){
+    : OperatingCommand(reciever){
         keyWord = "HELP"; //cannot map help command
         keyWordInfo = " - Lists Keywords for Commands";
     }
