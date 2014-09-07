@@ -8,6 +8,7 @@ CommandManager::CommandManager(){
     commandError = false;
     commandLine = "";
     command = new AwaitCommand(operatingReciever);
+    currentCommandMode = SYSTEM_MODE;
 }
 
 CommandManager::~CommandManager(){
@@ -19,9 +20,10 @@ CommandManager::~CommandManager(){
 }
 
 
-void CommandManager::enterCommand(Global_Data& system_data){
+void CommandManager::enterCommand(Global_Data& system_data, PCB_Controller& pcbController){
     std::cout << std::endl << "Type a command and press enter. Type help for more options" << std::endl;
     std::cout << "Enter a command: ";
+    //possibly use cin.get to allow spacing for commands
     std::cin >> commandLine;
 
     commandError = parseCommand(commandLine, system_data);
@@ -31,40 +33,113 @@ void CommandManager::enterCommand(Global_Data& system_data){
                   << std::endl << std::endl;
     }
     else{
-        command->execute(system_data);
+            switch(currentCommandMode)
+            {
+            case SYSTEM_MODE :
+                command->execute(system_data);
+                break;
+            case PCB_MODE :
+                command->execute(pcbController);
+                break;
+            }
     }
 }
 
 bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_data){
     newCommand = stringToUpper(newCommand);
 
+    //as you add commands, be sure to change the current command mode to match the command issued
+
     if(newCommand == system_data.keywordList[EXIT]){
         command = system_data.commandList[EXIT];
+        currentCommandMode = SYSTEM_MODE;
         return false;
     }
     else if(newCommand == system_data.keywordList[DISPLAY_VERSION]){
         command = system_data.commandList[DISPLAY_VERSION];
+        currentCommandMode = SYSTEM_MODE;
         return false;
     }
     else if(newCommand == system_data.keywordList[LIST_DIR_CONTENTS]){
         command = system_data.commandList[LIST_DIR_CONTENTS];
+        currentCommandMode = SYSTEM_MODE;
         return false;
     }
     else if(newCommand == system_data.keywordList[GET_DATE])
     {
         command = system_data.commandList[GET_DATE];
+        currentCommandMode = SYSTEM_MODE;
         return false;
     }
     else if(newCommand == system_data.keywordList[SET_DATE]){
         command = system_data.commandList[SET_DATE];;
+        currentCommandMode = SYSTEM_MODE;
         return false;
     }
     else if(newCommand == system_data.keywordList[HELP]){
         command = system_data.commandList[HELP];
+        currentCommandMode = SYSTEM_MODE;
+        return false;
+    }
+    else if(newCommand == system_data.keywordList[CREATE_PCB]){
+
+        command = system_data.commandList[CREATE_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[DELETE_PCB]){
+
+        command = system_data.commandList[DELETE_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[BLOCK_PCB]){
+
+        command = system_data.commandList[BLOCK_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[UNBLOCK_PCB]){
+
+        command = system_data.commandList[UNBLOCK_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SUSPEND_PCB]){
+
+        command = system_data.commandList[SUSPEND_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[RESUME_PCB]){
+
+        command = system_data.commandList[RESUME_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SET_PRIORITY]){
+
+        command = system_data.commandList[SET_PRIORITY];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SHOW_PCB]){
+
+        command = system_data.commandList[SHOW_PCB];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SHOW_ALL]){
+
+        command = system_data.commandList[SHOW_ALL];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SHOW_READY]){
+
+        command = system_data.commandList[SHOW_READY];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[SHOW_BLOCKED]){
+
+        command = system_data.commandList[SHOW_BLOCKED];
+        currentCommandMode = PCB_MODE;
         return false;
     }
     else{
         command = system_data.commandList[AWAIT_INPUT];
+        currentCommandMode = SYSTEM_MODE;
         return true;
     }
 }
@@ -87,6 +162,19 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[GET_DATE] = new GetDateCommand(operatingReciever);
     system_data.commandList[SET_DATE] = new SetDateCommand(operatingReciever);
     system_data.commandList[EXIT] = new ExitCommand(operatingReciever);
+
+    //Add PCB commands to list of commands
+    system_data.commandList[CREATE_PCB] = new CreateCommand(operatingReciever);
+    system_data.commandList[DELETE_PCB] = new DeleteCommand(operatingReciever);
+    system_data.commandList[BLOCK_PCB] = new BlockCommand(operatingReciever);
+    system_data.commandList[UNBLOCK_PCB] = new UnblockCommand(operatingReciever);
+    system_data.commandList[SUSPEND_PCB] = new SuspendCommand(operatingReciever);
+    system_data.commandList[RESUME_PCB] = new ResumeCommand(operatingReciever);
+    system_data.commandList[SET_PRIORITY] = new SetPriorityCommand(operatingReciever);
+    system_data.commandList[SHOW_PCB] = new ShowPCBCommand(operatingReciever);
+    system_data.commandList[SHOW_ALL] = new ShowAllCommand(operatingReciever);
+    system_data.commandList[SHOW_READY] = new ShowReadyCommand(operatingReciever);
+    system_data.commandList[SHOW_BLOCKED] = new ShowBlockedCommand(operatingReciever);
 
     if(readFile.is_open())
     {

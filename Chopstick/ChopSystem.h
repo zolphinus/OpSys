@@ -2,6 +2,7 @@
 #define CHOPSTICK_SYSTEM
 #include "DataStruct.h"
 #include "CommandManager.h"
+#include "PCBController.h"
 #include <time.h>
 
 class ChopSystem{
@@ -13,6 +14,7 @@ public:
 private:
     Global_Data system_data;
     CommandManager commandManager;
+    PCB_Controller pcbController;
     time_t tempTime;
 
     void initializeData();

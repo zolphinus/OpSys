@@ -29,8 +29,9 @@ ChopSystem::~ChopSystem()
 
 void ChopSystem::runOS(){
     welcomeScreen();
+
     while(this->isRunning() == true){
-            commandManager.enterCommand(system_data);
+            commandManager.enterCommand(system_data, pcbController);
     }
 }
 

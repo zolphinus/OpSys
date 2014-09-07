@@ -44,6 +44,16 @@
 		<Unit filename="OperatingCommands.h" />
 		<Unit filename="OperatingReciever.cpp" />
 		<Unit filename="OperatingReciever.h" />
+		<Unit filename="PCBController.cpp" />
+		<Unit filename="PCBController.h" />
+		<Unit filename="PCB_Commands.h" />
+		<Unit filename="PCB_Node.cpp" />
+		<Unit filename="PCB_Node.h" />
+		<Unit filename="PCB_Queue.cpp" />
+		<Unit filename="PCB_Queue.h" />
+		<Unit filename="ProcessControlBlock.cpp" />
+		<Unit filename="ProcessControlBlock.h" />
+		<Unit filename="ProcessControlEnums.h" />
 		<Unit filename="Reciever.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

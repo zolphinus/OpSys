@@ -44,6 +44,36 @@ void OperatingReciever::performAction(Global_Data& system_data)
 
 }
 
+void OperatingReciever::performAction(PCB_Controller& pcbController){
+
+    //User Commands to operate the pcbController are handled here
+
+    if(currentAction == CREATE_PCB){
+        pcbController.createPCB();
+    }else if(currentAction == DELETE_PCB){
+        pcbController.deletePCB();
+    }else if(currentAction == BLOCK_PCB){
+        pcbController.blockPCB();
+    }else if(currentAction == UNBLOCK_PCB){
+        pcbController.unblockPCB();
+    }else if(currentAction == SUSPEND_PCB){
+        pcbController.suspendPCB();
+    }else if(currentAction == RESUME_PCB){
+        pcbController.resumePCB();
+    }else if(currentAction == SET_PRIORITY){
+        pcbController.setPriority();
+    }else if(currentAction == SHOW_PCB){
+        pcbController.showPCB();
+    }else if(currentAction == SHOW_ALL){
+        pcbController.showAllPCB();
+    }else if(currentAction == SHOW_READY){
+        pcbController.showReady();
+    }else if(currentAction == SHOW_BLOCKED){
+        pcbController.showBlocked();
+    }
+
+}
+
 
 void OperatingReciever::printInformation(std::vector <std::string>& currentData){
     int lineCounter = 0;
