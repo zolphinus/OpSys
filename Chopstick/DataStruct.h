@@ -7,7 +7,8 @@ class Command;
 
 enum ACTION_LIST
 {
-    //These commands need to be in this order for algorithms.
+    //These commands need to stay in this order because their help/names are locked
+    //and the for loops to populate these start with DISPLAY_VERSION
     AWAIT_INPUT,
     HELP,
 
@@ -18,7 +19,7 @@ enum ACTION_LIST
     SET_DATE,
     EXIT,
 
-    //Leave last for algorithms
+    //Leave last for command initialization
     TOTAL_COMMANDS
 };
 
