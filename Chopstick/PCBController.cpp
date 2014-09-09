@@ -371,7 +371,7 @@ void PCB_Controller::setPriority(){
 
         while(std::cin.fail() == true){
                 std::cin.clear();
-                std::cin.ignore(100, '\n');
+                //std::cin.ignore(100, '\n');
             std::cout <<  std::endl <<"Invalid value. Enter Priority : ";
             std::cin >> tempPriority;
         }

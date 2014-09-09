@@ -110,7 +110,7 @@ class SetPriorityCommand : public PCBCommand{
 public:
     SetPriorityCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW PRIORITY";
+        keyWord = "SET PRIORITY";
         keyWordInfo = " - Sets the priority of a Process Control Block";
     }
 
