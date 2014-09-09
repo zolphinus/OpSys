@@ -23,8 +23,10 @@ CommandManager::~CommandManager(){
 void CommandManager::enterCommand(Global_Data& system_data, PCB_Controller& pcbController){
     std::cout << std::endl << "Type a command and press enter. Type help for more options" << std::endl;
     std::cout << "Enter a command: ";
-    //possibly use cin.get to allow spacing for commands
-    std::cin >> commandLine;
+
+
+    std::getline(std::cin, commandLine);
+    std::cin.clear();
 
     commandError = parseCommand(commandLine, system_data);
 
@@ -42,6 +44,9 @@ void CommandManager::enterCommand(Global_Data& system_data, PCB_Controller& pcbC
                 command->execute(pcbController);
                 break;
             }
+        std::cin.ignore();
+        std::cin.clear();
+
     }
 }
 

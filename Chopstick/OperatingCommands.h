@@ -85,7 +85,7 @@ class GetDateCommand : public OperatingCommand{
 public:
     GetDateCommand(Reciever* reciever)
     : OperatingCommand(reciever){
-        keyWord = "GDATE";
+        keyWord = "GET DATE";
         keyWordInfo = " - Gets the Current Date";
     }
 
@@ -99,7 +99,7 @@ class SetDateCommand : public OperatingCommand{
 public:
     SetDateCommand(Reciever* reciever)
     : OperatingCommand(reciever){
-        keyWord = "SDATE";
+        keyWord = "SET DATE";
         keyWordInfo = " - Sets the Current Date";
     }
 

@@ -19,7 +19,6 @@ void OperatingReciever::performAction(Global_Data& system_data)
         std::cout << std::endl << "Do you wish to exit? (Y/N) : ";
         std::cin >> tempChar;
         tempChar = toupper(tempChar);
-        std::cin.ignore();
         if(tempChar == 'Y')
         {
             std::cout << "Now exiting..." << std::endl << std::endl;

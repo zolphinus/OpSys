@@ -26,7 +26,7 @@ class CreateCommand : public PCBCommand{
 public:
     CreateCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "CREATE";
+        keyWord = "CREATE PCB";
         keyWordInfo = " - Creates a Process Control Block";
     }
 
@@ -40,7 +40,7 @@ class DeleteCommand : public PCBCommand{
 public:
     DeleteCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "DELETE";
+        keyWord = "DELETE PCB";
         keyWordInfo = " - Deletes a Process Control Block";
     }
 
@@ -54,7 +54,7 @@ class BlockCommand : public PCBCommand{
 public:
     BlockCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "BLOCK";
+        keyWord = "BLOCK PCB";
         keyWordInfo = " - Blocks a Process Control Block";
     }
 
@@ -68,7 +68,7 @@ class UnblockCommand : public PCBCommand{
 public:
     UnblockCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "UNBLOCK";
+        keyWord = "UNBLOCK PCB";
         keyWordInfo = " - Unblocks a Process Control Block";
     }
 
@@ -82,7 +82,7 @@ class SuspendCommand : public PCBCommand{
 public:
     SuspendCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SUSPEND";
+        keyWord = "SUSPEND PCB";
         keyWordInfo = " - Suspend a Process Control Block";
     }
 
@@ -96,7 +96,7 @@ class ResumeCommand : public PCBCommand{
 public:
     ResumeCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "RESUME";
+        keyWord = "RESUME PCB";
         keyWordInfo = " - Resumes a Process Control Block";
     }
 
@@ -110,7 +110,7 @@ class SetPriorityCommand : public PCBCommand{
 public:
     SetPriorityCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-PRIORITY";
+        keyWord = "SHOW PRIORITY";
         keyWordInfo = " - Sets the priority of a Process Control Block";
     }
 
@@ -124,7 +124,7 @@ class ShowPCBCommand : public PCBCommand{
 public:
     ShowPCBCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-PCB";
+        keyWord = "SHOW PCB";
         keyWordInfo = " - Shows a Process Control Block";
     }
 
@@ -138,7 +138,7 @@ class ShowAllCommand : public PCBCommand{
 public:
     ShowAllCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-ALL";
+        keyWord = "SHOW ALL";
         keyWordInfo = " - Shows all PCBs";
     }
 
@@ -152,7 +152,7 @@ class ShowReadyCommand : public PCBCommand{
 public:
     ShowReadyCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-READY";
+        keyWord = "SHOW READY";
         keyWordInfo = " - Shows all ready PCBs";
     }
 
@@ -166,7 +166,7 @@ class ShowBlockedCommand : public PCBCommand{
 public:
     ShowBlockedCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-BLOCKED";
+        keyWord = "SHOW BLOCKED";
         keyWordInfo = " - Shows all blocked PCBs";
     }
 
