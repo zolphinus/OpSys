@@ -86,7 +86,9 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         currentCommandMode = SYSTEM_MODE;
         return false;
     }
-    else if(newCommand == system_data.keywordList[CREATE_PCB]){
+    else
+
+        /*if(newCommand == system_data.keywordList[CREATE_PCB]){
 
         command = system_data.commandList[CREATE_PCB];
         currentCommandMode = PCB_MODE;
@@ -106,7 +108,8 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         command = system_data.commandList[UNBLOCK_PCB];
         currentCommandMode = PCB_MODE;
         return false;
-    }else if(newCommand == system_data.keywordList[SUSPEND_PCB]){
+    }else */
+    if(newCommand == system_data.keywordList[SUSPEND_PCB]){
 
         command = system_data.commandList[SUSPEND_PCB];
         currentCommandMode = PCB_MODE;
