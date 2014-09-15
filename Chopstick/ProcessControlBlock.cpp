@@ -4,6 +4,9 @@
 
 ProcessControlBlock::ProcessControlBlock(){
     memory = 0;
+    timeRemaining = 0;
+    timeOfArrival = 0;
+    percentOfCPU = 0;
 }
 
 std::string ProcessControlBlock::getProcessName(){
@@ -186,5 +189,33 @@ void ProcessControlBlock::testControlBlock(){
 
 
     printControlInfo(FULL_PRINT);
+}
+
+void ProcessControlBlock::setMemory(int newMemory){
+    memory = newMemory;
+}
+
+void ProcessControlBlock::setTimeRemaining(int newTimeRemaining){
+    timeRemaining = newTimeRemaining;
+}
+
+void ProcessControlBlock::setTimeOfArrival(int newTimeOfArrival){
+    timeOfArrival = newTimeOfArrival;
+}
+
+void ProcessControlBlock::setPercentOfCPU(int newPercent){
+    percentOfCPU = newPercent;
+}
+
+int ProcessControlBlock::getTimeRemaining(){
+    return timeRemaining;
+}
+
+int ProcessControlBlock::getTimeOfArrival(){
+    return timeOfArrival;
+}
+
+int ProcessControlBlock::getPercentOfCPU(){
+    return percentOfCPU;
 }
 

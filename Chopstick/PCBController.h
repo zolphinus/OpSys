@@ -3,6 +3,7 @@
 
 #include "PCB_Queue.h"
 #include <string>
+#include <istream>
 
 class ProcessControlBlock;
 
@@ -23,6 +24,7 @@ public:
     void showAllPCB();
     void showReady();
     void showBlocked();
+    ProcessControlBlock* readPCBFile(std::istream& in);
 
 private:
     PCB_Queue readyQueue;

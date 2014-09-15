@@ -70,7 +70,7 @@
 	<time.h>
 	<stdio.h>
 
-1410279525 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
+1410563035 source:c:\users\zolphinus\documents\github\opsys\chopstick\commandmanager.cpp
 	"CommandManager.h"
 	<fstream>
 
@@ -93,9 +93,10 @@
 1409692410 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
 	"Command.h"
 
-1410133490 c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.h
+1410735653 c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.h
 	"PCB_Queue.h"
 	<string>
+	<istream>
 
 1410133490 c:\users\zolphinus\documents\github\opsys\chopstick\pcb_queue.h
 	<string>

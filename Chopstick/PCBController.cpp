@@ -2,6 +2,7 @@
 #include "ProcessControlBlock.h"
 #include "ProcessControlEnums.h"
 #include <iostream>
+#include <istream>
 
 PCB_Controller::PCB_Controller(){
 }
@@ -479,4 +480,50 @@ void PCB_Controller::testController(){
     }
 
     showAllPCB();
+}
+
+//call this function from within schedulers. Requires you to open/close the file
+//but should allow you to read PCBs in a suitable form
+ProcessControlBlock* PCB_Controller::readPCBFile(std::istream& in){
+    ProcessControlBlock* tempPCB = AllocatePCB();
+    std::string getName;
+    char getClass;
+    int getValue;
+    ProcessClass processClass;
+
+    if(tempPCB != NULL)
+    {
+        //Will grab the process name, class, and priority and setup before handling other fields
+        in >> getName;
+        in >> getClass;
+        in >> getValue;
+        if(getClass == 'A'){
+            processClass = APPLICATION;
+        }
+        if(getClass == 'B'){
+            processClass = SYSTEM;
+        }
+        tempPCB->setupPCB(getName, getValue, processClass);
+
+        //grabs and sets memory
+        in >> getValue;
+        tempPCB->setMemory(getValue);
+
+        //grabs and sets time remaining
+        in >> getValue;
+        tempPCB->setTimeRemaining(getValue);
+
+        //grabs and sets time on arrival
+        in >> getValue;
+        tempPCB->setTimeOfArrival(getValue);
+
+        //grabs and sets cpu %
+        in >> getValue;
+        tempPCB->setPercentOfCPU(getValue);
+
+
+
+
+    }
+    return tempPCB;
 }
