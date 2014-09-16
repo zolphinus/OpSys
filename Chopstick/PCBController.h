@@ -13,6 +13,8 @@ public:
     ~PCB_Controller();
 
     void testController();
+    void testFileRead();
+
     void createPCB();
     void deletePCB();
     void blockPCB();
@@ -24,7 +26,7 @@ public:
     void showAllPCB();
     void showReady();
     void showBlocked();
-    ProcessControlBlock* readPCBFile(std::istream& in);
+    ProcessControlBlock* readPCBFile(std::ifstream& in);
 
 private:
     PCB_Queue readyQueue;

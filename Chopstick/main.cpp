@@ -10,12 +10,15 @@ void testPCB();
 void testNode();
 void testQueue();
 void testController();
-
+void testPCBFile();
 
 int main(){
-    ChopSystem Chopsticks;
 
+    /*
+    ChopSystem Chopsticks;
     Chopsticks.runOS();
+    */
+
     return 0;
 }
 
@@ -40,4 +43,10 @@ void testQueue(){
 void testController(){
     PCB_Controller testController;
     testController.testController();
+}
+
+
+void testPCBFile(){
+    PCB_Controller testController;
+    testController.testFileRead();
 }

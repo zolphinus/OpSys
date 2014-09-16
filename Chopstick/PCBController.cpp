@@ -2,7 +2,7 @@
 #include "ProcessControlBlock.h"
 #include "ProcessControlEnums.h"
 #include <iostream>
-#include <istream>
+#include <fstream>
 
 PCB_Controller::PCB_Controller(){
 }
@@ -482,9 +482,35 @@ void PCB_Controller::testController(){
     showAllPCB();
 }
 
+void PCB_Controller::testFileRead(){
+    std::ifstream in;
+    in.open("processes.txt");
+
+    ProcessControlBlock* testPCB = NULL;
+    if(in.is_open()){
+        std::cout << "OPEN" << std::endl;
+        testPCB = readPCBFile(in);
+
+        if(testPCB == NULL)
+        {
+            std::cout << "NULL" << std::endl;
+        }
+        else{
+            std::cout << testPCB->getProcessName() << std::endl;
+
+            testPCB = readPCBFile(in);
+            std::cout << testPCB->getProcessName() << std::endl;
+
+        }
+
+        in.close();
+    }else
+       std::cout << "NOT OPEN" << std::endl;
+}
+
 //call this function from within schedulers. Requires you to open/close the file
 //but should allow you to read PCBs in a suitable form
-ProcessControlBlock* PCB_Controller::readPCBFile(std::istream& in){
+ProcessControlBlock* PCB_Controller::readPCBFile(std::ifstream& in){
     ProcessControlBlock* tempPCB = AllocatePCB();
     std::string getName;
     char getClass;
@@ -520,9 +546,6 @@ ProcessControlBlock* PCB_Controller::readPCBFile(std::istream& in){
         //grabs and sets cpu %
         in >> getValue;
         tempPCB->setPercentOfCPU(getValue);
-
-
-
 
     }
     return tempPCB;

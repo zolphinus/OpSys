@@ -1,5 +1,5 @@
-TestProcess A 10 128 500 15 20
-TestProcess S 14 256 550 18 20
-TestProcess A 28 128 600 20 15
-TestProcess S 24  64 650 21 15
-TestProcess A 30 128 700 25 30
+Carrot A 10 128 500 15 20
+Bacon S 14 256 550 18 20
+Salad A 28 128 600 20 15
+Monkey S 24  64 650 21 15
+Cake A 30 128 700 25 30
