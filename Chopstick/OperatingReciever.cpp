@@ -69,6 +69,10 @@ void OperatingReciever::performAction(PCB_Controller& pcbController){
         pcbController.showReady();
     }else if(currentAction == SHOW_BLOCKED){
         pcbController.showBlocked();
+    }else if(currentAction == SHORTEST_JOB_FULL_KNOWLEDGE){
+        pcbController.shortestJobFirst();
+        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+        printInformation(pcbController.getProcessNames());
     }
 
 }

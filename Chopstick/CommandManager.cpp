@@ -145,7 +145,12 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         currentCommandMode = PCB_MODE;
         return false;
     }
-    else{
+    else if(newCommand == system_data.keywordList[SHORTEST_JOB_FULL_KNOWLEDGE]){
+
+        command = system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else{
         command = system_data.commandList[AWAIT_INPUT];
         currentCommandMode = SYSTEM_MODE;
         return true;
@@ -183,6 +188,7 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[SHOW_ALL] = new ShowAllCommand(operatingReciever);
     system_data.commandList[SHOW_READY] = new ShowReadyCommand(operatingReciever);
     system_data.commandList[SHOW_BLOCKED] = new ShowBlockedCommand(operatingReciever);
+    system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE] = new ShortestJobFullCommand(operatingReciever);
 
     if(readFile.is_open())
     {

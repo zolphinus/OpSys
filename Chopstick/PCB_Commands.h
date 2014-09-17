@@ -176,5 +176,19 @@ public:
     }
 };
 
+class ShortestJobFullCommand : public PCBCommand{
+public:
+    ShortestJobFullCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "SJF";
+        keyWordInfo = " - shortest job first scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(SHORTEST_JOB_FULL_KNOWLEDGE);
+        myReciever->performAction(pcbController);
+    }
+};
+
 
 #endif // PCB_COMMANDS

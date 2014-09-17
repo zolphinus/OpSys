@@ -28,7 +28,7 @@ enum ACTION_LIST
     SHOW_ALL,
     SHOW_READY,
     SHOW_BLOCKED,
-
+    SHORTEST_JOB_FULL_KNOWLEDGE,
     //Leave last for algorithms
     TOTAL_COMMANDS
 };
