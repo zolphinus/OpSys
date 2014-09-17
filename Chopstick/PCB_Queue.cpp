@@ -2,10 +2,12 @@
 #include "PCB_Node.h"
 #include "ProcessControlBlock.h"
 #include <iostream>
+#include <limits.h>
 
 PCB_Queue::PCB_Queue(){
     head = NULL;
     tail = NULL;
+    numberOfNodes = 0;
 }
 
 PCB_Queue::~PCB_Queue(){
@@ -39,6 +41,7 @@ void PCB_Queue::insertNode(ProcessControlBlock* PCB){
         head->setPrior(NULL);
         head->setNext(NULL);
         tail = head;
+        numberOfNodes++;
     }
     else{
         iterateNode = head;
@@ -55,6 +58,7 @@ void PCB_Queue::insertNode(ProcessControlBlock* PCB){
         nodeToInsert->setNext(NULL);
 
         tail = nodeToInsert;
+        numberOfNodes++;
     }
 }
 
@@ -62,6 +66,7 @@ ProcessControlBlock* PCB_Queue::popNode(){
 
     PCB_Node* tempNode = NULL;
     ProcessControlBlock* tempPCB = NULL;
+
     if(head != NULL)
     {
         tempNode = head;
@@ -69,18 +74,22 @@ ProcessControlBlock* PCB_Queue::popNode(){
         {
             head = head->getNext();
             head->setPrior(NULL);
+            numberOfNodes--;
         }
         else{
             head = NULL;
             tail = head;
+            numberOfNodes--;
         }
         tempPCB = tempNode->getPCB();
         delete tempNode;
         tempNode = NULL;
         return tempPCB;
+        numberOfNodes--;
     }
-    else
+    else{
         return NULL;
+    }
 }
 
 
@@ -102,6 +111,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                         tempNode = tempNode->getNext();
                         tempNode->setPrior(placeholder->getPrior());
                         delete placeholder;
+                        numberOfNodes--;
 
                         head = tempNode;
 
@@ -120,6 +130,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                                 //sets the next node to point to the last known not removed
                                 tempNode->getNext()->setPrior(placeholder);
                                 delete tempNode;
+                                numberOfNodes--;
 
                                 //exits the loop if found
                                 tempNode = NULL;
@@ -130,6 +141,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                                 placeholder->setNext(NULL);
                                 tail = placeholder;
                                 delete tempNode;
+                                numberOfNodes--;
                                 tempNode = NULL;
 
                                 PCBisFound = true;
@@ -154,6 +166,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                 delete head;
                 head = NULL;
                 tail = head;
+                numberOfNodes--;
             }
         }
     }
@@ -240,4 +253,38 @@ void PCB_Queue::printQueueContents(){
         }
         tempNode->printPCBInfo(PARTIAL_PRINT);
     }
+}
+
+bool PCB_Queue::isEmpty(){
+    if(numberOfNodes == 0)
+        return true;
+    else
+        return false;
+}
+
+
+ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
+    int lowestTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* lowestRemaining = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeRemaining() < lowestTime){
+                lowestTime = tempNode->getPCB()->getTimeRemaining();
+                lowestRemaining = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return lowestRemaining->getPCB();
+    }
+
+    return NULL;
+}
+
+
+int PCB_Queue::getNumNodes(){
+    return numberOfNodes;
 }

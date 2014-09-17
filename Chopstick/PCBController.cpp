@@ -508,6 +508,74 @@ void PCB_Controller::testFileRead(){
        std::cout << "NOT OPEN" << std::endl;
 }
 
+void PCB_Controller::shortestJobFirst(){
+    std::ifstream in;
+    std::string findFile;
+    ProcessControlBlock* tempPCB = NULL;
+    PCB_Queue tempQueue;
+
+    std::cout << "Please enter a process file to load : ";
+    std::cin >> findFile;
+
+    in.open(findFile.c_str());
+
+    if(in.is_open()){
+        while(!in.eof()){
+            tempPCB = readPCBFile(in);
+            if(in.eof()){
+                break;
+            }
+
+            if(tempPCB != NULL){
+                //logic on how to handle the PCBs read in
+                tempQueue.insertNode(tempPCB);
+            }
+
+        }
+        tempPCB = NULL;
+
+        while(tempQueue.isEmpty() != true){
+            tempPCB = tempQueue.getLowestTimeRemaining();
+            //move PCBs to the ready queue in time remaining order
+            if(tempPCB != NULL){
+
+                tempQueue.removePCB(tempPCB);
+                readyQueue.insertNode(tempPCB);
+            }
+            tempPCB = NULL;
+        }
+        in.close();
+
+        //prints the ready queue
+        readyQueue.printQueueContents();
+
+
+        //reset processName vector to size zero
+        processNames.resize(0);
+
+        //record names as you pop, and the command controller should list these names in order ran
+
+        while(!readyQueue.isEmpty()){
+            //represents pushing to running, but this is where you would handle running processes
+            tempPCB = readyQueue.popNode();
+            if(tempPCB != NULL){
+                processNames.push_back(tempPCB->getProcessName());
+            }
+            //readies
+
+
+        }
+
+
+    }else
+       std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+}
+
+std::vector<std::string>& PCB_Controller::getProcessNames(){
+    return processNames;
+}
+
+
 //call this function from within schedulers. Requires you to open/close the file
 //but should allow you to read PCBs in a suitable form
 ProcessControlBlock* PCB_Controller::readPCBFile(std::ifstream& in){

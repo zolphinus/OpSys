@@ -13,11 +13,15 @@ public:
     ~PCB_Queue();
 
     void insertNode(ProcessControlBlock*);
+
     ProcessControlBlock* popNode();
+    ProcessControlBlock* getLowestTimeRemaining();
 
     bool removePCB(ProcessControlBlock* PCB);
     void testQueue();
     void printQueueContents();
+    bool isEmpty();
+    int getNumNodes();
     ProcessControlBlock* FindPCB(std::string);
 
 private:

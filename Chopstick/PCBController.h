@@ -4,6 +4,7 @@
 #include "PCB_Queue.h"
 #include <string>
 #include <istream>
+#include <vector>
 
 class ProcessControlBlock;
 
@@ -27,12 +28,16 @@ public:
     void showReady();
     void showBlocked();
     ProcessControlBlock* readPCBFile(std::ifstream& in);
+    std::vector<std::string>& getProcessNames();
+
+    void shortestJobFirst();
 
 private:
     PCB_Queue readyQueue;
     PCB_Queue suspendedReadyQueue;
     PCB_Queue blockedQueue;
     PCB_Queue suspendedBlockedQueue;
+    std::vector<std::string> processNames;
 
     ProcessControlBlock* AllocatePCB();
     ProcessControlBlock* FindPCB(std::string);
@@ -40,8 +45,6 @@ private:
 
     void removePCB(ProcessControlBlock* PCB);
     void freePCB(ProcessControlBlock* PCB);
-
-
 
 };
 

@@ -14,10 +14,11 @@ void testPCBFile();
 
 int main(){
 
-    /*
+    //testPCBFile();
+
     ChopSystem Chopsticks;
     Chopsticks.runOS();
-    */
+
 
     return 0;
 }
@@ -48,5 +49,6 @@ void testController(){
 
 void testPCBFile(){
     PCB_Controller testController;
-    testController.testFileRead();
+    //testController.testFileRead();
+    testController.shortestJobFirst();
 }
