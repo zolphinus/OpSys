@@ -239,11 +239,16 @@ ProcessControlBlock* PCB_Queue::FindPCB(std::string processToFind){
     return NULL;
 }
 
-
+//add print mode as parameter
 void PCB_Queue::printQueueContents(){
     PCB_Node* tempNode;
 
-    std::cout << "Name/State/Priority" << std::endl;
+
+    //Setup if statements based on printMode
+
+    std::cout << std::endl << "Name/State/Priority" << std::endl;
+
+    //scroll array, but using the print mode instead of a set print
     if(head != NULL)
     {
         tempNode = head;

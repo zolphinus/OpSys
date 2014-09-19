@@ -8,6 +8,7 @@ enum ProcessClass{
 
 enum PrintMode{
     PARTIAL_PRINT,
+    TIME_REMAINING,
     FULL_PRINT
 };
 

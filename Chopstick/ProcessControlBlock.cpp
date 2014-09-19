@@ -88,7 +88,7 @@ void ProcessControlBlock::printControlInfo(PrintMode printMode){
         std::cout << "Priority : " << priority << std::endl;
         std::cout << "Memory : " << memory << std::endl << std::endl;
     }
-    else{
+    else if(printMode == PARTIAL_PRINT){
         std::cout << processName << " ";
 
         switch(runState)
@@ -113,6 +113,9 @@ void ProcessControlBlock::printControlInfo(PrintMode printMode){
         }
 
         std::cout << priority << std::endl;
+    } else if (printMode == TIME_REMAINING){
+        std::cout << processName << "   Time Remaining: ";
+        std::cout << timeRemaining << std::endl;
     }
 
 }
