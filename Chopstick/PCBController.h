@@ -30,13 +30,25 @@ public:
     ProcessControlBlock* readPCBFile(std::ifstream& in);
     std::vector<std::string>& getProcessNames();
 
+    int getCompletionTime();
+    int getTotalTurnAround();
+    int getCompletedPCBs();
     void shortestJobFirst();
+
 
 private:
     PCB_Queue readyQueue;
     PCB_Queue suspendedReadyQueue;
     PCB_Queue blockedQueue;
     PCB_Queue suspendedBlockedQueue;
+    PCB_Queue runningQueue;
+    int totalTimeToCompletion;
+    int totalTurnAroundTime;
+    int totalCompletedPCBs;
+    int executionTime;
+    int turnAroundTime;
+
+
     std::vector<std::string> processNames;
 
     ProcessControlBlock* AllocatePCB();

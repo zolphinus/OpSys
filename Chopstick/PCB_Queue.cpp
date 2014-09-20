@@ -195,25 +195,25 @@ void PCB_Queue::testQueue(){
     insertNode(tempFour);
     insertNode(tempFive);
 
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempThree);
 
     std::cout << std::endl << "Removing test 3 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempOne);
 
     std::cout << std::endl << "Removing test 1 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempFive);
 
     std::cout << std::endl << "Removing test 5 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     tempOne = NULL;
     tempTwo = NULL;
@@ -240,23 +240,29 @@ ProcessControlBlock* PCB_Queue::FindPCB(std::string processToFind){
 }
 
 //add print mode as parameter
-void PCB_Queue::printQueueContents(){
+void PCB_Queue::printQueueContents(PrintMode printMode){
     PCB_Node* tempNode;
 
 
     //Setup if statements based on printMode
 
-    std::cout << std::endl << "Name/State/Priority" << std::endl;
+    if(printMode == PARTIAL_PRINT){
+        std::cout << std::endl << "Name/State/Priority" << std::endl;
+    }
+    if(printMode == TIME_REMAINING){
+        std::cout << std::endl << "Name/Time Remaining" << std::endl;
+    }
 
     //scroll array, but using the print mode instead of a set print
     if(head != NULL)
     {
         tempNode = head;
         while(tempNode != tail){
-            tempNode->printPCBInfo(PARTIAL_PRINT);
+            tempNode->printPCBInfo(printMode);
             tempNode = tempNode->getNext();
         }
-        tempNode->printPCBInfo(PARTIAL_PRINT);
+        //prints tail
+        tempNode->printPCBInfo(printMode);
     }
 }
 
@@ -287,6 +293,18 @@ ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
     }
 
     return NULL;
+}
+
+bool PCB_Queue::runUntilComplete(){
+    if(head != NULL){
+        head->getPCB()->run();
+    }
+
+    if(head->getPCB()->getTimeRemaining() == 0){
+        return true;
+    }
+
+    return false;
 }
 
 

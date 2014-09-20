@@ -222,3 +222,8 @@ int ProcessControlBlock::getPercentOfCPU(){
     return percentOfCPU;
 }
 
+void ProcessControlBlock::run(){
+    if(timeRemaining > 0){
+        timeRemaining--;
+    }
+}

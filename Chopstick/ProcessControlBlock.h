@@ -28,6 +28,7 @@ public:
 
 
     void testControlBlock();
+    void run();
 
 private:
     std::string processName;

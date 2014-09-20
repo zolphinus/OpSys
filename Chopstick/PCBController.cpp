@@ -410,33 +410,33 @@ void PCB_Controller::showPCB(){
 
 void PCB_Controller::showAllPCB(){
     std::cout << std::endl << "Ready" << std::endl << std::endl;
-    readyQueue.printQueueContents();
+    readyQueue.printQueueContents(PARTIAL_PRINT);
 
     std::cout << std::endl << "Suspended Ready" << std::endl << std::endl;
-    suspendedReadyQueue.printQueueContents();
+    suspendedReadyQueue.printQueueContents(PARTIAL_PRINT);
 
     std::cout << std::endl << "Blocked" << std::endl << std::endl;
-    blockedQueue.printQueueContents();
+    blockedQueue.printQueueContents(PARTIAL_PRINT);
 
     std::cout << std::endl << "Suspended Blocked" << std::endl << std::endl;
-    suspendedBlockedQueue.printQueueContents();
+    suspendedBlockedQueue.printQueueContents(PARTIAL_PRINT);
 }
 
 void PCB_Controller::showReady(){
     std::cout << std::endl << "Ready" << std::endl << std::endl;
-    readyQueue.printQueueContents();
+    readyQueue.printQueueContents(PARTIAL_PRINT);
 
     std::cout << std::endl << "Suspended Ready" << std::endl << std::endl;
-    suspendedReadyQueue.printQueueContents();
+    suspendedReadyQueue.printQueueContents(PARTIAL_PRINT);
 }
 
 void PCB_Controller::showBlocked(){
 
     std::cout << std::endl << "Blocked" << std::endl << std::endl;
-    blockedQueue.printQueueContents();
+    blockedQueue.printQueueContents(PARTIAL_PRINT);
 
     std::cout << std::endl << "Suspended Blocked" << std::endl << std::endl;
-    suspendedBlockedQueue.printQueueContents();
+    suspendedBlockedQueue.printQueueContents(PARTIAL_PRINT);
 }
 
 void PCB_Controller::testController(){
@@ -513,6 +513,11 @@ void PCB_Controller::shortestJobFirst(){
     std::string findFile;
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
+    bool processCompleted = true;
+    totalTimeToCompletion = 0;
+    totalTurnAroundTime = 0;
+    totalCompletedPCBs = 0;
+    executionTime = 0;
 
     std::cout << "Please enter a process file to load : ";
     std::cin >> findFile;
@@ -547,7 +552,7 @@ void PCB_Controller::shortestJobFirst(){
         in.close();
 
         //prints the ready queue
-        readyQueue.printQueueContents();
+        readyQueue.printQueueContents(TIME_REMAINING);
 
 
         //reset processName vector to size zero
@@ -559,14 +564,28 @@ void PCB_Controller::shortestJobFirst(){
             //represents pushing to running, but this is where you would handle running processes
             tempPCB = readyQueue.popNode();
             if(tempPCB != NULL){
-                processNames.push_back(tempPCB->getProcessName());
+                //grabs and totals time until completion
+                tempPCB->setRunState(RUNNING);
+                runningQueue.insertNode(tempPCB);
+
+
+                while(!runningQueue.isEmpty()){
+                    totalTimeToCompletion++;
+                    processCompleted = runningQueue.runUntilComplete();
+
+                    if(processCompleted == true){
+                        tempPCB = runningQueue.popNode();
+                        processNames.push_back(tempPCB->getProcessName());
+                        totalCompletedPCBs++;
+                    }
+
+                }
+
             }
-            //readies
-
-
         }
 
-
+            //in full knowledge SJF Scheduler, totalCompletionTime will equal totalTurnAround time
+            totalTurnAroundTime = totalTimeToCompletion;
     }else
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
 }
@@ -614,7 +633,19 @@ ProcessControlBlock* PCB_Controller::readPCBFile(std::ifstream& in){
         //grabs and sets cpu %
         in >> getValue;
         tempPCB->setPercentOfCPU(getValue);
-
+        tempPCB->setRunState(READY);
     }
     return tempPCB;
+}
+
+int PCB_Controller::getCompletedPCBs(){
+    return totalCompletedPCBs;
+}
+
+int PCB_Controller::getCompletionTime(){
+    return totalTimeToCompletion;
+}
+
+int PCB_Controller::getTotalTurnAround(){
+    return totalTurnAroundTime;
 }

@@ -2,7 +2,7 @@
 #define PCB_QUEUE
 
 #include <string>
-
+#include "ProcessControlEnums.h"
 
 class PCB_Node;
 class ProcessControlBlock;
@@ -19,15 +19,20 @@ public:
 
     bool removePCB(ProcessControlBlock* PCB);
     void testQueue();
-    void printQueueContents();
+    void printQueueContents(PrintMode);
     bool isEmpty();
     int getNumNodes();
+    bool runUntilComplete();
+
+
     ProcessControlBlock* FindPCB(std::string);
+
 
 private:
     PCB_Node* head;
     PCB_Node* tail;
     int numberOfNodes;
+
 };
 
 #endif // PCB_QUEUE
