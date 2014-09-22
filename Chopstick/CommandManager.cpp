@@ -150,6 +150,18 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         command = system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE];
         currentCommandMode = PCB_MODE;
         return false;
+    }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_FIFO]){
+
+        command = system_data.commandList[INCOMPLETE_FIFO];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_SJF]){
+
+        command = system_data.commandList[INCOMPLETE_SJF];
+        currentCommandMode = PCB_MODE;
+        return false;
     }else{
         command = system_data.commandList[AWAIT_INPUT];
         currentCommandMode = SYSTEM_MODE;
@@ -189,6 +201,8 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[SHOW_READY] = new ShowReadyCommand(operatingReciever);
     system_data.commandList[SHOW_BLOCKED] = new ShowBlockedCommand(operatingReciever);
     system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE] = new ShortestJobFullCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_FIFO] = new IncompleteFIFOCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_SJF] = new IncompleteSJFCommand(operatingReciever);
 
     if(readFile.is_open())
     {

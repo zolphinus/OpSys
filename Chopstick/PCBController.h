@@ -33,7 +33,11 @@ public:
     int getCompletionTime();
     int getTotalTurnAround();
     int getCompletedPCBs();
-    void shortestJobFirst();
+
+    //Schedulers
+    void sjfFullKnowledge();
+    void incompleteFIFO();
+    void incompleteSJF();
 
 
 private:

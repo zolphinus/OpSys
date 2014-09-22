@@ -15,6 +15,7 @@ public:
     int getTimeRemaining();
     int getTimeOfArrival();
     int getPercentOfCPU();
+    int getTurnAround();
 
     void setupPCB(std::string, int, ProcessClass);
     void setRunState(RunState);
@@ -29,6 +30,7 @@ public:
 
     void testControlBlock();
     void run();
+    void calculateTurnAround(int completionTime);
 
 private:
     std::string processName;
@@ -39,7 +41,7 @@ private:
     int timeRemaining;
     int timeOfArrival;
     int percentOfCPU;
-
+    int turnAround;
 };
 
 

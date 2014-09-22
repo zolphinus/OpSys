@@ -16,6 +16,10 @@ public:
 
     ProcessControlBlock* popNode();
     ProcessControlBlock* getLowestTimeRemaining();
+    ProcessControlBlock* getLowestTimeRemaining(int currentProcessTime);
+
+    ProcessControlBlock* getEarliestArrival();
+
 
     bool removePCB(ProcessControlBlock* PCB);
     void testQueue();
@@ -23,6 +27,9 @@ public:
     bool isEmpty();
     int getNumNodes();
     bool runUntilComplete();
+
+    int getTimeRemaining();
+    std::string getProcessName();
 
 
     ProcessControlBlock* FindPCB(std::string);

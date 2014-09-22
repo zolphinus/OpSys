@@ -274,6 +274,27 @@ bool PCB_Queue::isEmpty(){
 }
 
 
+ProcessControlBlock* PCB_Queue::getEarliestArrival(){
+    int earliestArrivalTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* earliestArrival = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeOfArrival() < earliestArrivalTime){
+                earliestArrivalTime = tempNode->getPCB()->getTimeOfArrival();
+                earliestArrival = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return earliestArrival->getPCB();
+    }
+
+    return NULL;
+}
+
 ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
     int lowestTime = INT_MAX;
     PCB_Node* tempNode = head;
@@ -294,6 +315,56 @@ ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
 
     return NULL;
 }
+
+
+//used for FPPS
+int PCB_Queue::getTimeRemaining(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getTimeRemaining();
+    }
+
+    return INT_MAX;
+}
+
+std::string PCB_Queue::getProcessName(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getProcessName();
+    }
+
+    return "NULL PROCESS";
+}
+
+
+//should only return the lowest process that has "arrived"
+ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(int currentProcessTime){
+    int lowestTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* lowestRemaining = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeRemaining() < lowestTime &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                lowestTime = tempNode->getPCB()->getTimeRemaining();
+                lowestRemaining = tempNode;
+            }
+                tempNode = tempNode->getNext();
+        }
+        if(lowestRemaining != NULL){
+            return lowestRemaining->getPCB();
+        }else{
+            return NULL;
+        }
+    }
+
+    std::cout << "APES6" << std::endl;
+    return NULL;
+}
+
+
 
 bool PCB_Queue::runUntilComplete(){
     if(head != NULL){

@@ -70,13 +70,24 @@ void OperatingReciever::performAction(PCB_Controller& pcbController){
     }else if(currentAction == SHOW_BLOCKED){
         pcbController.showBlocked();
     }else if(currentAction == SHORTEST_JOB_FULL_KNOWLEDGE){
-        pcbController.shortestJobFirst();
+        pcbController.sjfFullKnowledge();
+        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+        printInformation(pcbController.getProcessNames());
+        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+    }else if(currentAction == INCOMPLETE_FIFO){
+        pcbController.incompleteFIFO();
+        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+        printInformation(pcbController.getProcessNames());
+        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+    }else if(currentAction == INCOMPLETE_SJF){
+        pcbController.incompleteSJF();
         std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
         printInformation(pcbController.getProcessNames());
         std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
         std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
     }
-
 }
 
 

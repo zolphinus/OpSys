@@ -7,6 +7,7 @@ ProcessControlBlock::ProcessControlBlock(){
     timeRemaining = 0;
     timeOfArrival = 0;
     percentOfCPU = 0;
+    turnAround = 0;
 }
 
 std::string ProcessControlBlock::getProcessName(){
@@ -29,6 +30,10 @@ int ProcessControlBlock::getMemory(){
     return memory;
 }
 
+int ProcessControlBlock::getTurnAround(){
+    return turnAround;
+}
+
 //Parameter validation occurs in the controller
 void ProcessControlBlock::setupPCB(std::string newProcessName, int newPriority, ProcessClass newProcessClass){
     processName = newProcessName;
@@ -43,6 +48,10 @@ void ProcessControlBlock::setRunState(RunState newRunState){
 
 void ProcessControlBlock::setPriority(int newPriority){
     priority = newPriority;
+}
+
+void ProcessControlBlock::calculateTurnAround(int completionTime){
+    turnAround = completionTime - timeOfArrival;
 }
 
 void ProcessControlBlock::printControlInfo(PrintMode printMode){

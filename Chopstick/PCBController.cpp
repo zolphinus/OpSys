@@ -508,7 +508,7 @@ void PCB_Controller::testFileRead(){
        std::cout << "NOT OPEN" << std::endl;
 }
 
-void PCB_Controller::shortestJobFirst(){
+void PCB_Controller::sjfFullKnowledge(){
     std::ifstream in;
     std::string findFile;
     ProcessControlBlock* tempPCB = NULL;
@@ -589,6 +589,227 @@ void PCB_Controller::shortestJobFirst(){
     }else
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
 }
+
+void PCB_Controller::incompleteFIFO(){
+    std::ifstream in;
+
+    //need to create file in case it doesn't exist
+    std::fstream out;
+    out.open("fifo.txt", std::ofstream::out); // files to write to
+
+
+    std::string findFile;
+    ProcessControlBlock* tempPCB = NULL;
+    PCB_Queue tempQueue;
+    bool processCompleted = true;
+    totalTimeToCompletion = 0;
+    totalTurnAroundTime = 0;
+    totalCompletedPCBs = 0;
+    executionTime = 0;
+
+    std::cout << "Please enter a process file to load : ";
+    std::cin >> findFile;
+
+    in.open(findFile.c_str());
+
+    if(in.is_open()){
+        while(!in.eof()){
+            tempPCB = readPCBFile(in);
+            if(in.eof()){
+                break;
+            }
+
+            if(tempPCB != NULL){
+                //logic on how to handle the PCBs read in
+                tempQueue.insertNode(tempPCB);
+            }
+
+        }
+        tempPCB = NULL;
+
+        while(tempQueue.isEmpty() != true){
+            tempPCB = tempQueue.getEarliestArrival();
+            //move PCBs to the ready queue in time remaining order
+            if(tempPCB != NULL){
+                out << tempPCB->getProcessName() << " loaded from file into Ready Queue" << std::endl;
+                tempQueue.removePCB(tempPCB);
+                readyQueue.insertNode(tempPCB);
+            }
+            tempPCB = NULL;
+        }
+        in.close();
+
+        //prints the ready queue
+        readyQueue.printQueueContents(TIME_REMAINING);
+
+
+        //reset processName vector to size zero
+        processNames.resize(0);
+
+        //record names as you pop, and the command controller should list these names in order ran
+
+        while(!readyQueue.isEmpty()){
+            //represents pushing to running, but this is where you would handle running processes
+            tempPCB = readyQueue.popNode();
+
+            if(tempPCB != NULL){
+                //grabs and totals time until completion
+                out << tempPCB->getProcessName() << " is now running" << std::endl;
+
+                tempPCB->setRunState(RUNNING);
+                runningQueue.insertNode(tempPCB);
+
+
+                while(!runningQueue.isEmpty()){
+                    totalTimeToCompletion++;
+                    processCompleted = runningQueue.runUntilComplete();
+
+                    if(processCompleted == true){
+                        tempPCB = runningQueue.popNode();
+                        processNames.push_back(tempPCB->getProcessName());
+                        totalCompletedPCBs++;
+                    }
+
+                }
+                out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+            }
+        }
+
+            //in full knowledge SJF Scheduler, totalCompletionTime will equal totalTurnAround time
+            totalTurnAroundTime = totalTimeToCompletion;
+    }else{
+       std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+    }
+
+    out.close();
+}
+
+
+
+void PCB_Controller::incompleteSJF(){
+    std::ifstream in;
+
+    //need to create file in case it doesn't exist
+    std::fstream out;
+    out.open("stcf.txt", std::ofstream::out); // files to write to
+
+    std::string findFile;
+    ProcessControlBlock* tempPCB = NULL;
+    PCB_Queue tempQueue;
+    bool processCompleted = true;
+    totalTimeToCompletion = 0;
+    totalTurnAroundTime = 0;
+    totalCompletedPCBs = 0;
+    executionTime = 0;
+
+    std::cout << "Please enter a process file to load : ";
+    std::cin >> findFile;
+
+    in.open(findFile.c_str());
+
+    if(in.is_open()){
+        while(!in.eof()){
+            tempPCB = readPCBFile(in);
+            if(in.eof()){
+                break;
+            }
+
+            if(tempPCB != NULL){
+                //logic on how to handle the PCBs read in
+                tempQueue.insertNode(tempPCB);
+            }
+
+        }
+        tempPCB = NULL;
+
+        while(tempQueue.isEmpty() != true){
+            tempPCB = tempQueue.getEarliestArrival();
+            //move PCBs to the ready queue in time remaining order
+            if(tempPCB != NULL){
+                out << tempPCB->getProcessName() << " loaded from file into Ready Queue" << std::endl;
+                tempQueue.removePCB(tempPCB);
+                readyQueue.insertNode(tempPCB);
+            }
+            tempPCB = NULL;
+        }
+        in.close();
+
+        //prints the ready queue
+        readyQueue.printQueueContents(TIME_REMAINING);
+
+
+        //reset processName vector to size zero
+        processNames.resize(0);
+
+        //record names as you pop, and the command controller should list these names in order ran
+
+        while(!readyQueue.isEmpty()){
+            //grab our potential job
+            tempPCB = readyQueue.getLowestTimeRemaining(totalTimeToCompletion);
+            totalTimeToCompletion++;
+            if(tempPCB != NULL){
+                if(runningQueue.isEmpty()){
+                    //if there is no process in the running queue, it adds one
+                    readyQueue.removePCB(tempPCB);
+                    tempPCB->setRunState(RUNNING);
+                    runningQueue.insertNode(tempPCB);
+                    out << runningQueue.getProcessName() << " is now running" << std::endl;
+                }
+                else{
+                    //otherwise, we check our current job against our potential job
+                    if(tempPCB->getTimeRemaining() < runningQueue.getTimeRemaining())
+                    {
+                        readyQueue.removePCB(tempPCB);
+                        runningQueue.insertNode(tempPCB);
+                        out << tempPCB->getProcessName() << " was added to the running queue" << std::endl;
+
+                        tempPCB = runningQueue.popNode();
+                        out << tempPCB->getProcessName() << " was removed from the running queue" << std::endl;
+
+                        readyQueue.insertNode(tempPCB);
+                        out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
+                        out << runningQueue.getProcessName() << " is now running" << std::endl;
+                    }
+                }
+                processCompleted = runningQueue.runUntilComplete();
+
+                if(processCompleted == true){
+                    tempPCB = runningQueue.popNode();
+                    processNames.push_back(tempPCB->getProcessName());
+                    totalCompletedPCBs++;
+                    tempPCB->calculateTurnAround(totalTimeToCompletion);
+                    out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                    totalTurnAroundTime += tempPCB->getTurnAround();
+                }
+            }
+        }
+
+        if(!runningQueue.isEmpty()){
+            while(!runningQueue.isEmpty()){
+                processCompleted = runningQueue.runUntilComplete();
+                totalTimeToCompletion++;
+                if(processCompleted == true){
+                    tempPCB = runningQueue.popNode();
+                    processNames.push_back(tempPCB->getProcessName());
+                    totalCompletedPCBs++;
+                    tempPCB->calculateTurnAround(totalTimeToCompletion);
+                    out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                    totalTurnAroundTime += tempPCB->getTurnAround();
+                }
+            }
+        }
+
+    }
+    else{
+       std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+    }
+
+    out.close();
+}
+
+
+
+
 
 std::vector<std::string>& PCB_Controller::getProcessNames(){
     return processNames;

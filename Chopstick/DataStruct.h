@@ -29,6 +29,9 @@ enum ACTION_LIST
     SHOW_READY,
     SHOW_BLOCKED,
     SHORTEST_JOB_FULL_KNOWLEDGE,
+    INCOMPLETE_FIFO,
+    INCOMPLETE_SJF,
+
     //Leave last for algorithms
     TOTAL_COMMANDS
 };

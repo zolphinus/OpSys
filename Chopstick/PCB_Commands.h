@@ -191,4 +191,33 @@ public:
 };
 
 
+class IncompleteFIFOCommand : public PCBCommand{
+public:
+    IncompleteFIFOCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "FIFO";
+        keyWordInfo = " - first in, first out scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_FIFO);
+        myReciever->performAction(pcbController);
+    }
+};
+
+class IncompleteSJFCommand : public PCBCommand{
+public:
+    IncompleteSJFCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "STCF";
+        keyWordInfo = " - incomplete preemptive SJF scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_SJF);
+        myReciever->performAction(pcbController);
+    }
+};
+
+
 #endif // PCB_COMMANDS

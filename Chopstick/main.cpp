@@ -50,5 +50,5 @@ void testController(){
 void testPCBFile(){
     PCB_Controller testController;
     //testController.testFileRead();
-    testController.shortestJobFirst();
+    testController.sjfFullKnowledge();
 }
