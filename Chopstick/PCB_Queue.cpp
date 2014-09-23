@@ -317,6 +317,28 @@ ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
 }
 
 
+ProcessControlBlock* PCB_Queue::getHighestPriority(){
+    int highestPriority = -128;
+    PCB_Node* tempNode = head;
+    PCB_Node* mostUrgent = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getPriority() > highestPriority){
+                highestPriority = tempNode->getPCB()->getPriority();
+                mostUrgent = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return mostUrgent->getPCB();
+    }
+
+    return NULL;
+}
+
+
 //used for FPPS
 int PCB_Queue::getTimeRemaining(){
     if(head != NULL)
@@ -337,7 +359,18 @@ std::string PCB_Queue::getProcessName(){
 }
 
 
-//should only return the lowest process that has "arrived"
+
+int PCB_Queue::getPriority(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getPriority();
+    }
+
+    return -128;
+}
+
+
+//should only return the shortest job process that has "arrived"
 ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(int currentProcessTime){
     int lowestTime = INT_MAX;
     PCB_Node* tempNode = head;
@@ -359,10 +392,35 @@ ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(int currentProcessTime){
             return NULL;
         }
     }
-
-    std::cout << "APES6" << std::endl;
     return NULL;
 }
+
+
+//should only return the highest priority process that has "arrived"
+ProcessControlBlock* PCB_Queue::getHighestPriority(int currentProcessTime){
+    int highestPriority = -128;
+    PCB_Node* tempNode = head;
+    PCB_Node* mostUrgent = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getPriority() > highestPriority &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                highestPriority = tempNode->getPCB()->getPriority();
+                mostUrgent = tempNode;
+            }
+                tempNode = tempNode->getNext();
+        }
+        if(mostUrgent != NULL){
+            return mostUrgent->getPCB();
+        }else{
+            return NULL;
+        }
+    }
+    return NULL;
+}
+
 
 
 

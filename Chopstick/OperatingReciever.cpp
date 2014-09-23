@@ -87,6 +87,12 @@ void OperatingReciever::performAction(PCB_Controller& pcbController){
         printInformation(pcbController.getProcessNames());
         std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
         std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+    }else if(currentAction == INCOMPLETE_FPPS){
+        pcbController.incompleteFPPS();
+        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+        printInformation(pcbController.getProcessNames());
+        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
     }
 }
 

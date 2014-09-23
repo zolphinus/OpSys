@@ -157,6 +157,12 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         currentCommandMode = PCB_MODE;
         return false;
     }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_FPPS]){
+
+        command = system_data.commandList[INCOMPLETE_FPPS];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }
     else if(newCommand == system_data.keywordList[INCOMPLETE_SJF]){
 
         command = system_data.commandList[INCOMPLETE_SJF];
@@ -203,6 +209,7 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE] = new ShortestJobFullCommand(operatingReciever);
     system_data.commandList[INCOMPLETE_FIFO] = new IncompleteFIFOCommand(operatingReciever);
     system_data.commandList[INCOMPLETE_SJF] = new IncompleteSJFCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_FPPS] = new IncompleteFPPSCommand(operatingReciever);
 
     if(readFile.is_open())
     {

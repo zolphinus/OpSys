@@ -219,5 +219,19 @@ public:
     }
 };
 
+class IncompleteFPPSCommand : public PCBCommand{
+public:
+    IncompleteFPPSCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "FPPS";
+        keyWordInfo = " - incomplete preemptive Fixed Priority scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_FPPS);
+        myReciever->performAction(pcbController);
+    }
+};
+
 
 #endif // PCB_COMMANDS

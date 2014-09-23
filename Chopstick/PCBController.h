@@ -38,6 +38,7 @@ public:
     void sjfFullKnowledge();
     void incompleteFIFO();
     void incompleteSJF();
+    void incompleteFPPS();
 
 
 private:

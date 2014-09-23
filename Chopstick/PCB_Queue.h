@@ -17,6 +17,8 @@ public:
     ProcessControlBlock* popNode();
     ProcessControlBlock* getLowestTimeRemaining();
     ProcessControlBlock* getLowestTimeRemaining(int currentProcessTime);
+    ProcessControlBlock* getHighestPriority();
+    ProcessControlBlock* getHighestPriority(int currentProcessTime);
 
     ProcessControlBlock* getEarliestArrival();
 
@@ -29,6 +31,7 @@ public:
     bool runUntilComplete();
 
     int getTimeRemaining();
+    int getPriority();
     std::string getProcessName();
 
 
