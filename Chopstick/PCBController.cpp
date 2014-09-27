@@ -3,6 +3,7 @@
 #include "ProcessControlEnums.h"
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 PCB_Controller::PCB_Controller(){
 }
@@ -508,7 +509,7 @@ void PCB_Controller::testFileRead(){
        std::cout << "NOT OPEN" << std::endl;
 }
 
-void PCB_Controller::sjfFullKnowledge(){
+bool PCB_Controller::sjfFullKnowledge(){
     std::ifstream in;
     std::string findFile;
     ProcessControlBlock* tempPCB = NULL;
@@ -590,7 +591,7 @@ void PCB_Controller::sjfFullKnowledge(){
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
 }
 
-void PCB_Controller::incompleteFIFO(){
+bool PCB_Controller::incompleteFIFO(){
     std::ifstream in;
 
     //need to create file in case it doesn't exist
@@ -686,7 +687,7 @@ void PCB_Controller::incompleteFIFO(){
 
 
 
-void PCB_Controller::incompleteFPPS(){
+bool PCB_Controller::incompleteFPPS(){
     std::ifstream in;
 
     //need to create file in case it doesn't exist
@@ -808,7 +809,7 @@ void PCB_Controller::incompleteFPPS(){
 }
 
 
-void PCB_Controller::incompleteSJF(){
+bool PCB_Controller::incompleteSJF(){
     std::ifstream in;
 
     //need to create file in case it doesn't exist
@@ -930,12 +931,12 @@ void PCB_Controller::incompleteSJF(){
 }
 
 //actually need to implement this still
-void PCB_Controller::incompleteRoundRobin(){
+bool PCB_Controller::incompleteRoundRobin(){
     std::ifstream in;
 
     //need to create file in case it doesn't exist
     std::fstream out;
-    out.open("fifo.txt", std::ofstream::out); // files to write to
+    out.open("rr.txt", std::ofstream::out); // files to write to
 
 
     std::string findFile;
@@ -957,7 +958,9 @@ void PCB_Controller::incompleteRoundRobin(){
         std::cout << "Please enter a positive time quantum : ";
         std::cin >> timeQuantum;
 
-        while(cin.fail()){
+        while(std::cin.fail() || timeQuantum < 0){
+            std::cin.clear();
+            std::cin.ignore();
             std::cout << "Please enter a positive time quantum : ";
             std::cin >> timeQuantum;
         }
@@ -978,7 +981,7 @@ void PCB_Controller::incompleteRoundRobin(){
 
         while(tempQueue.isEmpty() != true){
             tempPCB = tempQueue.getEarliestArrival();
-            //move PCBs to the ready queue in time remaining order
+            //move PCBs to the ready queue in time of arrival order
             if(tempPCB != NULL){
                 out << tempPCB->getProcessName() << " loaded from file into Ready Queue" << std::endl;
                 tempQueue.removePCB(tempPCB);
@@ -998,7 +1001,8 @@ void PCB_Controller::incompleteRoundRobin(){
         //record names as you pop, and the command controller should list these names in order ran
 
         while(!readyQueue.isEmpty()){
-            //represents pushing to running, but this is where you would handle running processes
+
+            //needs to find next node if arrival is less than current time
             tempPCB = readyQueue.popNode();
 
             if(tempPCB != NULL){
@@ -1009,29 +1013,334 @@ void PCB_Controller::incompleteRoundRobin(){
                 runningQueue.insertNode(tempPCB);
 
 
-                while(!runningQueue.isEmpty()){
+                for(int i = 0; i < timeQuantum; i++){
+
                     totalTimeToCompletion++;
                     processCompleted = runningQueue.runUntilComplete();
+                    if(processCompleted == true)
+                        break;
+                }
 
-                    if(processCompleted == true){
+                if(processCompleted == true){
                         tempPCB = runningQueue.popNode();
                         processNames.push_back(tempPCB->getProcessName());
                         totalCompletedPCBs++;
-                    }
-
+                        tempPCB->calculateTurnAround(totalTimeToCompletion);
+                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                        totalTurnAroundTime += tempPCB->getTurnAround();
+                }else{
+                    tempPCB = runningQueue.popNode();
+                    readyQueue.insertNode(tempPCB);
+                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
                 }
-                out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+
             }
         }
-
-            //in full knowledge SJF Scheduler, totalCompletionTime will equal totalTurnAround time
-            totalTurnAroundTime = totalTimeToCompletion;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
     }
 
     out.close();
 }
+
+bool PCB_Controller::incompleteMLFQ(){
+    std::ifstream in;
+
+    //need to create file in case it doesn't exist
+    std::fstream out;
+    out.open("mlfq.txt", std::ofstream::out); // files to write to
+
+
+    std::string findFile;
+    ProcessControlBlock* tempPCB = NULL;
+    PCB_Queue tempQueue;
+    bool processCompleted = true;
+    int timeQuantum = 0;
+    int numberOfQueues = 0;
+    int timeToBump = 0;
+
+    totalTimeToCompletion = 0;
+    totalTurnAroundTime = 0;
+    totalCompletedPCBs = 0;
+    executionTime = 0;
+
+    std::cout << "Please enter a process file to load : ";
+    std::cin >> findFile;
+    in.open(findFile.c_str());
+
+    if(in.is_open()){
+        //prompt for time quanta
+        std::cout << "Please enter a positive time quantum : ";
+        std::cin >> timeQuantum;
+
+        while(std::cin.fail() || timeQuantum < 0){
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a positive time quantum : ";
+            std::cin >> timeQuantum;
+        }
+
+        std::cout << "Please enter a positive number of queues : ";
+        std::cin >> numberOfQueues;
+
+        while(std::cin.fail() || numberOfQueues < 0){
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a positive number of queues : ";
+            std::cin >> numberOfQueues;
+        }
+
+        std::cout << "Please enter a positive number for time to boost PCBs : ";
+        std::cin >> timeToBump;
+
+        while(std::cin.fail() || timeToBump < 0){
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a positive number for time to boost PCBs : ";
+            std::cin >> timeToBump;
+        }
+
+
+        while(!in.eof()){
+            tempPCB = readPCBFile(in);
+            if(in.eof()){
+                break;
+            }
+
+            if(tempPCB != NULL){
+
+                //sets all PCBs to the maximum queue value
+                tempPCB->setPriority(numberOfQueues);
+                tempQueue.insertNode(tempPCB);
+            }
+
+        }
+        tempPCB = NULL;
+
+        while(tempQueue.isEmpty() != true){
+            tempPCB = tempQueue.getEarliestArrival();
+            //move PCBs to the ready queue in time of arrival order
+            if(tempPCB != NULL){
+                out << tempPCB->getProcessName() << " loaded from file into Ready Queue" << std::endl;
+                tempQueue.removePCB(tempPCB);
+                readyQueue.insertNode(tempPCB);
+            }
+            tempPCB = NULL;
+        }
+        in.close();
+
+        //prints the ready queue
+        readyQueue.printQueueContents(TIME_REMAINING);
+
+
+        //reset processName vector to size zero
+        processNames.resize(0);
+
+        while(!readyQueue.isEmpty()){
+
+            //needs to grab highest priority that has arrived
+            tempPCB = readyQueue.getHighestPriority(totalTimeToCompletion);
+            readyQueue.removePCB(tempPCB);
+
+            if(tempPCB != NULL){
+                    //std::cout << tempPCB->getProcessName() << " has priority " << tempPCB->getPriority() << std::endl;
+                out << tempPCB->getProcessName() << " is now running" << std::endl;
+
+                tempPCB->setRunState(RUNNING);
+                runningQueue.insertNode(tempPCB);
+
+
+                for(int i = 0; i < timeQuantum; i++){
+
+                    totalTimeToCompletion++;
+                    processCompleted = runningQueue.runUntilComplete();
+                    if(processCompleted == true)
+                        break;
+                }
+
+
+                tempPCB->lowerPriority();
+                out << tempPCB->getProcessName() << " has lowered priority" << std::endl;
+
+
+                if(processCompleted == true){
+
+                        tempPCB = runningQueue.popNode();
+                        processNames.push_back(tempPCB->getProcessName());
+                        totalCompletedPCBs++;
+                        tempPCB->calculateTurnAround(totalTimeToCompletion);
+                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                        totalTurnAroundTime += tempPCB->getTurnAround();
+
+                        //std::cout << " COMPLETED" << std::endl;
+                }else{
+                    tempPCB = runningQueue.popNode();
+                    readyQueue.insertNode(tempPCB);
+                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                }
+
+                if((totalTimeToCompletion % timeToBump) == 0){
+                    readyQueue.boostPriority(numberOfQueues);
+                    out << "BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX" << std::endl;
+                }
+
+            }
+            else{
+                totalTimeToCompletion++;
+            }
+        }
+    }else{
+       std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+    }
+
+    out.close();
+}
+
+
+//actually need to implement this still
+bool PCB_Controller::incompleteLottery(){
+    std::ifstream in;
+
+    //need to create file in case it doesn't exist
+    std::fstream out;
+    out.open("lottery.txt", std::ofstream::out); // files to write to
+
+
+    std::string findFile;
+    ProcessControlBlock* tempPCB = NULL;
+    PCB_Queue tempQueue;
+    bool processCompleted = true;
+    int timeQuantum = 20;
+    int suggestedTickets = 100;
+    int totalCPU = 0;
+    int totalTickets = 0;
+    int lotterySelect = 0;
+
+
+
+    totalTimeToCompletion = 0;
+    totalTurnAroundTime = 0;
+    totalCompletedPCBs = 0;
+    executionTime = 0;
+
+    std::cout << "Please enter a process file to load : ";
+    std::cin >> findFile;
+    in.open(findFile.c_str());
+
+    if(in.is_open()){
+        //prompt for time quanta
+        std::cout << "Please enter a number of tickets (100 or greater) : ";
+        std::cin >> suggestedTickets;
+
+        while(std::cin.fail() || suggestedTickets < 100){
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a number of tickets (100 or greater) : ";
+            std::cin >> suggestedTickets;
+        }
+
+        while(!in.eof()){
+            tempPCB = readPCBFile(in);
+            if(in.eof()){
+                break;
+            }
+
+            if(tempPCB != NULL){
+                //logic on how to handle the PCBs read in
+
+                //if the cpu request is invalid, gives minimal amount available
+                if(tempPCB->getPercentOfCPU() < 1)
+                {
+                    tempPCB->setPercentOfCPU(1);
+                }
+
+                totalCPU += tempPCB->getPercentOfCPU();
+                tempQueue.insertNode(tempPCB);
+            }
+
+        }
+        tempPCB = NULL;
+
+        while(tempQueue.isEmpty() != true){
+            tempPCB = tempQueue.getEarliestArrival();
+            //move PCBs to the ready queue in time of arrival order
+            if(tempPCB != NULL){
+                out << tempPCB->getProcessName() << " loaded from file into Ready Queue" << std::endl;
+                tempQueue.removePCB(tempPCB);
+
+                //converts the current PCBs CPU request into a value to calculate the tickets given
+                tempPCB->setPercentOfCPU(totalCPU / tempPCB->getPercentOfCPU());
+
+                //turns the user suggested tickets into a proportionate amount of tickets for the system
+                tempPCB->setPercentOfCPU(suggestedTickets / tempPCB->getPercentOfCPU());
+
+                //percent of CPU now holds the tickets
+                totalTickets += tempPCB->getPercentOfCPU();
+
+                readyQueue.insertNode(tempPCB);
+            }
+            tempPCB = NULL;
+        }
+        in.close();
+
+        //prints the ready queue
+        readyQueue.printQueueContents(TIME_REMAINING);
+
+
+        //reset processName vector to size zero
+        processNames.resize(0);
+
+        //record names as you pop, and the command controller should list these names in order ran
+
+        while(!readyQueue.isEmpty()){
+
+            //Random roll to determine which process to grab
+            lotterySelect = rand() % totalTickets;
+
+            //grabs PCB
+            tempPCB = readyQueue.getLotteryWinner(totalTimeToCompletion, lotterySelect);
+            readyQueue.removePCB(tempPCB);
+
+            if(tempPCB != NULL){
+                out << tempPCB->getProcessName() << " won the lottery" << std::endl;
+                out << tempPCB->getProcessName() << " is now running" << std::endl;
+
+                tempPCB->setRunState(RUNNING);
+                runningQueue.insertNode(tempPCB);
+
+                //time quantum is fixed on this scheduler
+                for(int i = 0; i < timeQuantum; i++){
+
+                    totalTimeToCompletion++;
+                    processCompleted = runningQueue.runUntilComplete();
+                    if(processCompleted == true)
+                        break;
+                }
+
+                if(processCompleted == true){
+                        tempPCB = runningQueue.popNode();
+                        processNames.push_back(tempPCB->getProcessName());
+                        totalCompletedPCBs++;
+                        tempPCB->calculateTurnAround(totalTimeToCompletion);
+                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                        totalTurnAroundTime += tempPCB->getTurnAround();
+                }else{
+                    tempPCB = runningQueue.popNode();
+                    readyQueue.insertNode(tempPCB);
+                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                }
+
+            }else{
+                totalTimeToCompletion++;
+            }
+        }
+    }else{
+       std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+    }
+
+    out.close();
+}
+
 
 
 std::vector<std::string>& PCB_Controller::getProcessNames(){

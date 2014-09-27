@@ -44,7 +44,7 @@ void OperatingReciever::performAction(Global_Data& system_data)
 }
 
 void OperatingReciever::performAction(PCB_Controller& pcbController){
-
+    bool validFile = false;
     //User Commands to operate the pcbController are handled here
 
     if(currentAction == CREATE_PCB){
@@ -70,30 +70,61 @@ void OperatingReciever::performAction(PCB_Controller& pcbController){
     }else if(currentAction == SHOW_BLOCKED){
         pcbController.showBlocked();
     }else if(currentAction == SHORTEST_JOB_FULL_KNOWLEDGE){
-        pcbController.sjfFullKnowledge();
-        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
-        printInformation(pcbController.getProcessNames());
-        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
-        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        validFile = pcbController.sjfFullKnowledge();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
     }else if(currentAction == INCOMPLETE_FIFO){
-        pcbController.incompleteFIFO();
-        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
-        printInformation(pcbController.getProcessNames());
-        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
-        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        validFile = pcbController.incompleteFIFO();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
     }else if(currentAction == INCOMPLETE_SJF){
-        pcbController.incompleteSJF();
-        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
-        printInformation(pcbController.getProcessNames());
-        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
-        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        validFile = pcbController.incompleteSJF();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
     }else if(currentAction == INCOMPLETE_FPPS){
-        pcbController.incompleteFPPS();
-        std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
-        printInformation(pcbController.getProcessNames());
-        std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
-        std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
-    }
+        validFile = pcbController.incompleteFPPS();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
+    }else if(currentAction == INCOMPLETE_RR){
+        validFile = pcbController.incompleteRoundRobin();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
+    }else if(currentAction == INCOMPLETE_MLFQ){
+        validFile = pcbController.incompleteMLFQ();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }
+    }else if(currentAction == INCOMPLETE_LOTTO){
+        validFile = pcbController.incompleteLottery();
+        if(validFile == true){
+            std::cout << std::endl << std::endl << "Order Processes ran" << std::endl << std::endl;
+            printInformation(pcbController.getProcessNames());
+            std::cout << "Total time to completion is " << pcbController.getCompletionTime() << std::endl;
+            std::cout << "Average turnaround time is " << pcbController.getTotalTurnAround() / pcbController.getCompletedPCBs() << std::endl;
+        }   }
 }
 
 

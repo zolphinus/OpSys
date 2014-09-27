@@ -234,4 +234,49 @@ public:
 };
 
 
+class IncompleteRoundRobinCommand : public PCBCommand{
+public:
+    IncompleteRoundRobinCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "RR";
+        keyWordInfo = " - incomplete Round Robin scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_RR);
+        myReciever->performAction(pcbController);
+    }
+};
+
+//multi level feedback queue
+class IncompleteMLFQCommand : public PCBCommand{
+public:
+    IncompleteMLFQCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "MLFQ";
+        keyWordInfo = " - incomplete multi level feedback scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_MLFQ);
+        myReciever->performAction(pcbController);
+    }
+};
+
+//lottery scheduler
+class IncompleteLottoCommand : public PCBCommand{
+public:
+    IncompleteLottoCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "LS";
+        keyWordInfo = " - incomplete lottery scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_LOTTO);
+        myReciever->performAction(pcbController);
+    }
+};
+
+
 #endif // PCB_COMMANDS

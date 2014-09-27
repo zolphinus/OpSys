@@ -19,6 +19,7 @@ public:
     ProcessControlBlock* getLowestTimeRemaining(int currentProcessTime);
     ProcessControlBlock* getHighestPriority();
     ProcessControlBlock* getHighestPriority(int currentProcessTime);
+    ProcessControlBlock* getLotteryWinner(int currentProcessTime, int lottery);
 
     ProcessControlBlock* getEarliestArrival();
 
@@ -32,6 +33,8 @@ public:
 
     int getTimeRemaining();
     int getPriority();
+    void boostPriority(int);
+
     std::string getProcessName();
 
 

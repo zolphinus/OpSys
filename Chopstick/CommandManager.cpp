@@ -168,6 +168,21 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         command = system_data.commandList[INCOMPLETE_SJF];
         currentCommandMode = PCB_MODE;
         return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_RR]){
+
+        command = system_data.commandList[INCOMPLETE_RR];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_MLFQ]){
+
+        command = system_data.commandList[INCOMPLETE_MLFQ];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_LOTTO]){
+
+        command = system_data.commandList[INCOMPLETE_LOTTO];
+        currentCommandMode = PCB_MODE;
+        return false;
     }else{
         command = system_data.commandList[AWAIT_INPUT];
         currentCommandMode = SYSTEM_MODE;
@@ -210,6 +225,9 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[INCOMPLETE_FIFO] = new IncompleteFIFOCommand(operatingReciever);
     system_data.commandList[INCOMPLETE_SJF] = new IncompleteSJFCommand(operatingReciever);
     system_data.commandList[INCOMPLETE_FPPS] = new IncompleteFPPSCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_RR] = new IncompleteRoundRobinCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_MLFQ] = new IncompleteMLFQCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_LOTTO] = new IncompleteLottoCommand(operatingReciever);
 
     if(readFile.is_open())
     {

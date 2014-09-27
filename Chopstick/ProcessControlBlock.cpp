@@ -236,3 +236,9 @@ void ProcessControlBlock::run(){
         timeRemaining--;
     }
 }
+
+void ProcessControlBlock::lowerPriority(){
+    if(priority > 0){
+        priority--;
+    }
+}

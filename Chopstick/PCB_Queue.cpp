@@ -440,3 +440,37 @@ bool PCB_Queue::runUntilComplete(){
 int PCB_Queue::getNumNodes(){
     return numberOfNodes;
 }
+
+//used for multi level feedback queue
+void PCB_Queue::boostPriority(int highestQueue){
+    PCB_Node* tempNode = head;
+    while(tempNode != NULL)
+    {
+        tempNode->getPCB()->setPriority(highestQueue);
+        tempNode = tempNode->getNext();
+    }
+}
+
+ProcessControlBlock* PCB_Queue::getLotteryWinner(int currentProcessTime, int lottery){
+    PCB_Node* tempNode = head;
+    PCB_Node* lotteryWinner = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+
+            //subtracts tickets from lottery until lottery is < 1
+            //then returns the current process as a winner
+            lottery = lottery - tempNode->getPCB()->getPercentOfCPU();
+            if(lottery < 0 &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                lotteryWinner = tempNode;
+                return lotteryWinner->getPCB();
+            }
+                tempNode = tempNode->getNext();
+        }
+        //no winner was found
+            return NULL;
+    }
+    return NULL;
+}

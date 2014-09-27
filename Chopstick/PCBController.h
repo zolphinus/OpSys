@@ -35,10 +35,13 @@ public:
     int getCompletedPCBs();
 
     //Schedulers
-    void sjfFullKnowledge();
-    void incompleteFIFO();
-    void incompleteSJF();
-    void incompleteFPPS();
+    bool sjfFullKnowledge();
+    bool incompleteFIFO();
+    bool incompleteSJF();
+    bool incompleteFPPS();
+    bool incompleteRoundRobin();
+    bool incompleteMLFQ();
+    bool incompleteLottery();
 
 
 private:

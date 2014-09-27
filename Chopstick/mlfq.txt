@@ -1,0 +1,675 @@
+Cake loaded from file into Ready Queue
+Carrot loaded from file into Ready Queue
+Bacon loaded from file into Ready Queue
+Salad loaded from file into Ready Queue
+Monkey loaded from file into Ready Queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Cake is now running
+0x377468 has lowered priority
+Cake has successfully completed
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Monkey is now running
+0x377438 has lowered priority
+Monkey has successfully completed
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+Bacon is now running
+0x3773d8 has lowered priority
+Bacon has successfully completed
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Carrot is now running
+0x3723c0 has lowered priority
+Carrot has successfully completed
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+Salad is now running
+0x377408 has lowered priority
+Salad ran out of time and was moved to ready queue
+BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX
+Salad is now running
+0x377408 has lowered priority
+Salad has successfully completed

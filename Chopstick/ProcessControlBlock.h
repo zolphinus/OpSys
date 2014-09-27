@@ -25,6 +25,7 @@ public:
     void setTimeRemaining(int);
     void setTimeOfArrival(int);
     void setPercentOfCPU(int);
+    void lowerPriority();
 
 
 
