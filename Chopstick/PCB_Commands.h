@@ -26,7 +26,7 @@ class CreateCommand : public PCBCommand{
 public:
     CreateCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "CREATE";
+        keyWord = "CREATE PCB";
         keyWordInfo = " - Creates a Process Control Block";
     }
 
@@ -40,7 +40,7 @@ class DeleteCommand : public PCBCommand{
 public:
     DeleteCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "DELETE";
+        keyWord = "DELETE PCB";
         keyWordInfo = " - Deletes a Process Control Block";
     }
 
@@ -54,7 +54,7 @@ class BlockCommand : public PCBCommand{
 public:
     BlockCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "BLOCK";
+        keyWord = "BLOCK PCB";
         keyWordInfo = " - Blocks a Process Control Block";
     }
 
@@ -68,7 +68,7 @@ class UnblockCommand : public PCBCommand{
 public:
     UnblockCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "UNBLOCK";
+        keyWord = "UNBLOCK PCB";
         keyWordInfo = " - Unblocks a Process Control Block";
     }
 
@@ -82,7 +82,7 @@ class SuspendCommand : public PCBCommand{
 public:
     SuspendCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SUSPEND";
+        keyWord = "SUSPEND PCB";
         keyWordInfo = " - Suspend a Process Control Block";
     }
 
@@ -96,7 +96,7 @@ class ResumeCommand : public PCBCommand{
 public:
     ResumeCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "RESUME";
+        keyWord = "RESUME PCB";
         keyWordInfo = " - Resumes a Process Control Block";
     }
 
@@ -110,7 +110,7 @@ class SetPriorityCommand : public PCBCommand{
 public:
     SetPriorityCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-PRIORITY";
+        keyWord = "SET PRIORITY";
         keyWordInfo = " - Sets the priority of a Process Control Block";
     }
 
@@ -124,7 +124,7 @@ class ShowPCBCommand : public PCBCommand{
 public:
     ShowPCBCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-PCB";
+        keyWord = "SHOW PCB";
         keyWordInfo = " - Shows a Process Control Block";
     }
 
@@ -138,7 +138,7 @@ class ShowAllCommand : public PCBCommand{
 public:
     ShowAllCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-ALL";
+        keyWord = "SHOW ALL";
         keyWordInfo = " - Shows all PCBs";
     }
 
@@ -152,7 +152,7 @@ class ShowReadyCommand : public PCBCommand{
 public:
     ShowReadyCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-READY";
+        keyWord = "SHOW READY";
         keyWordInfo = " - Shows all ready PCBs";
     }
 
@@ -166,12 +166,114 @@ class ShowBlockedCommand : public PCBCommand{
 public:
     ShowBlockedCommand(Reciever* reciever)
     : PCBCommand(reciever){
-        keyWord = "SHOW-BLOCKED";
+        keyWord = "SHOW BLOCKED";
         keyWordInfo = " - Shows all blocked PCBs";
     }
 
     void execute(PCB_Controller& pcbController){
         myReciever->setAction(SHOW_BLOCKED);
+        myReciever->performAction(pcbController);
+    }
+};
+
+class ShortestJobFullCommand : public PCBCommand{
+public:
+    ShortestJobFullCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "SJF";
+        keyWordInfo = " - shortest job first scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(SHORTEST_JOB_FULL_KNOWLEDGE);
+        myReciever->performAction(pcbController);
+    }
+};
+
+
+class IncompleteFIFOCommand : public PCBCommand{
+public:
+    IncompleteFIFOCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "FIFO";
+        keyWordInfo = " - first in, first out scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_FIFO);
+        myReciever->performAction(pcbController);
+    }
+};
+
+class IncompleteSJFCommand : public PCBCommand{
+public:
+    IncompleteSJFCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "STCF";
+        keyWordInfo = " - incomplete preemptive SJF scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_SJF);
+        myReciever->performAction(pcbController);
+    }
+};
+
+class IncompleteFPPSCommand : public PCBCommand{
+public:
+    IncompleteFPPSCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "FPPS";
+        keyWordInfo = " - incomplete preemptive Fixed Priority scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_FPPS);
+        myReciever->performAction(pcbController);
+    }
+};
+
+
+class IncompleteRoundRobinCommand : public PCBCommand{
+public:
+    IncompleteRoundRobinCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "RR";
+        keyWordInfo = " - incomplete Round Robin scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_RR);
+        myReciever->performAction(pcbController);
+    }
+};
+
+//multi level feedback queue
+class IncompleteMLFQCommand : public PCBCommand{
+public:
+    IncompleteMLFQCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "MLFQ";
+        keyWordInfo = " - incomplete multi level feedback scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_MLFQ);
+        myReciever->performAction(pcbController);
+    }
+};
+
+//lottery scheduler
+class IncompleteLottoCommand : public PCBCommand{
+public:
+    IncompleteLottoCommand(Reciever* reciever)
+    : PCBCommand(reciever){
+        keyWord = "LS";
+        keyWordInfo = " - incomplete lottery scheduler";
+    }
+
+    void execute(PCB_Controller& pcbController){
+        myReciever->setAction(INCOMPLETE_LOTTO);
         myReciever->performAction(pcbController);
     }
 };

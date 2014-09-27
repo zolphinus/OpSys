@@ -3,6 +3,8 @@
 
 #include "PCB_Queue.h"
 #include <string>
+#include <istream>
+#include <vector>
 
 class ProcessControlBlock;
 
@@ -12,6 +14,8 @@ public:
     ~PCB_Controller();
 
     void testController();
+    void testFileRead();
+
     void createPCB();
     void deletePCB();
     void blockPCB();
@@ -23,12 +27,37 @@ public:
     void showAllPCB();
     void showReady();
     void showBlocked();
+    ProcessControlBlock* readPCBFile(std::ifstream& in);
+    std::vector<std::string>& getProcessNames();
+
+    int getCompletionTime();
+    int getTotalTurnAround();
+    int getCompletedPCBs();
+
+    //Schedulers
+    bool sjfFullKnowledge();
+    bool incompleteFIFO();
+    bool incompleteSJF();
+    bool incompleteFPPS();
+    bool incompleteRoundRobin();
+    bool incompleteMLFQ();
+    bool incompleteLottery();
+
 
 private:
     PCB_Queue readyQueue;
     PCB_Queue suspendedReadyQueue;
     PCB_Queue blockedQueue;
     PCB_Queue suspendedBlockedQueue;
+    PCB_Queue runningQueue;
+    int totalTimeToCompletion;
+    int totalTurnAroundTime;
+    int totalCompletedPCBs;
+    int executionTime;
+    int turnAroundTime;
+
+
+    std::vector<std::string> processNames;
 
     ProcessControlBlock* AllocatePCB();
     ProcessControlBlock* FindPCB(std::string);
@@ -36,8 +65,6 @@ private:
 
     void removePCB(ProcessControlBlock* PCB);
     void freePCB(ProcessControlBlock* PCB);
-
-
 
 };
 

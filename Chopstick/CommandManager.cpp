@@ -23,8 +23,10 @@ CommandManager::~CommandManager(){
 void CommandManager::enterCommand(Global_Data& system_data, PCB_Controller& pcbController){
     std::cout << std::endl << "Type a command and press enter. Type help for more options" << std::endl;
     std::cout << "Enter a command: ";
-    //possibly use cin.get to allow spacing for commands
-    std::cin >> commandLine;
+
+
+    std::getline(std::cin, commandLine);
+    std::cin.clear();
 
     commandError = parseCommand(commandLine, system_data);
 
@@ -42,6 +44,9 @@ void CommandManager::enterCommand(Global_Data& system_data, PCB_Controller& pcbC
                 command->execute(pcbController);
                 break;
             }
+        std::cin.ignore();
+        std::cin.clear();
+
     }
 }
 
@@ -81,7 +86,9 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         currentCommandMode = SYSTEM_MODE;
         return false;
     }
-    else if(newCommand == system_data.keywordList[CREATE_PCB]){
+    else
+
+        /*if(newCommand == system_data.keywordList[CREATE_PCB]){
 
         command = system_data.commandList[CREATE_PCB];
         currentCommandMode = PCB_MODE;
@@ -101,7 +108,8 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         command = system_data.commandList[UNBLOCK_PCB];
         currentCommandMode = PCB_MODE;
         return false;
-    }else if(newCommand == system_data.keywordList[SUSPEND_PCB]){
+    }else */
+    if(newCommand == system_data.keywordList[SUSPEND_PCB]){
 
         command = system_data.commandList[SUSPEND_PCB];
         currentCommandMode = PCB_MODE;
@@ -137,7 +145,45 @@ bool CommandManager::parseCommand(std::string newCommand, Global_Data& system_da
         currentCommandMode = PCB_MODE;
         return false;
     }
-    else{
+    else if(newCommand == system_data.keywordList[SHORTEST_JOB_FULL_KNOWLEDGE]){
+
+        command = system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_FIFO]){
+
+        command = system_data.commandList[INCOMPLETE_FIFO];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_FPPS]){
+
+        command = system_data.commandList[INCOMPLETE_FPPS];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }
+    else if(newCommand == system_data.keywordList[INCOMPLETE_SJF]){
+
+        command = system_data.commandList[INCOMPLETE_SJF];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_RR]){
+
+        command = system_data.commandList[INCOMPLETE_RR];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_MLFQ]){
+
+        command = system_data.commandList[INCOMPLETE_MLFQ];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else if(newCommand == system_data.keywordList[INCOMPLETE_LOTTO]){
+
+        command = system_data.commandList[INCOMPLETE_LOTTO];
+        currentCommandMode = PCB_MODE;
+        return false;
+    }else{
         command = system_data.commandList[AWAIT_INPUT];
         currentCommandMode = SYSTEM_MODE;
         return true;
@@ -175,6 +221,13 @@ void CommandManager::initCommandList(Global_Data& system_data){
     system_data.commandList[SHOW_ALL] = new ShowAllCommand(operatingReciever);
     system_data.commandList[SHOW_READY] = new ShowReadyCommand(operatingReciever);
     system_data.commandList[SHOW_BLOCKED] = new ShowBlockedCommand(operatingReciever);
+    system_data.commandList[SHORTEST_JOB_FULL_KNOWLEDGE] = new ShortestJobFullCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_FIFO] = new IncompleteFIFOCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_SJF] = new IncompleteSJFCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_FPPS] = new IncompleteFPPSCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_RR] = new IncompleteRoundRobinCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_MLFQ] = new IncompleteMLFQCommand(operatingReciever);
+    system_data.commandList[INCOMPLETE_LOTTO] = new IncompleteLottoCommand(operatingReciever);
 
     if(readFile.is_open())
     {

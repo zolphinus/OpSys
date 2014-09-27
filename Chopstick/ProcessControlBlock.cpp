@@ -4,6 +4,10 @@
 
 ProcessControlBlock::ProcessControlBlock(){
     memory = 0;
+    timeRemaining = 0;
+    timeOfArrival = 0;
+    percentOfCPU = 0;
+    turnAround = 0;
 }
 
 std::string ProcessControlBlock::getProcessName(){
@@ -26,6 +30,10 @@ int ProcessControlBlock::getMemory(){
     return memory;
 }
 
+int ProcessControlBlock::getTurnAround(){
+    return turnAround;
+}
+
 //Parameter validation occurs in the controller
 void ProcessControlBlock::setupPCB(std::string newProcessName, int newPriority, ProcessClass newProcessClass){
     processName = newProcessName;
@@ -40,6 +48,10 @@ void ProcessControlBlock::setRunState(RunState newRunState){
 
 void ProcessControlBlock::setPriority(int newPriority){
     priority = newPriority;
+}
+
+void ProcessControlBlock::calculateTurnAround(int completionTime){
+    turnAround = completionTime - timeOfArrival;
 }
 
 void ProcessControlBlock::printControlInfo(PrintMode printMode){
@@ -85,7 +97,7 @@ void ProcessControlBlock::printControlInfo(PrintMode printMode){
         std::cout << "Priority : " << priority << std::endl;
         std::cout << "Memory : " << memory << std::endl << std::endl;
     }
-    else{
+    else if(printMode == PARTIAL_PRINT){
         std::cout << processName << " ";
 
         switch(runState)
@@ -110,6 +122,9 @@ void ProcessControlBlock::printControlInfo(PrintMode printMode){
         }
 
         std::cout << priority << std::endl;
+    } else if (printMode == TIME_REMAINING){
+        std::cout << processName << "   Time Remaining: ";
+        std::cout << timeRemaining << std::endl;
     }
 
 }
@@ -188,3 +203,42 @@ void ProcessControlBlock::testControlBlock(){
     printControlInfo(FULL_PRINT);
 }
 
+void ProcessControlBlock::setMemory(int newMemory){
+    memory = newMemory;
+}
+
+void ProcessControlBlock::setTimeRemaining(int newTimeRemaining){
+    timeRemaining = newTimeRemaining;
+}
+
+void ProcessControlBlock::setTimeOfArrival(int newTimeOfArrival){
+    timeOfArrival = newTimeOfArrival;
+}
+
+void ProcessControlBlock::setPercentOfCPU(int newPercent){
+    percentOfCPU = newPercent;
+}
+
+int ProcessControlBlock::getTimeRemaining(){
+    return timeRemaining;
+}
+
+int ProcessControlBlock::getTimeOfArrival(){
+    return timeOfArrival;
+}
+
+int ProcessControlBlock::getPercentOfCPU(){
+    return percentOfCPU;
+}
+
+void ProcessControlBlock::run(){
+    if(timeRemaining > 0){
+        timeRemaining--;
+    }
+}
+
+void ProcessControlBlock::lowerPriority(){
+    if(priority > 0){
+        priority--;
+    }
+}

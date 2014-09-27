@@ -2,10 +2,12 @@
 #include "PCB_Node.h"
 #include "ProcessControlBlock.h"
 #include <iostream>
+#include <limits.h>
 
 PCB_Queue::PCB_Queue(){
     head = NULL;
     tail = NULL;
+    numberOfNodes = 0;
 }
 
 PCB_Queue::~PCB_Queue(){
@@ -39,6 +41,7 @@ void PCB_Queue::insertNode(ProcessControlBlock* PCB){
         head->setPrior(NULL);
         head->setNext(NULL);
         tail = head;
+        numberOfNodes++;
     }
     else{
         iterateNode = head;
@@ -55,6 +58,7 @@ void PCB_Queue::insertNode(ProcessControlBlock* PCB){
         nodeToInsert->setNext(NULL);
 
         tail = nodeToInsert;
+        numberOfNodes++;
     }
 }
 
@@ -62,6 +66,7 @@ ProcessControlBlock* PCB_Queue::popNode(){
 
     PCB_Node* tempNode = NULL;
     ProcessControlBlock* tempPCB = NULL;
+
     if(head != NULL)
     {
         tempNode = head;
@@ -69,18 +74,22 @@ ProcessControlBlock* PCB_Queue::popNode(){
         {
             head = head->getNext();
             head->setPrior(NULL);
+            numberOfNodes--;
         }
         else{
             head = NULL;
             tail = head;
+            numberOfNodes--;
         }
         tempPCB = tempNode->getPCB();
         delete tempNode;
         tempNode = NULL;
         return tempPCB;
+        numberOfNodes--;
     }
-    else
+    else{
         return NULL;
+    }
 }
 
 
@@ -102,6 +111,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                         tempNode = tempNode->getNext();
                         tempNode->setPrior(placeholder->getPrior());
                         delete placeholder;
+                        numberOfNodes--;
 
                         head = tempNode;
 
@@ -120,6 +130,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                                 //sets the next node to point to the last known not removed
                                 tempNode->getNext()->setPrior(placeholder);
                                 delete tempNode;
+                                numberOfNodes--;
 
                                 //exits the loop if found
                                 tempNode = NULL;
@@ -130,6 +141,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                                 placeholder->setNext(NULL);
                                 tail = placeholder;
                                 delete tempNode;
+                                numberOfNodes--;
                                 tempNode = NULL;
 
                                 PCBisFound = true;
@@ -154,6 +166,7 @@ bool PCB_Queue::removePCB(ProcessControlBlock* PCB){
                 delete head;
                 head = NULL;
                 tail = head;
+                numberOfNodes--;
             }
         }
     }
@@ -182,25 +195,25 @@ void PCB_Queue::testQueue(){
     insertNode(tempFour);
     insertNode(tempFive);
 
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempThree);
 
     std::cout << std::endl << "Removing test 3 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempOne);
 
     std::cout << std::endl << "Removing test 1 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     removePCB(tempFive);
 
     std::cout << std::endl << "Removing test 5 from queue" << std::endl;
     std::cout << std::endl;
-    printQueueContents();
+    printQueueContents(PARTIAL_PRINT);
 
     tempOne = NULL;
     tempTwo = NULL;
@@ -226,18 +239,238 @@ ProcessControlBlock* PCB_Queue::FindPCB(std::string processToFind){
     return NULL;
 }
 
-
-void PCB_Queue::printQueueContents(){
+//add print mode as parameter
+void PCB_Queue::printQueueContents(PrintMode printMode){
     PCB_Node* tempNode;
 
-    std::cout << "Name/State/Priority" << std::endl;
+
+    //Setup if statements based on printMode
+
+    if(printMode == PARTIAL_PRINT){
+        std::cout << std::endl << "Name/State/Priority" << std::endl;
+    }
+    if(printMode == TIME_REMAINING){
+        std::cout << std::endl << "Name/Time Remaining" << std::endl;
+    }
+
+    //scroll array, but using the print mode instead of a set print
     if(head != NULL)
     {
         tempNode = head;
         while(tempNode != tail){
-            tempNode->printPCBInfo(PARTIAL_PRINT);
+            tempNode->printPCBInfo(printMode);
             tempNode = tempNode->getNext();
         }
-        tempNode->printPCBInfo(PARTIAL_PRINT);
+        //prints tail
+        tempNode->printPCBInfo(printMode);
     }
+}
+
+bool PCB_Queue::isEmpty(){
+    if(numberOfNodes == 0)
+        return true;
+    else
+        return false;
+}
+
+
+ProcessControlBlock* PCB_Queue::getEarliestArrival(){
+    int earliestArrivalTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* earliestArrival = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeOfArrival() < earliestArrivalTime){
+                earliestArrivalTime = tempNode->getPCB()->getTimeOfArrival();
+                earliestArrival = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return earliestArrival->getPCB();
+    }
+
+    return NULL;
+}
+
+ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(){
+    int lowestTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* lowestRemaining = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeRemaining() < lowestTime){
+                lowestTime = tempNode->getPCB()->getTimeRemaining();
+                lowestRemaining = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return lowestRemaining->getPCB();
+    }
+
+    return NULL;
+}
+
+
+ProcessControlBlock* PCB_Queue::getHighestPriority(){
+    int highestPriority = -128;
+    PCB_Node* tempNode = head;
+    PCB_Node* mostUrgent = NULL;
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getPriority() > highestPriority){
+                highestPriority = tempNode->getPCB()->getPriority();
+                mostUrgent = tempNode;
+            }
+
+                tempNode = tempNode->getNext();
+
+        }
+        return mostUrgent->getPCB();
+    }
+
+    return NULL;
+}
+
+
+//used for FPPS
+int PCB_Queue::getTimeRemaining(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getTimeRemaining();
+    }
+
+    return INT_MAX;
+}
+
+std::string PCB_Queue::getProcessName(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getProcessName();
+    }
+
+    return "NULL PROCESS";
+}
+
+
+
+int PCB_Queue::getPriority(){
+    if(head != NULL)
+    {
+        return head->getPCB()->getPriority();
+    }
+
+    return -128;
+}
+
+
+//should only return the shortest job process that has "arrived"
+ProcessControlBlock* PCB_Queue::getLowestTimeRemaining(int currentProcessTime){
+    int lowestTime = INT_MAX;
+    PCB_Node* tempNode = head;
+    PCB_Node* lowestRemaining = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getTimeRemaining() < lowestTime &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                lowestTime = tempNode->getPCB()->getTimeRemaining();
+                lowestRemaining = tempNode;
+            }
+                tempNode = tempNode->getNext();
+        }
+        if(lowestRemaining != NULL){
+            return lowestRemaining->getPCB();
+        }else{
+            return NULL;
+        }
+    }
+    return NULL;
+}
+
+
+//should only return the highest priority process that has "arrived"
+ProcessControlBlock* PCB_Queue::getHighestPriority(int currentProcessTime){
+    int highestPriority = -128;
+    PCB_Node* tempNode = head;
+    PCB_Node* mostUrgent = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+            if(tempNode->getPCB()->getPriority() > highestPriority &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                highestPriority = tempNode->getPCB()->getPriority();
+                mostUrgent = tempNode;
+            }
+                tempNode = tempNode->getNext();
+        }
+        if(mostUrgent != NULL){
+            return mostUrgent->getPCB();
+        }else{
+            return NULL;
+        }
+    }
+    return NULL;
+}
+
+
+
+
+bool PCB_Queue::runUntilComplete(){
+    if(head != NULL){
+        head->getPCB()->run();
+    }
+
+    if(head->getPCB()->getTimeRemaining() == 0){
+        return true;
+    }
+
+    return false;
+}
+
+
+int PCB_Queue::getNumNodes(){
+    return numberOfNodes;
+}
+
+//used for multi level feedback queue
+void PCB_Queue::boostPriority(int highestQueue){
+    PCB_Node* tempNode = head;
+    while(tempNode != NULL)
+    {
+        tempNode->getPCB()->setPriority(highestQueue);
+        tempNode = tempNode->getNext();
+    }
+}
+
+ProcessControlBlock* PCB_Queue::getLotteryWinner(int currentProcessTime, int lottery){
+    PCB_Node* tempNode = head;
+    PCB_Node* lotteryWinner = NULL;
+
+
+    if(tempNode != NULL){
+        while(tempNode != NULL){
+
+            //subtracts tickets from lottery until lottery is < 1
+            //then returns the current process as a winner
+            lottery = lottery - tempNode->getPCB()->getPercentOfCPU();
+            if(lottery < 0 &&
+               tempNode->getPCB()->getTimeOfArrival() <= currentProcessTime){
+                lotteryWinner = tempNode;
+                return lotteryWinner->getPCB();
+            }
+                tempNode = tempNode->getNext();
+        }
+        //no winner was found
+            return NULL;
+    }
+    return NULL;
 }

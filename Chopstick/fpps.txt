@@ -1,0 +1,19 @@
+Cake loaded from file into Ready Queue
+Carrot loaded from file into Ready Queue
+Bacon loaded from file into Ready Queue
+Salad loaded from file into Ready Queue
+Monkey loaded from file into Ready Queue
+Cake is now running
+Salad was added to the running queue
+Cake was removed from the running queue
+Cake was returned to the ready queue
+Salad is now running
+Salad has successfully completed
+Cake is now running
+Cake has successfully completed
+Carrot is now running
+Carrot has successfully completed
+Bacon is now running
+Bacon has successfully completed
+Monkey is now running
+Monkey has successfully completed
