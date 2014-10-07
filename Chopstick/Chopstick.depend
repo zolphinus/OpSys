@@ -23,7 +23,7 @@
 	"PCBController.h"
 	<time.h>
 
-1412637583 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
+1412658605 c:\users\zolphinus\documents\github\opsys\chopstick\datastruct.h
 	<string>
 	<vector>
 
@@ -93,12 +93,13 @@
 1409692410 source:c:\users\zolphinus\documents\github\opsys\chopstick\command.cpp
 	"Command.h"
 
-1412653018 c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.h
+1412694841 c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.h
 	"PCB_Queue.h"
 	<string>
 	<istream>
 	<vector>
 	<fstream>
+	"MemoryManager.h"
 
 1411836055 c:\users\zolphinus\documents\github\opsys\chopstick\pcb_queue.h
 	<string>
@@ -128,7 +129,7 @@
 	<iostream>
 	<limits.h>
 
-1412653160 source:c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.cpp
+1412696442 source:c:\users\zolphinus\documents\github\opsys\chopstick\pcbcontroller.cpp
 	"PCBController.h"
 	"ProcessControlBlock.h"
 	"ProcessControlEnums.h"
@@ -147,11 +148,25 @@
 	"Reciever.h"
 	<iostream>
 
-1412652854 source:c:\users\zolphinus\documents\github\opsys\chopstick\memorynode.cpp
+1412696551 source:c:\users\zolphinus\documents\github\opsys\chopstick\memorynode.cpp
 	"MemoryNode.h"
 	"ProcessControlBlock.h"
+	<fstream>
+	<iostream>
 
-1412653042 c:\users\zolphinus\documents\github\opsys\chopstick\memorynode.h
+1412695964 c:\users\zolphinus\documents\github\opsys\chopstick\memorynode.h
 	<string>
 	"ProcessControlBlock.h"
+	<fstream>
+
+1412696356 c:\users\zolphinus\documents\github\opsys\chopstick\memorymanager.h
+	"MemoryNode.h"
+	<fstream>
+	"ProcessControlBlock.h"
+	"DataStruct.h"
+
+1412698159 source:c:\users\zolphinus\documents\github\opsys\chopstick\memorymanager.cpp
+	"MemoryManager.h"
+	"DataStruct.h"
+	<iostream>
 

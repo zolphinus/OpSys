@@ -1,5 +1,6 @@
 #include "MemoryManager.h"
 #include "DataStruct.h"
+#include <iostream>
 
 MemoryManager::MemoryManager(){
     //creates a block of free memory equal to the default amount
@@ -20,7 +21,7 @@ void MemoryManager::coalesce(){
     //and if travel is NULL, skips the coalesce as this means there is only free memory or there is zero free memory
     while(travel != NULL){
         //both nodes should be different. If both are free memory, combines them
-        if(travel->isFree == TRUE && placeHolder->isFree == TRUE){
+        if(travel->isFree == true && placeHolder->isFree == true){
             placeHolder->memoryUsed += travel->memoryUsed;
             placeHolder->next = travel->next;
             placeHolder = travel;
@@ -35,7 +36,9 @@ void MemoryManager::coalesce(){
     }
 
     lastChecked = head;
+    }
 }
+
 
 void MemoryManager::compact(){
     MemoryNode* travel = head;
@@ -46,9 +49,10 @@ void MemoryManager::compact(){
 
     //totals the amount of free memory
     while(travel != NULL){
-        if(travel->isFree == TRUE){
+        if(travel->isFree == true){
             freeMemory += travel->memoryUsed;
         }
+        travel = travel->next;
     }
 
     travel = head;
@@ -62,7 +66,7 @@ void MemoryManager::compact(){
         head = newMemoryList;
 
         while(travel != NULL){
-            if(travel->isFree == TRUE){
+            if(travel->isFree == true){
                 markedNode = travel;
                 travel = travel->next;
                 delete markedNode;
@@ -85,25 +89,26 @@ void MemoryManager::compact(){
 }
 
 
-void coalesce(std::ofstream& out){
+void MemoryManager::coalesce(std::fstream& out){
     printMemory(out);
     out << std::endl << "COALESCING" << std::endl;
     coalesce();
-    printMemory();
+    printMemory(out);
 }
 
-void compact(std::ofstream& out){
+void MemoryManager::compact(std::fstream& out){
     printMemory(out);
     out << std::endl << "COMPACTING" << std::endl;
     compact();
     printMemory(out);
 }
 
-void MemoryManager::printMemory(std::ofstream& out){
+void MemoryManager::printMemory(std::fstream& out){
     MemoryNode* temp = head;
     out << std::endl << "MEMORY CONTENTS" << std::endl;
     while(temp != NULL){
         temp->printDetails(out);
+        temp = temp->next;
     }
 }
 
@@ -119,16 +124,25 @@ void MemoryManager::freeMemory(ProcessControlBlock* pcb){
 
 void MemoryManager::promptMemoryMode(){
     char selector;
+    bool validSelection = false;
     std::cout << "Which memory mode will the scheduler use?" << std::endl;
     std::cout << "A) First Fit" << std::endl;
     std::cout << "B) Next Fit" << std::endl;
     std::cout << "C) Best Fit" << std::endl;
     std::cout << "D) Worst Fit" << std::endl;
 
-    while(selector < 'A' && selector > 'D'){
+    while(validSelection == false){
         std::cout << std::endl << "Please select a memory mode : ";
         std::cin >> selector;
         selector = toupper(selector);
+
+        switch(selector){
+        case 'A': case 'B' : case 'C' : case 'D':
+            validSelection = true;
+            break;
+        default:
+            std::cout << selector << std::endl;
+        }
     }
 
     switch(selector){
@@ -152,7 +166,7 @@ void MemoryManager::promptMemoryMode(){
 
 
 //used by the schedulers to determine if a process should run
-bool MemoryManager::fitPCB(ProcessControlBlock* pcb, std::ofstream& out){
+bool MemoryManager::fitPCB(ProcessControlBlock* pcb, std::fstream& out){
     bool fitSuccessful = false;
 
     //attempts to fit memory based on the selected memory mode
@@ -179,20 +193,101 @@ bool MemoryManager::fitPCB(ProcessControlBlock* pcb, std::ofstream& out){
 }
 
 
-bool firstFit(ProcessControlBlock* pcb, std::ofstream& out){
+bool MemoryManager::firstFit(ProcessControlBlock* pcb, std::fstream& out){
+    bool isSuccessful = false;
+    MemoryNode* travel = head;
+    MemoryNode* placeHolder = travel;
+
+    if(travel != NULL){
+            //tries to fit, then coalesces if needed and tries again, then compacts then tries again
+            for(int numAttempts = 0; numAttempts < 3; numAttempts++){
+                //resets the attempt
+                travel = head;
+                placeHolder = travel;
+
+                while(travel != NULL){
+                    if(travel->isFree == true){
+                        //only cares about free memory
+                        if(travel == head){
+                            //if first free slot is at beginning
+                            if(pcb->getMemory() <= travel->memoryUsed){
+                                //if there is enough free memory in one chunk
+                                head = new MemoryNode(pcb);
+                                head->next = travel;
+                                //subtracts the memory taken from the free node
+                                travel->memoryUsed = travel->memoryUsed - pcb->getMemory();
+                                travel = head;
+
+                                //process inserted successfully, breaks
+                                isSuccessful = true;
+                                break;
+                            }
+                        }else{
+                            //if first free slot is not at beginning
+                            if(pcb->getMemory() <= travel->memoryUsed){
+                                //if there is enough free memory in one chunk
+
+                                placeHolder->next = new MemoryNode(pcb);
+
+                                //subtracts the memory taken from the free node
+                                travel->memoryUsed = travel->memoryUsed - pcb->getMemory();
+                                if(travel->memoryUsed > 0){
+                                    //the free node still has memory
+                                    placeHolder = placeHolder->next;
+                                    placeHolder->next = travel;
+                                }else{
+                                    placeHolder = placeHolder->next;
+                                    placeHolder->next = travel->next;
+                                    delete travel;
+                                    travel = placeHolder;
+                                }
+
+                                //process inserted successfully, breaks
+                                isSuccessful = true;
+                                break;
+
+
+                            }
+                        }
+                    }
+
+
+                    placeHolder = travel;
+                    if(travel != NULL){
+                        travel = travel->next;
+                    }
+                }
+
+
+
+                if(isSuccessful == true){
+                    break;
+                }
+
+                if(numAttempts == 0){
+                    coalesce(out);
+                }
+
+                if(numAttempts == 1){
+                    compact(out);
+                }
+            }
+    }
+
+
+    return isSuccessful;
+}
+
+
+bool MemoryManager::nextFit(ProcessControlBlock* pcb, std::fstream& out){
     return false;
 }
 
 
-bool nextFit(ProcessControlBlock* pcb, std::ofstream& out){
+bool MemoryManager::bestFit(ProcessControlBlock* pcb, std::fstream& out){
     return false;
 }
 
-
-bool bestFit(ProcessControlBlock* pcb, std::ofstream& out){
-    return false;
-}
-
-bool worstFit(ProcessControlBlock* pcb, std::ofstream& out){
+bool MemoryManager::worstFit(ProcessControlBlock* pcb, std::fstream& out){
     return false;
 }

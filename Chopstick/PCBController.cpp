@@ -509,10 +509,13 @@ void PCB_Controller::testFileRead(){
 }
 
 bool PCB_Controller::sjfFullKnowledge(){
+    out.open("sjf.txt", std::ofstream::out);
     std::string findFile;
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool isInMemory = false;
+    bool schedulerCompleted = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -524,6 +527,8 @@ bool PCB_Controller::sjfFullKnowledge(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
+
         while(!in.eof()){
             tempPCB = readPCBFile(in);
             if(in.eof()){
@@ -551,6 +556,7 @@ bool PCB_Controller::sjfFullKnowledge(){
         in.close();
 
         //prints the ready queue
+        std::cout << "READY QUEUE" << std::endl;
         readyQueue.printQueueContents(TIME_REMAINING);
 
 
@@ -564,9 +570,15 @@ bool PCB_Controller::sjfFullKnowledge(){
             tempPCB = readyQueue.popNode();
             if(tempPCB != NULL){
                 //grabs and totals time until completion
-                tempPCB->setRunState(RUNNING);
-                runningQueue.insertNode(tempPCB);
+                isInMemory = memoryManager.fitPCB(tempPCB, out);
 
+                if(isInMemory == true){
+                    tempPCB->setRunState(RUNNING);
+                    runningQueue.insertNode(tempPCB);
+                }else{
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                }
 
                 while(!runningQueue.isEmpty()){
                     totalTimeToCompletion++;
@@ -585,8 +597,14 @@ bool PCB_Controller::sjfFullKnowledge(){
 
             //in full knowledge SJF Scheduler, totalCompletionTime will equal totalTurnAround time
             totalTurnAroundTime = totalTimeToCompletion;
-    }else
+            schedulerCompleted = true;
+    }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
+    }
+
+    out.close();
+    return schedulerCompleted;
 }
 
 bool PCB_Controller::incompleteFIFO(){
@@ -597,6 +615,9 @@ bool PCB_Controller::incompleteFIFO(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+
+
+    bool schedulerCompleted = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -651,6 +672,7 @@ bool PCB_Controller::incompleteFIFO(){
                 //grabs and totals time until completion
                 out << tempPCB->getProcessName() << " is now running" << std::endl;
 
+
                 tempPCB->setRunState(RUNNING);
                 runningQueue.insertNode(tempPCB);
 
@@ -672,11 +694,16 @@ bool PCB_Controller::incompleteFIFO(){
 
             //in full knowledge SJF Scheduler, totalCompletionTime will equal totalTurnAround time
             totalTurnAroundTime = totalTimeToCompletion;
+            schedulerCompleted = true;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+
+
+    return schedulerCompleted;
 }
 
 
@@ -688,6 +715,8 @@ bool PCB_Controller::incompleteFPPS(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool schedulerCompleted = false;
+
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -789,13 +818,15 @@ bool PCB_Controller::incompleteFPPS(){
                 }
             }
         }
-
+        schedulerCompleted = true;
     }
     else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+    return schedulerCompleted;
 }
 
 
@@ -806,6 +837,7 @@ bool PCB_Controller::incompleteSJF(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool schedulerCompleted = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -907,13 +939,15 @@ bool PCB_Controller::incompleteSJF(){
                 }
             }
         }
-
+        schedulerCompleted = true;
     }
     else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+    return schedulerCompleted;
 }
 
 //actually need to implement this still
@@ -927,6 +961,7 @@ bool PCB_Controller::incompleteRoundRobin(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool schedulerCompleted = false;
     int timeQuantum = 0;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
@@ -1020,11 +1055,14 @@ bool PCB_Controller::incompleteRoundRobin(){
 
             }
         }
+        schedulerCompleted = true;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+    return schedulerCompleted;
 }
 
 bool PCB_Controller::incompleteMLFQ(){
@@ -1039,6 +1077,7 @@ bool PCB_Controller::incompleteMLFQ(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool schedulerCompleted = false;
     int timeQuantum = 0;
     int numberOfQueues = 0;
     int timeToBump = 0;
@@ -1173,11 +1212,14 @@ bool PCB_Controller::incompleteMLFQ(){
                 totalTimeToCompletion++;
             }
         }
+        schedulerCompleted = true;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+    return schedulerCompleted;
 }
 
 
@@ -1194,6 +1236,7 @@ bool PCB_Controller::incompleteLottery(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool schedulerCompleted = false;
     int timeQuantum = 20;
     int suggestedTickets = 100;
     int totalCPU = 0;
@@ -1318,11 +1361,14 @@ bool PCB_Controller::incompleteLottery(){
                 totalTimeToCompletion++;
             }
         }
+        schedulerCompleted = true;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
+       schedulerCompleted = false;
     }
 
     out.close();
+    return schedulerCompleted;
 }
 
 

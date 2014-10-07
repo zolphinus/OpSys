@@ -10,20 +10,21 @@
 class MemoryManager{
 public:
     MemoryManager();
-    void coalesce(std::ofstream&);
-    void compact(std::ofstream&);
+    void coalesce(std::fstream&);
+    void compact(std::fstream&);
     void freeMemory(ProcessControlBlock*);
     void promptMemoryMode();
-    bool fitPCB(ProcessControlBlock*, std::ofstream&);
+    bool fitPCB(ProcessControlBlock*, std::fstream&);
+
+    void printMemory(std::fstream&);
 
 private:
     void coalesce();
     void compact();
-    void printMemory(std::ofstream&);
-    void firstFit(ProcessControlBlock*, std::ofstream&);
-    void nextFit(ProcessControlBlock*, std::ofstream&);
-    void bestFit(ProcessControlBlock*, std::ofstream&);
-    void worstFit(ProcessControlBlock*, std::ofstream&);
+    bool firstFit(ProcessControlBlock*, std::fstream&);
+    bool nextFit(ProcessControlBlock*, std::fstream&);
+    bool bestFit(ProcessControlBlock*, std::fstream&);
+    bool worstFit(ProcessControlBlock*, std::fstream&);
 
 
 

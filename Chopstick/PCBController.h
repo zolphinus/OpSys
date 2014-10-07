@@ -6,6 +6,7 @@
 #include <istream>
 #include <vector>
 #include <fstream>
+#include "MemoryManager.h"
 
 class ProcessControlBlock;
 
@@ -53,6 +54,7 @@ private:
     PCB_Queue blockedQueue;
     PCB_Queue suspendedBlockedQueue;
     PCB_Queue runningQueue;
+    MemoryManager memoryManager;
     int totalTimeToCompletion;
     int totalTurnAroundTime;
     int totalCompletedPCBs;

@@ -1,0 +1,27 @@
+
+MEMORY CONTENTS
+Cake   Memory Used: 128
+Monkey   Memory Used: 64
+Bacon   Memory Used: 512
+Carrot   Memory Used: 256
+FREE   Memory Used: 64
+
+COALESCING
+
+MEMORY CONTENTS
+Cake   Memory Used: 128
+Monkey   Memory Used: 64
+Bacon   Memory Used: 512
+Carrot   Memory Used: 256
+FREE   Memory Used: 64
+
+MEMORY CONTENTS
+Cake   Memory Used: 128
+Monkey   Memory Used: 64
+Bacon   Memory Used: 512
+Carrot   Memory Used: 256
+FREE   Memory Used: 64
+
+COMPACTING
+
+MEMORY CONTENTS

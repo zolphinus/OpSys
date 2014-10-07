@@ -2,6 +2,8 @@
 #include "ProcessControlBlock.h"
 #include <fstream>
 
+#include <iostream>
+
 
 //constructor used for creating a free node
 MemoryNode::MemoryNode(int memoryUsed){
@@ -26,7 +28,7 @@ void MemoryNode::freeMemory(ProcessControlBlock* pcb){
     }
 }
 
-void MemoryNode::printDetails(std::ofstream& out){
+void MemoryNode::printDetails(std::fstream& out){
     //writes details of the node into the appropriate information file
-    out << this->processName << "   Memory Used: " << this->memoryUsed;
+    out << this->processName << "   Memory Used: " << this->memoryUsed << '\n';
 }

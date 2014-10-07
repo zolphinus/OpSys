@@ -41,6 +41,10 @@
 		<Unit filename="DirectoryCommands.h" />
 		<Unit filename="GeneralFunctions.cpp" />
 		<Unit filename="GeneralFunctions.h" />
+		<Unit filename="MemoryManager.cpp" />
+		<Unit filename="MemoryManager.h" />
+		<Unit filename="MemoryNode.cpp" />
+		<Unit filename="MemoryNode.h" />
 		<Unit filename="OperatingCommands.h" />
 		<Unit filename="OperatingReciever.cpp" />
 		<Unit filename="OperatingReciever.h" />

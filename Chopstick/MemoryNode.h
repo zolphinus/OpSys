@@ -11,7 +11,7 @@ public:
     MemoryNode(ProcessControlBlock*);
 
     void freeMemory(ProcessControlBlock*);
-    void printDetails(std::ofstream& out);
+    void printDetails(std::fstream& out);
 
     MemoryNode* next;
     int memoryUsed;
