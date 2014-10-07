@@ -118,6 +118,7 @@ void MemoryManager::freeMemory(ProcessControlBlock* pcb){
     MemoryNode* travel = head;
     while(travel != NULL){
         travel->freeMemory(pcb);
+        travel = travel->next;
     }
 }
 

@@ -588,6 +588,7 @@ bool PCB_Controller::sjfFullKnowledge(){
                         tempPCB = runningQueue.popNode();
                         processNames.push_back(tempPCB->getProcessName());
                         totalCompletedPCBs++;
+                        memoryManager.freeMemory(tempPCB);
                     }
 
                 }
