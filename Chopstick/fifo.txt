@@ -3,13 +3,65 @@ Carrot loaded from file into Ready Queue
 Bacon loaded from file into Ready Queue
 Salad loaded from file into Ready Queue
 Monkey loaded from file into Ready Queue
+
 Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+FREE   Memory Used: 725
 Cake has successfully completed
+
 Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
 Carrot has successfully completed
+
 Bacon is now running
+
+MEMORY CONTENTS
+Bacon   Memory Used: 45
+FREE   Memory Used: 254
+FREE   Memory Used: 368
+FREE   Memory Used: 357
 Bacon has successfully completed
-Salad is now running
-Salad has successfully completed
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 45
+FREE   Memory Used: 254
+FREE   Memory Used: 368
+FREE   Memory Used: 357
+
+COALESCING
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+FREE   Memory Used: 725
+
+----------------------------------------------
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+FREE   Memory Used: 725
+
+COMPACTING
+
+MEMORY CONTENTS
+FREE   Memory Used: 1024
+
+----------------------------------------------
+
+Salad has been blocked due to insufficient memory
+
 Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 458
 Monkey has successfully completed

@@ -1,24 +1,32 @@
 
+----------------------------------------------
+
 MEMORY CONTENTS
-FREE   Memory Used: 513
-FREE   Memory Used: 0
-FREE   Memory Used: 0
-FREE   Memory Used: 0
-FREE   Memory Used: 511
+FREE   Memory Used: 45
+FREE   Memory Used: 254
+FREE   Memory Used: 368
+FREE   Memory Used: 198
+FREE   Memory Used: 159
 
 COALESCING
 
 MEMORY CONTENTS
-FREE   Memory Used: 513
-FREE   Memory Used: 0
-FREE   Memory Used: 511
+FREE   Memory Used: 299
+FREE   Memory Used: 566
+FREE   Memory Used: 159
+
+----------------------------------------------
+
+----------------------------------------------
 
 MEMORY CONTENTS
-FREE   Memory Used: 513
-FREE   Memory Used: 0
-FREE   Memory Used: 511
+FREE   Memory Used: 299
+FREE   Memory Used: 566
+FREE   Memory Used: 159
 
 COMPACTING
 
 MEMORY CONTENTS
 FREE   Memory Used: 1024
+
+----------------------------------------------

@@ -3,17 +3,93 @@ Carrot loaded from file into Ready Queue
 Bacon loaded from file into Ready Queue
 Salad loaded from file into Ready Queue
 Monkey loaded from file into Ready Queue
+
 Cake is now running
-Salad was added to the running queue
-Cake was removed from the running queue
-Cake was returned to the ready queue
-Salad is now running
-Salad has successfully completed
-Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+FREE   Memory Used: 725
+
+----------------------------------------------
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
+COALESCING
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
+----------------------------------------------
+
+----------------------------------------------
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
+COMPACTING
+
+MEMORY CONTENTS
+FREE   Memory Used: 357
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+
+----------------------------------------------
+
+Salad has been blocked due to insufficient memory
 Cake has successfully completed
+
 Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 357
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
 Carrot has successfully completed
+
 Bacon is now running
+
+MEMORY CONTENTS
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+FREE   Memory Used: 299
+FREE   Memory Used: 368
+
+----------------------------------------------
+
+MEMORY CONTENTS
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+FREE   Memory Used: 299
+FREE   Memory Used: 368
+
+COALESCING
+
+MEMORY CONTENTS
+Bacon   Memory Used: 45
+FREE   Memory Used: 611
+FREE   Memory Used: 368
+
+----------------------------------------------
 Bacon has successfully completed
+
 Monkey is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 45
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 368
 Monkey has successfully completed
+
+MEMORY CONTENTS
+FREE   Memory Used: 45
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 368

@@ -616,8 +616,7 @@ bool PCB_Controller::incompleteFIFO(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
-
-
+    bool isInMemory = false;
     bool schedulerCompleted = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
@@ -630,6 +629,7 @@ bool PCB_Controller::incompleteFIFO(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         while(!in.eof()){
             tempPCB = readPCBFile(in);
             if(in.eof()){
@@ -671,11 +671,19 @@ bool PCB_Controller::incompleteFIFO(){
 
             if(tempPCB != NULL){
                 //grabs and totals time until completion
-                out << tempPCB->getProcessName() << " is now running" << std::endl;
 
+                isInMemory = memoryManager.fitPCB(tempPCB, out);
 
-                tempPCB->setRunState(RUNNING);
-                runningQueue.insertNode(tempPCB);
+                if(isInMemory == true){
+                    tempPCB->setRunState(RUNNING);
+                    runningQueue.insertNode(tempPCB);
+                    out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
+                    memoryManager.printMemory(out);
+                }else{
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                    out << std::endl <<  tempPCB->getProcessName() << " has been blocked due to insufficient memory" << std::endl;
+                }
 
 
                 while(!runningQueue.isEmpty()){
@@ -686,10 +694,12 @@ bool PCB_Controller::incompleteFIFO(){
                         tempPCB = runningQueue.popNode();
                         processNames.push_back(tempPCB->getProcessName());
                         totalCompletedPCBs++;
+                        memoryManager.freeMemory(tempPCB);
+                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                     }
 
                 }
-                out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+
             }
         }
 
@@ -717,7 +727,7 @@ bool PCB_Controller::incompleteFPPS(){
     PCB_Queue tempQueue;
     bool processCompleted = true;
     bool schedulerCompleted = false;
-
+    bool isInMemory = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -729,6 +739,7 @@ bool PCB_Controller::incompleteFPPS(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         while(!in.eof()){
             tempPCB = readPCBFile(in);
             if(in.eof()){
@@ -768,31 +779,51 @@ bool PCB_Controller::incompleteFPPS(){
             //grab our potential job
             tempPCB = readyQueue.getHighestPriority(totalTimeToCompletion);
             totalTimeToCompletion++;
-            if(tempPCB != NULL){
-                if(runningQueue.isEmpty()){
-                    //if there is no process in the running queue, it adds one
-                    readyQueue.removePCB(tempPCB);
-                    tempPCB->setRunState(RUNNING);
-                    runningQueue.insertNode(tempPCB);
-                    out << runningQueue.getProcessName() << " is now running" << std::endl;
-                }
-                else{
-                    //otherwise, we check our current job against our potential job
-                    if(tempPCB->getPriority() > runningQueue.getPriority())
-                    {
+
+
+            isInMemory = memoryManager.fitPCB(tempPCB, out);
+
+            if(isInMemory == true){
+                if(tempPCB != NULL){
+                    if(runningQueue.isEmpty()){
+                        //if there is no process in the running queue, it adds one
                         readyQueue.removePCB(tempPCB);
+                        tempPCB->setRunState(RUNNING);
                         runningQueue.insertNode(tempPCB);
-                        out << tempPCB->getProcessName() << " was added to the running queue" << std::endl;
+                        out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
+                        memoryManager.printMemory(out);
+                    }else{
+                        //otherwise, we check our current job against our potential job
+                        if(tempPCB->getPriority() > runningQueue.getPriority())
+                        {
+                            readyQueue.removePCB(tempPCB);
+                            runningQueue.insertNode(tempPCB);
+                            out << tempPCB->getProcessName() << " was added to the running queue" << std::endl;
 
-                        tempPCB = runningQueue.popNode();
-                        out << tempPCB->getProcessName() << " was removed from the running queue" << std::endl;
+                            tempPCB = runningQueue.popNode();
+                            out << tempPCB->getProcessName() << " was removed from the running queue" << std::endl;
+                            memoryManager.freeMemory(tempPCB);
 
-                        readyQueue.insertNode(tempPCB);
-                        out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
-                        out << runningQueue.getProcessName() << " is now running" << std::endl;
+                            readyQueue.insertNode(tempPCB);
+                            out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
+                            out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
+                            memoryManager.printMemory(out);
+                        }
                     }
                 }
+            }else{
+                std::cout << "SUP BRO" << std::endl;
+                if(tempPCB != NULL){
+                    readyQueue.removePCB(tempPCB);
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                    out << std::endl <<  tempPCB->getProcessName() << " has been blocked due to insufficient memory" << std::endl;
+                }
+                std::cout << "SUP" << std::endl;
+            }
+
                 processCompleted = runningQueue.runUntilComplete();
+
 
                 if(processCompleted == true){
                     tempPCB = runningQueue.popNode();
@@ -801,10 +832,10 @@ bool PCB_Controller::incompleteFPPS(){
                     tempPCB->calculateTurnAround(totalTimeToCompletion);
                     out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                     totalTurnAroundTime += tempPCB->getTurnAround();
+                    memoryManager.freeMemory(tempPCB);
                 }
-            }
-        }
 
+        }
         if(!runningQueue.isEmpty()){
             while(!runningQueue.isEmpty()){
                 processCompleted = runningQueue.runUntilComplete();
@@ -816,10 +847,12 @@ bool PCB_Controller::incompleteFPPS(){
                     tempPCB->calculateTurnAround(totalTimeToCompletion);
                     out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                     totalTurnAroundTime += tempPCB->getTurnAround();
+                    memoryManager.freeMemory(tempPCB);
                 }
             }
         }
         schedulerCompleted = true;
+        memoryManager.printMemory(out);
     }
     else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;
@@ -839,6 +872,7 @@ bool PCB_Controller::incompleteSJF(){
     PCB_Queue tempQueue;
     bool processCompleted = true;
     bool schedulerCompleted = false;
+    bool isInMemory = false;
     totalTimeToCompletion = 0;
     totalTurnAroundTime = 0;
     totalCompletedPCBs = 0;
@@ -850,6 +884,7 @@ bool PCB_Controller::incompleteSJF(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         while(!in.eof()){
             tempPCB = readPCBFile(in);
             if(in.eof()){
@@ -895,7 +930,7 @@ bool PCB_Controller::incompleteSJF(){
                     readyQueue.removePCB(tempPCB);
                     tempPCB->setRunState(RUNNING);
                     runningQueue.insertNode(tempPCB);
-                    out << runningQueue.getProcessName() << " is now running" << std::endl;
+                    out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
                 }
                 else{
                     //otherwise, we check our current job against our potential job
@@ -910,7 +945,7 @@ bool PCB_Controller::incompleteSJF(){
 
                         readyQueue.insertNode(tempPCB);
                         out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
-                        out << runningQueue.getProcessName() << " is now running" << std::endl;
+                        out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
                     }
                 }
                 processCompleted = runningQueue.runUntilComplete();
@@ -962,6 +997,7 @@ bool PCB_Controller::incompleteRoundRobin(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool isInMemory = false;
     bool schedulerCompleted = false;
     int timeQuantum = 0;
     totalTimeToCompletion = 0;
@@ -974,6 +1010,7 @@ bool PCB_Controller::incompleteRoundRobin(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         //prompt for time quanta
         std::cout << "Please enter a positive time quantum : ";
         std::cin >> timeQuantum;
@@ -1027,7 +1064,7 @@ bool PCB_Controller::incompleteRoundRobin(){
 
             if(tempPCB != NULL){
                 //grabs and totals time until completion
-                out << tempPCB->getProcessName() << " is now running" << std::endl;
+                out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
 
                 tempPCB->setRunState(RUNNING);
                 runningQueue.insertNode(tempPCB);
@@ -1079,6 +1116,7 @@ bool PCB_Controller::incompleteMLFQ(){
     PCB_Queue tempQueue;
     bool processCompleted = true;
     bool schedulerCompleted = false;
+    bool isInMemory = false;
     int timeQuantum = 0;
     int numberOfQueues = 0;
     int timeToBump = 0;
@@ -1093,6 +1131,7 @@ bool PCB_Controller::incompleteMLFQ(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         //prompt for time quanta
         std::cout << "Please enter a positive time quantum : ";
         std::cin >> timeQuantum;
@@ -1168,7 +1207,7 @@ bool PCB_Controller::incompleteMLFQ(){
 
             if(tempPCB != NULL){
                     //std::cout << tempPCB->getProcessName() << " has priority " << tempPCB->getPriority() << std::endl;
-                out << tempPCB->getProcessName() << " is now running" << std::endl;
+                out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
 
                 tempPCB->setRunState(RUNNING);
                 runningQueue.insertNode(tempPCB);
@@ -1184,7 +1223,7 @@ bool PCB_Controller::incompleteMLFQ(){
 
 
                 tempPCB->lowerPriority();
-                out << tempPCB->getProcessName() << " has lowered priority" << std::endl;
+                out << std::endl <<  tempPCB->getProcessName() << " has lowered priority" << std::endl;
 
 
                 if(processCompleted == true){
@@ -1196,7 +1235,7 @@ bool PCB_Controller::incompleteMLFQ(){
                         out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                         totalTurnAroundTime += tempPCB->getTurnAround();
 
-                        //std::cout << " COMPLETED" << std::endl;
+
                 }else{
                     tempPCB = runningQueue.popNode();
                     readyQueue.insertNode(tempPCB);
@@ -1205,7 +1244,7 @@ bool PCB_Controller::incompleteMLFQ(){
 
                 if((totalTimeToCompletion % timeToBump) == 0){
                     readyQueue.boostPriority(numberOfQueues);
-                    out << "BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX" << std::endl;
+                    out << std::endl <<  "BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX" << std::endl;
                 }
 
             }
@@ -1237,6 +1276,7 @@ bool PCB_Controller::incompleteLottery(){
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
     bool processCompleted = true;
+    bool isInMemory = false;
     bool schedulerCompleted = false;
     int timeQuantum = 20;
     int suggestedTickets = 100;
@@ -1256,6 +1296,7 @@ bool PCB_Controller::incompleteLottery(){
     in.open(findFile.c_str());
 
     if(in.is_open()){
+        memoryManager.promptMemoryMode();
         //prompt for time quanta
         std::cout << "Please enter a number of tickets (100 or greater) : ";
         std::cin >> suggestedTickets;
@@ -1330,7 +1371,7 @@ bool PCB_Controller::incompleteLottery(){
             readyQueue.removePCB(tempPCB);
 
             if(tempPCB != NULL){
-                out << tempPCB->getProcessName() << " won the lottery" << std::endl;
+                out << std::endl <<  tempPCB->getProcessName() << " won the lottery" << std::endl;
                 out << tempPCB->getProcessName() << " is now running" << std::endl;
 
                 tempPCB->setRunState(RUNNING);

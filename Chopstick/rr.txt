@@ -3,77 +3,177 @@ Carrot loaded from file into Ready Queue
 Bacon loaded from file into Ready Queue
 Salad loaded from file into Ready Queue
 Monkey loaded from file into Ready Queue
+
 Cake is now running
 Cake ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Monkey is now running
 Monkey ran out of time and was moved to ready queue
+
 Cake is now running
 Cake has successfully completed
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Monkey is now running
 Monkey ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
+Monkey is now running
+Monkey ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
+Monkey is now running
+Monkey ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
 Monkey is now running
 Monkey has successfully completed
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon ran out of time and was moved to ready queue
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
+Bacon is now running
+Bacon ran out of time and was moved to ready queue
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
+Carrot is now running
+Carrot ran out of time and was moved to ready queue
+
 Bacon is now running
 Bacon has successfully completed
+
 Salad is now running
 Salad ran out of time and was moved to ready queue
+
 Carrot is now running
 Carrot has successfully completed
+
+Salad is now running
+Salad ran out of time and was moved to ready queue
+
 Salad is now running
 Salad has successfully completed

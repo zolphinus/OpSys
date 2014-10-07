@@ -90,17 +90,21 @@ void MemoryManager::compact(){
 
 
 void MemoryManager::coalesce(std::fstream& out){
+    out << std::endl << "----------------------------------------------" << std::endl;
     printMemory(out);
     out << std::endl << "COALESCING" << std::endl;
     coalesce();
     printMemory(out);
+    out << std::endl << "----------------------------------------------" << std::endl;
 }
 
 void MemoryManager::compact(std::fstream& out){
+    out << std::endl << "----------------------------------------------" << std::endl;
     printMemory(out);
     out << std::endl << "COMPACTING" << std::endl;
     compact();
     printMemory(out);
+    out << std::endl << "----------------------------------------------" << std::endl;
 }
 
 void MemoryManager::printMemory(std::fstream& out){
@@ -169,10 +173,22 @@ void MemoryManager::promptMemoryMode(){
 //used by the schedulers to determine if a process should run
 bool MemoryManager::fitPCB(ProcessControlBlock* pcb, std::fstream& out){
     bool fitSuccessful = false;
+    MemoryNode* travel = head;
+
+    if(pcb == NULL)
+        return false;
 
     //attempts to fit memory based on the selected memory mode
     //allows each scheduler to use memory with a generic function
     //which can then be used for expanding memory algorithms
+    while(travel != NULL){
+        if(pcb->getProcessName() == travel->processName){
+            return true;
+        }
+        travel = travel->next;
+    }
+
+
     switch(memoryMode){
     case FIRST_FIT:
         fitSuccessful = firstFit(pcb, out);
@@ -199,6 +215,11 @@ bool MemoryManager::firstFit(ProcessControlBlock* pcb, std::fstream& out){
     MemoryNode* travel = head;
     MemoryNode* placeHolder = travel;
 
+    if(pcb == NULL)
+    {
+        std::cout << "TEST" << std::endl;
+        return false;
+    }
     if(travel != NULL){
             //tries to fit, then coalesces if needed and tries again, then compacts then tries again
             for(int numAttempts = 0; numAttempts < 3; numAttempts++){
@@ -214,10 +235,16 @@ bool MemoryManager::firstFit(ProcessControlBlock* pcb, std::fstream& out){
                             if(pcb->getMemory() <= travel->memoryUsed){
                                 //if there is enough free memory in one chunk
                                 head = new MemoryNode(pcb);
-                                head->next = travel;
-                                //subtracts the memory taken from the free node
                                 travel->memoryUsed = travel->memoryUsed - pcb->getMemory();
-                                travel = head;
+
+                                if(travel->memoryUsed > 0){
+                                    //the free node still has memory
+                                    head->next = travel;
+                                }else{
+                                    head->next = travel->next;
+                                    delete travel;
+                                    travel = head;
+                                }
 
                                 //process inserted successfully, breaks
                                 isSuccessful = true;

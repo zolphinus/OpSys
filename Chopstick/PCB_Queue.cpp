@@ -427,10 +427,9 @@ ProcessControlBlock* PCB_Queue::getHighestPriority(int currentProcessTime){
 bool PCB_Queue::runUntilComplete(){
     if(head != NULL){
         head->getPCB()->run();
-    }
-
-    if(head->getPCB()->getTimeRemaining() == 0){
-        return true;
+        if(head->getPCB()->getTimeRemaining() == 0){
+            return true;
+        }
     }
 
     return false;
