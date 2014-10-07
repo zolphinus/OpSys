@@ -5,6 +5,7 @@
 #include <string>
 #include <istream>
 #include <vector>
+#include <fstream>
 
 class ProcessControlBlock;
 
@@ -45,6 +46,8 @@ public:
 
 
 private:
+    std::ifstream in;
+    std::fstream out;
     PCB_Queue readyQueue;
     PCB_Queue suspendedReadyQueue;
     PCB_Queue blockedQueue;

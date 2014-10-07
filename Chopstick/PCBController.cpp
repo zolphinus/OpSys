@@ -484,7 +484,6 @@ void PCB_Controller::testController(){
 }
 
 void PCB_Controller::testFileRead(){
-    std::ifstream in;
     in.open("processes.txt");
 
     ProcessControlBlock* testPCB = NULL;
@@ -510,7 +509,6 @@ void PCB_Controller::testFileRead(){
 }
 
 bool PCB_Controller::sjfFullKnowledge(){
-    std::ifstream in;
     std::string findFile;
     ProcessControlBlock* tempPCB = NULL;
     PCB_Queue tempQueue;
@@ -592,10 +590,6 @@ bool PCB_Controller::sjfFullKnowledge(){
 }
 
 bool PCB_Controller::incompleteFIFO(){
-    std::ifstream in;
-
-    //need to create file in case it doesn't exist
-    std::fstream out;
     out.open("fifo.txt", std::ofstream::out); // files to write to
 
 
@@ -688,10 +682,6 @@ bool PCB_Controller::incompleteFIFO(){
 
 
 bool PCB_Controller::incompleteFPPS(){
-    std::ifstream in;
-
-    //need to create file in case it doesn't exist
-    std::fstream out;
     out.open("fpps.txt", std::ofstream::out); // files to write to
 
     std::string findFile;
@@ -810,10 +800,6 @@ bool PCB_Controller::incompleteFPPS(){
 
 
 bool PCB_Controller::incompleteSJF(){
-    std::ifstream in;
-
-    //need to create file in case it doesn't exist
-    std::fstream out;
     out.open("stcf.txt", std::ofstream::out); // files to write to
 
     std::string findFile;
@@ -932,10 +918,8 @@ bool PCB_Controller::incompleteSJF(){
 
 //actually need to implement this still
 bool PCB_Controller::incompleteRoundRobin(){
-    std::ifstream in;
 
     //need to create file in case it doesn't exist
-    std::fstream out;
     out.open("rr.txt", std::ofstream::out); // files to write to
 
 

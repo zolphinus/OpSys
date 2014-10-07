@@ -45,6 +45,14 @@ enum COMMAND_MODE{
     PCB_MODE
 };
 
+enum MEMORY_MODE{
+    FIRST_FIT,
+    NEXT_FIT,
+    BEST_FIT,
+    WORST_FIT,
+    MEMORY_MODE_ERROR
+};
+
 struct Global_Data{
         bool isRunning;
         std::string versionInfo;
