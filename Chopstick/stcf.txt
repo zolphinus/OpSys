@@ -3,17 +3,6206 @@ Carrot loaded from file into Ready Queue
 Bacon loaded from file into Ready Queue
 Salad loaded from file into Ready Queue
 Monkey loaded from file into Ready Queue
+
 Cake is now running
-Cake has successfully completed
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+FREE   Memory Used: 725
+
+Carrot is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
+Carrot is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
+Carrot is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+FREE   Memory Used: 357
+
 Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+Cake has successfully completed
+
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+COALESCING
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+----------------------------------------------
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+FREE   Memory Used: 312
+
+COMPACTING
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+----------------------------------------------
 Monkey was added to the running queue
 Bacon was removed from the running queue
 Bacon was returned to the ready queue
-Monkey is now running
-Monkey has successfully completed
+
 Bacon is now running
-Bacon has successfully completed
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+Monkey has successfully completed
+
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
 Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon   Memory Used: 45
+Bacon has successfully completed
+
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 45
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 45
+
+COALESCING
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Carrot   Memory Used: 368
+FREE   Memory Used: 45
+
+----------------------------------------------
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Carrot   Memory Used: 368
+FREE   Memory Used: 45
+
+COMPACTING
+
+MEMORY CONTENTS
+FREE   Memory Used: 656
+Carrot   Memory Used: 368
+
+----------------------------------------------
+
+Salad has been blocked due to insufficient memory
 Carrot has successfully completed
-Salad is now running
-Salad has successfully completed
+
+MEMORY CONTENTS
+FREE   Memory Used: 656
+FREE   Memory Used: 368

@@ -1,11 +1,12 @@
 #include "MemoryManager.h"
 #include "DataStruct.h"
 #include <iostream>
+#include <limits.h>
 
 MemoryManager::MemoryManager(){
     //creates a block of free memory equal to the default amount
     head = new MemoryNode(DEFAULT_MEMORY);
-    lastChecked = head;
+    lastChecked = NULL;
 
     //provides a default memory mode in case of errors in selection
     memoryMode = MEMORY_MODE_ERROR;
@@ -35,7 +36,7 @@ void MemoryManager::coalesce(){
             travel = travel->next;
     }
 
-    lastChecked = head;
+    lastChecked = NULL;
     }
 }
 
@@ -85,7 +86,7 @@ void MemoryManager::compact(){
             }
         }
     }
-    lastChecked = head;
+    lastChecked = NULL;
 }
 
 
@@ -217,7 +218,6 @@ bool MemoryManager::firstFit(ProcessControlBlock* pcb, std::fstream& out){
 
     if(pcb == NULL)
     {
-        std::cout << "TEST" << std::endl;
         return false;
     }
     if(travel != NULL){
@@ -308,14 +308,328 @@ bool MemoryManager::firstFit(ProcessControlBlock* pcb, std::fstream& out){
 
 
 bool MemoryManager::nextFit(ProcessControlBlock* pcb, std::fstream& out){
-    return false;
+    bool isSuccessful = false;
+    MemoryNode* travel = NULL;
+
+    //if nothing has been checked, starts with the head node
+
+
+    //otherwise starts looking from the last checked spot
+    if(lastChecked != NULL){
+        travel = lastChecked->next;
+    }else{
+        travel = head;
+    }
+
+    MemoryNode* placeHolder = travel;
+
+    if(pcb == NULL)
+    {
+        return false;
+    }
+    if(travel != NULL){
+            //tries to fit, then coalesces if needed and tries again, then compacts then tries again
+            for(int numAttempts = 0; numAttempts < 3; numAttempts++){
+                //resets the attempt
+                if(lastChecked != NULL){
+                    travel = lastChecked->next;
+                    placeHolder = lastChecked;
+                }else{
+                    travel = head;
+                    placeHolder = travel;
+                }
+
+                while(travel != lastChecked){
+                    if(travel == NULL){
+                        travel = head;
+                        placeHolder = travel;
+                    }
+
+                    if(travel->isFree == true){
+                        //only cares about free memory
+
+                        if(travel == head){
+                            //if first free slot is at beginning
+                            if(pcb->getMemory() <= travel->memoryUsed){
+                                //if there is enough free memory in one chunk
+                                head = new MemoryNode(pcb);
+                                travel->memoryUsed = travel->memoryUsed - pcb->getMemory();
+
+                                if(travel->memoryUsed > 0){
+                                    //the free node still has memory
+                                    head->next = travel;
+                                }else{
+                                    head->next = travel->next;
+                                    delete travel;
+                                    travel = head;
+                                }
+
+                                lastChecked = head;
+
+                                //process inserted successfully, breaks
+                                isSuccessful = true;
+                                break;
+                            }
+                        }else{
+
+                            //if first free slot is not at beginning
+                            if(pcb->getMemory() <= travel->memoryUsed){
+                                //if there is enough free memory in one chunk
+
+                                placeHolder->next = new MemoryNode(pcb);
+
+                                //subtracts the memory taken from the free node
+                                travel->memoryUsed = travel->memoryUsed - pcb->getMemory();
+                                if(travel->memoryUsed > 0){
+                                    //the free node still has memory
+                                    placeHolder = placeHolder->next;
+                                    placeHolder->next = travel;
+                                }else{
+                                    placeHolder = placeHolder->next;
+                                    placeHolder->next = travel->next;
+                                    delete travel;
+                                    travel = placeHolder;
+                                }
+
+                                lastChecked = placeHolder;
+                                //process inserted successfully, breaks
+                                isSuccessful = true;
+                                break;
+                            }
+                        }
+                    }
+
+
+
+                    placeHolder = travel;
+                    if(travel != NULL){
+                        travel = travel->next;
+                    }else
+                        travel = head;
+                    }
+
+
+
+
+                if(isSuccessful == true){
+                    break;
+                }
+
+
+                if(numAttempts == 0){
+                    coalesce(out);
+                }
+
+                if(numAttempts == 1){
+                    compact(out);
+                }
+            }
+    }
+
+    return isSuccessful;
 }
 
 
 bool MemoryManager::bestFit(ProcessControlBlock* pcb, std::fstream& out){
-    return false;
+    bool isSuccessful = false;
+    MemoryNode* travel = head;
+    MemoryNode* placeHolder = travel;
+
+    MemoryNode* bestPlaceHolder;
+    MemoryNode* best;
+    int lowestWaste = INT_MAX;
+
+    if(pcb == NULL)
+    {
+        return false;
+    }
+
+    if(travel != NULL){
+            //tries to fit, then coalesces if needed and tries again, then compacts then tries again
+            for(int numAttempts = 0; numAttempts < 3; numAttempts++){
+                //resets the attempt
+                travel = head;
+                placeHolder = travel;
+
+                while(travel != NULL){
+
+                    if(travel->isFree == true){
+                        //only care about valid memory slots
+                        if(pcb->getMemory() <= travel->memoryUsed){
+                            if((travel->memoryUsed - pcb->getMemory()) < lowestWaste){
+                               //only if the lowest leftover space
+                               lowestWaste = travel->memoryUsed - pcb->getMemory();
+                               std::cout << "Lowest Waste : " << lowestWaste << std::endl;
+                               bestPlaceHolder = placeHolder;
+                               best = travel;
+                               isSuccessful = true;
+                            }
+
+                        }
+
+                    }
+
+
+                    placeHolder = travel;
+                    if(travel != NULL){
+                        travel = travel->next;
+                    }
+                }
+
+
+
+                if(isSuccessful == true){
+                    break;
+                }
+
+                if(numAttempts == 0){
+                    coalesce(out);
+                }
+
+                if(numAttempts == 1){
+                    compact(out);
+                }
+            }
+
+            //node insertion stuffs here
+            if(best == head){
+                //if first free slot is at beginning
+                    head = new MemoryNode(pcb);
+                    best->memoryUsed = best->memoryUsed - pcb->getMemory();
+
+                    if(best->memoryUsed > 0){
+                        //the free node still has memory
+                        head->next = best;
+                    }else{
+                        head->next = best->next;
+                        delete best;
+                        best = head;
+                    }
+
+            }else{
+                //if first free slot is not at beginning
+                    bestPlaceHolder->next = new MemoryNode(pcb);
+
+
+                    //subtracts the memory taken from the free node
+                    best->memoryUsed = best->memoryUsed - pcb->getMemory();
+
+
+                    if(best->memoryUsed > 0){
+                        //the free node still has memory
+                        bestPlaceHolder = bestPlaceHolder->next;
+                        bestPlaceHolder->next = best;
+                    }else{
+
+                        bestPlaceHolder = bestPlaceHolder->next;
+                        bestPlaceHolder->next = best->next;
+                        delete best;
+                        best = bestPlaceHolder;
+                    }
+        }
+    }
+
+    return isSuccessful;
 }
 
 bool MemoryManager::worstFit(ProcessControlBlock* pcb, std::fstream& out){
-    return false;
+    bool isSuccessful = false;
+    MemoryNode* travel = head;
+    MemoryNode* placeHolder = travel;
+
+    MemoryNode* worstPlaceHolder;
+    MemoryNode* worst;
+    int biggestWaste = INT_MIN;
+
+    if(pcb == NULL)
+    {
+        return false;
+    }
+
+    if(travel != NULL){
+            //tries to fit, then coalesces if needed and tries again, then compacts then tries again
+            for(int numAttempts = 0; numAttempts < 3; numAttempts++){
+                //resets the attempt
+                travel = head;
+                placeHolder = travel;
+
+                while(travel != NULL){
+
+                    if(travel->isFree == true){
+                        //only care about valid memory slots
+                        if(pcb->getMemory() <= travel->memoryUsed){
+                            if((travel->memoryUsed - pcb->getMemory()) > biggestWaste){
+                               //only if the lowest leftover space
+                               biggestWaste = travel->memoryUsed - pcb->getMemory();
+                               std::cout << "Biggest Waste : " << biggestWaste << std::endl;
+                               worstPlaceHolder = placeHolder;
+                               worst = travel;
+                               isSuccessful = true;
+                            }
+
+                        }
+
+                    }
+
+
+                    placeHolder = travel;
+                    if(travel != NULL){
+                        travel = travel->next;
+                    }
+                }
+
+
+
+                if(isSuccessful == true){
+                    break;
+                }
+
+                if(numAttempts == 0){
+                    coalesce(out);
+                }
+
+                if(numAttempts == 1){
+                    compact(out);
+                }
+            }
+
+            //node insertion stuffs here
+            if(worst == head){
+                //if first free slot is at beginning
+                    head = new MemoryNode(pcb);
+                    worst->memoryUsed = worst->memoryUsed - pcb->getMemory();
+
+                    if(worst->memoryUsed > 0){
+                        //the free node still has memory
+                        head->next = worst;
+                    }else{
+                        head->next = worst->next;
+                        delete worst;
+                        worst = head;
+                    }
+
+            }else{
+                //if first free slot is not at beginning
+                    worstPlaceHolder->next = new MemoryNode(pcb);
+
+
+                    //subtracts the memory taken from the free node
+                    worst->memoryUsed = worst->memoryUsed - pcb->getMemory();
+
+
+                    if(worst->memoryUsed > 0){
+                        //the free node still has memory
+                        worstPlaceHolder = worstPlaceHolder->next;
+                        worstPlaceHolder->next = worst;
+                    }else{
+
+                        worstPlaceHolder = worstPlaceHolder->next;
+                        worstPlaceHolder->next = worst->next;
+                        delete worst;
+                        worst = worstPlaceHolder;
+                    }
+        }
+    }
+
+    return isSuccessful;
 }

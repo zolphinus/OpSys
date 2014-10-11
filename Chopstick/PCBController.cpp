@@ -812,14 +812,12 @@ bool PCB_Controller::incompleteFPPS(){
                     }
                 }
             }else{
-                std::cout << "SUP BRO" << std::endl;
                 if(tempPCB != NULL){
                     readyQueue.removePCB(tempPCB);
                     tempPCB->setRunState(BLOCKED);
                     blockedQueue.insertNode(tempPCB);
                     out << std::endl <<  tempPCB->getProcessName() << " has been blocked due to insufficient memory" << std::endl;
                 }
-                std::cout << "SUP" << std::endl;
             }
 
                 processCompleted = runningQueue.runUntilComplete();
@@ -924,30 +922,46 @@ bool PCB_Controller::incompleteSJF(){
             //grab our potential job
             tempPCB = readyQueue.getLowestTimeRemaining(totalTimeToCompletion);
             totalTimeToCompletion++;
-            if(tempPCB != NULL){
-                if(runningQueue.isEmpty()){
+
+            isInMemory = memoryManager.fitPCB(tempPCB, out);
+
+            if(isInMemory == true){
+                if(tempPCB != NULL){
+                    if(runningQueue.isEmpty()){
                     //if there is no process in the running queue, it adds one
-                    readyQueue.removePCB(tempPCB);
-                    tempPCB->setRunState(RUNNING);
-                    runningQueue.insertNode(tempPCB);
-                    out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
-                }
-                else{
-                    //otherwise, we check our current job against our potential job
-                    if(tempPCB->getTimeRemaining() < runningQueue.getTimeRemaining())
-                    {
                         readyQueue.removePCB(tempPCB);
+                        tempPCB->setRunState(RUNNING);
                         runningQueue.insertNode(tempPCB);
-                        out << tempPCB->getProcessName() << " was added to the running queue" << std::endl;
-
-                        tempPCB = runningQueue.popNode();
-                        out << tempPCB->getProcessName() << " was removed from the running queue" << std::endl;
-
-                        readyQueue.insertNode(tempPCB);
-                        out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
-                        out << std::endl <<  runningQueue.getProcessName() << " is now running" << std::endl;
                     }
+                    else{
+                        //otherwise, we check our current job against our potential job
+                        if(tempPCB->getTimeRemaining() < runningQueue.getTimeRemaining())
+                        {
+                            readyQueue.removePCB(tempPCB);
+                            runningQueue.insertNode(tempPCB);
+                            out << tempPCB->getProcessName() << " was added to the running queue" << std::endl;
+
+                            tempPCB = runningQueue.popNode();
+                            out << tempPCB->getProcessName() << " was removed from the running queue" << std::endl;
+
+                            readyQueue.insertNode(tempPCB);
+                            out << tempPCB->getProcessName() << " was returned to the ready queue" << std::endl;
+                        }
+                    }
+                    out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
+                    memoryManager.printMemory(out);
                 }
+            }else{
+                if(tempPCB != NULL){
+                    readyQueue.removePCB(tempPCB);
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                    out << std::endl <<  tempPCB->getProcessName() << " has been blocked due to insufficient memory" << std::endl;
+                }
+            }
+
+            if(tempPCB != NULL){
+
                 processCompleted = runningQueue.runUntilComplete();
 
                 if(processCompleted == true){
@@ -957,6 +971,7 @@ bool PCB_Controller::incompleteSJF(){
                     tempPCB->calculateTurnAround(totalTimeToCompletion);
                     out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                     totalTurnAroundTime += tempPCB->getTurnAround();
+                    memoryManager.freeMemory(tempPCB);
                 }
             }
         }
@@ -972,9 +987,12 @@ bool PCB_Controller::incompleteSJF(){
                     tempPCB->calculateTurnAround(totalTimeToCompletion);
                     out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
                     totalTurnAroundTime += tempPCB->getTurnAround();
+                    memoryManager.freeMemory(tempPCB);
                 }
             }
         }
+
+        memoryManager.printMemory(out);
         schedulerCompleted = true;
     }
     else{
@@ -1062,36 +1080,51 @@ bool PCB_Controller::incompleteRoundRobin(){
             //needs to find next node if arrival is less than current time
             tempPCB = readyQueue.popNode();
 
-            if(tempPCB != NULL){
-                //grabs and totals time until completion
-                out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
+            isInMemory = memoryManager.fitPCB(tempPCB, out);
 
-                tempPCB->setRunState(RUNNING);
-                runningQueue.insertNode(tempPCB);
+            if(isInMemory == true){
+                if(tempPCB != NULL){
+                    //grabs and totals time until completion
+                    out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
+
+                    tempPCB->setRunState(RUNNING);
+                    runningQueue.insertNode(tempPCB);
 
 
-                for(int i = 0; i < timeQuantum; i++){
+                    for(int i = 0; i < timeQuantum; i++){
 
-                    totalTimeToCompletion++;
-                    processCompleted = runningQueue.runUntilComplete();
-                    if(processCompleted == true)
-                        break;
-                }
+                        totalTimeToCompletion++;
+                        processCompleted = runningQueue.runUntilComplete();
+                        if(processCompleted == true)
+                            break;
+                    }
 
-                if(processCompleted == true){
+                    if(processCompleted == true){
+                            tempPCB = runningQueue.popNode();
+                            processNames.push_back(tempPCB->getProcessName());
+                            totalCompletedPCBs++;
+                            tempPCB->calculateTurnAround(totalTimeToCompletion);
+                            out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                            totalTurnAroundTime += tempPCB->getTurnAround();
+                            memoryManager.freeMemory(tempPCB);
+                    }else{
                         tempPCB = runningQueue.popNode();
-                        processNames.push_back(tempPCB->getProcessName());
-                        totalCompletedPCBs++;
-                        tempPCB->calculateTurnAround(totalTimeToCompletion);
-                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
-                        totalTurnAroundTime += tempPCB->getTurnAround();
-                }else{
-                    tempPCB = runningQueue.popNode();
-                    readyQueue.insertNode(tempPCB);
-                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
-                }
+                        readyQueue.insertNode(tempPCB);
+                        out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                        memoryManager.freeMemory(tempPCB);
+                    }
 
+                }
+            }else{
+                if(tempPCB != NULL){
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                    out << tempPCB->getProcessName() << " was blocked due to lack of sufficient memory" << std::endl;
+                }
             }
+
+
+
         }
         schedulerCompleted = true;
     }else{
@@ -1203,54 +1236,67 @@ bool PCB_Controller::incompleteMLFQ(){
 
             //needs to grab highest priority that has arrived
             tempPCB = readyQueue.getHighestPriority(totalTimeToCompletion);
-            readyQueue.removePCB(tempPCB);
 
-            if(tempPCB != NULL){
-                    //std::cout << tempPCB->getProcessName() << " has priority " << tempPCB->getPriority() << std::endl;
-                out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
+            isInMemory = memoryManager.fitPCB(tempPCB, out);
 
-                tempPCB->setRunState(RUNNING);
-                runningQueue.insertNode(tempPCB);
+            if(isInMemory == true){
 
+                if(tempPCB != NULL){
+                    out << std::endl <<  tempPCB->getProcessName() << " is now running" << std::endl;
 
-                for(int i = 0; i < timeQuantum; i++){
-
-                    totalTimeToCompletion++;
-                    processCompleted = runningQueue.runUntilComplete();
-                    if(processCompleted == true)
-                        break;
-                }
+                    tempPCB->setRunState(RUNNING);
+                    readyQueue.removePCB(tempPCB);
+                    runningQueue.insertNode(tempPCB);
 
 
-                tempPCB->lowerPriority();
-                out << std::endl <<  tempPCB->getProcessName() << " has lowered priority" << std::endl;
+                    for(int i = 0; i < timeQuantum; i++){
+
+                        totalTimeToCompletion++;
+                        processCompleted = runningQueue.runUntilComplete();
+                        if(processCompleted == true)
+                            break;
+                    }
 
 
-                if(processCompleted == true){
+                    tempPCB->lowerPriority();
+                    out << std::endl <<  tempPCB->getProcessName() << " has lowered priority" << std::endl;
 
+                    memoryManager.printMemory(out);
+
+                    if(processCompleted == true){
+
+                            tempPCB = runningQueue.popNode();
+                            processNames.push_back(tempPCB->getProcessName());
+                            totalCompletedPCBs++;
+                            tempPCB->calculateTurnAround(totalTimeToCompletion);
+                            out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                            totalTurnAroundTime += tempPCB->getTurnAround();
+                            memoryManager.freeMemory(tempPCB);
+
+                    }else{
                         tempPCB = runningQueue.popNode();
-                        processNames.push_back(tempPCB->getProcessName());
-                        totalCompletedPCBs++;
-                        tempPCB->calculateTurnAround(totalTimeToCompletion);
-                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
-                        totalTurnAroundTime += tempPCB->getTurnAround();
+                        readyQueue.insertNode(tempPCB);
+                        out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                        memoryManager.freeMemory(tempPCB);
+                    }
 
+                    if((totalTimeToCompletion % timeToBump) == 0){
+                        readyQueue.boostPriority(numberOfQueues);
+                        out << std::endl <<  "BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX" << std::endl;
+                    }
 
-                }else{
-                    tempPCB = runningQueue.popNode();
-                    readyQueue.insertNode(tempPCB);
-                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
                 }
 
-                if((totalTimeToCompletion % timeToBump) == 0){
-                    readyQueue.boostPriority(numberOfQueues);
-                    out << std::endl <<  "BOOSTED ALL PRIORITIES IN READY QUEUE TO MAX" << std::endl;
-                }
 
+            }else{
+                if(tempPCB != NULL){
+                    readyQueue.removePCB(tempPCB);
+                    tempPCB->setRunState(BLOCKED);
+                    blockedQueue.insertNode(tempPCB);
+                }
             }
-            else{
                 totalTimeToCompletion++;
-            }
+
         }
         schedulerCompleted = true;
     }else{
@@ -1368,41 +1414,55 @@ bool PCB_Controller::incompleteLottery(){
 
             //grabs PCB
             tempPCB = readyQueue.getLotteryWinner(totalTimeToCompletion, lotterySelect);
-            readyQueue.removePCB(tempPCB);
 
-            if(tempPCB != NULL){
-                out << std::endl <<  tempPCB->getProcessName() << " won the lottery" << std::endl;
-                out << tempPCB->getProcessName() << " is now running" << std::endl;
+            //finish hooking this up
+            isInMemory = memoryManager.fitPCB(tempPCB, out);
 
-                tempPCB->setRunState(RUNNING);
-                runningQueue.insertNode(tempPCB);
+                if(isInMemory == true){
+                    if(tempPCB != NULL){
+                        out << std::endl <<  tempPCB->getProcessName() << " won the lottery" << std::endl;
+                        out << tempPCB->getProcessName() << " is now running" << std::endl;
 
-                //time quantum is fixed on this scheduler
-                for(int i = 0; i < timeQuantum; i++){
+                        readyQueue.removePCB(tempPCB);
+                        tempPCB->setRunState(RUNNING);
+                        runningQueue.insertNode(tempPCB);
 
-                    totalTimeToCompletion++;
-                    processCompleted = runningQueue.runUntilComplete();
-                    if(processCompleted == true)
-                        break;
-                }
+                        //time quantum is fixed on this scheduler
+                        for(int i = 0; i < timeQuantum; i++){
 
-                if(processCompleted == true){
-                        tempPCB = runningQueue.popNode();
-                        processNames.push_back(tempPCB->getProcessName());
-                        totalCompletedPCBs++;
-                        tempPCB->calculateTurnAround(totalTimeToCompletion);
-                        out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
-                        totalTurnAroundTime += tempPCB->getTurnAround();
+                            totalTimeToCompletion++;
+                            processCompleted = runningQueue.runUntilComplete();
+                            if(processCompleted == true)
+                                break;
+                        }
+
+                        memoryManager.printMemory(out);
+
+
+                        if(processCompleted == true){
+                                tempPCB = runningQueue.popNode();
+                                processNames.push_back(tempPCB->getProcessName());
+                                totalCompletedPCBs++;
+                                tempPCB->calculateTurnAround(totalTimeToCompletion);
+                                out << tempPCB->getProcessName() << " has successfully completed" << std::endl;
+                                totalTurnAroundTime += tempPCB->getTurnAround();
+                                memoryManager.freeMemory(tempPCB);
+                        }else{
+                            tempPCB = runningQueue.popNode();
+                            readyQueue.insertNode(tempPCB);
+                            out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                        }
+                    }
                 }else{
-                    tempPCB = runningQueue.popNode();
-                    readyQueue.insertNode(tempPCB);
-                    out << tempPCB->getProcessName() << " ran out of time and was moved to ready queue" << std::endl;
+                    if(tempPCB != NULL){
+                        readyQueue.removePCB(tempPCB);
+                        tempPCB->setRunState(BLOCKED);
+                        blockedQueue.insertNode(tempPCB);
+                    }
                 }
-
-            }else{
                 totalTimeToCompletion++;
-            }
         }
+        memoryManager.printMemory(out);
         schedulerCompleted = true;
     }else{
        std::cout << std::endl << "Unable to locate file." << std::endl << std::endl;

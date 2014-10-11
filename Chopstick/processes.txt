@@ -1,6 +1,6 @@
 Carrot A 18 368 580 15 20
 Bacon S 14 45 550 18 20
-Salad A 28 1103 600 20 15
+Salad A 28 1003 600 20 15
 Monkey S 6  566 150 400 15
 Cake A 24 299 65 5 40
 

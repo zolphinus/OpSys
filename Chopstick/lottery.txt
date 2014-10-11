@@ -1,0 +1,717 @@
+Cake loaded from file into Ready Queue
+Carrot loaded from file into Ready Queue
+Bacon loaded from file into Ready Queue
+Salad loaded from file into Ready Queue
+Monkey loaded from file into Ready Queue
+
+Cake won the lottery
+Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+FREE   Memory Used: 725
+Cake ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Bacon ran out of time and was moved to ready queue
+
+Cake won the lottery
+Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Cake ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Bacon ran out of time and was moved to ready queue
+
+Cake won the lottery
+Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Cake ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Bacon ran out of time and was moved to ready queue
+
+Cake won the lottery
+Cake is now running
+
+MEMORY CONTENTS
+Cake   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Cake has successfully completed
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+FREE   Memory Used: 680
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+Carrot ran out of time and was moved to ready queue
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+
+COALESCING
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+
+----------------------------------------------
+
+----------------------------------------------
+
+MEMORY CONTENTS
+FREE   Memory Used: 299
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+FREE   Memory Used: 312
+
+COMPACTING
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+
+----------------------------------------------
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 611
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey ran out of time and was moved to ready queue
+
+Monkey won the lottery
+Monkey is now running
+
+MEMORY CONTENTS
+Monkey   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Monkey has successfully completed
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon ran out of time and was moved to ready queue
+
+Bacon won the lottery
+Bacon is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+Bacon   Memory Used: 45
+Carrot   Memory Used: 368
+Bacon has successfully completed
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot ran out of time and was moved to ready queue
+
+Carrot won the lottery
+Carrot is now running
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 45
+Carrot   Memory Used: 368
+Carrot has successfully completed
+
+MEMORY CONTENTS
+FREE   Memory Used: 566
+FREE   Memory Used: 45
+FREE   Memory Used: 45
+FREE   Memory Used: 368
