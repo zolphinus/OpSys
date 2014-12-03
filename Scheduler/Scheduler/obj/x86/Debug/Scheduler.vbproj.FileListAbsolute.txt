@@ -1,0 +1,9 @@
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\bin\Debug\Scheduler.xml
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.SchedulerForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.Resources.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.vbproj.GenerateResource.Cache
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.exe
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.xml
+C:\Users\zolphinus\Documents\GitHub\OpSys\Scheduler\Scheduler\obj\x86\Debug\Scheduler.pdb
