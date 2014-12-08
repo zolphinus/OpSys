@@ -22,7 +22,6 @@ Partial Class SchedulerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.NextStudent = New System.Windows.Forms.Button()
         Me.StudentListBox = New System.Windows.Forms.ListBox()
         Me.StudentNameLabel = New System.Windows.Forms.Label()
         Me.SkillLabel = New System.Windows.Forms.Label()
@@ -40,15 +39,6 @@ Partial Class SchedulerForm
         Me.EndTimeTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'NextStudent
-        '
-        Me.NextStudent.Location = New System.Drawing.Point(12, 220)
-        Me.NextStudent.Name = "NextStudent"
-        Me.NextStudent.Size = New System.Drawing.Size(75, 23)
-        Me.NextStudent.TabIndex = 0
-        Me.NextStudent.Text = "&Next"
-        Me.NextStudent.UseVisualStyleBackColor = True
         '
         'StudentListBox
         '
@@ -211,14 +201,12 @@ Partial Class SchedulerForm
         Me.Controls.Add(Me.SkillLabel)
         Me.Controls.Add(Me.StudentNameLabel)
         Me.Controls.Add(Me.StudentListBox)
-        Me.Controls.Add(Me.NextStudent)
         Me.Name = "SchedulerForm"
         Me.Text = "Student Scheduler"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents NextStudent As System.Windows.Forms.Button
     Friend WithEvents StudentListBox As System.Windows.Forms.ListBox
     Friend WithEvents StudentNameLabel As System.Windows.Forms.Label
     Friend WithEvents SkillLabel As System.Windows.Forms.Label

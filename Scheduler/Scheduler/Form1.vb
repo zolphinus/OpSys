@@ -1,4 +1,6 @@
-﻿Public Class SchedulerForm
+﻿Imports System.IO
+
+Public Class SchedulerForm
 
     'Skill levels for students
     Public Enum Skill
@@ -32,23 +34,10 @@
         'Need to add file loading/parsing to fill the student list from saved data
     End Sub
 
-    
 
-    
 
-    Private Sub NextStudent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NextStudent.Click
-        'Test to verify that students can be created and populated into list
 
-        Dim newSkill As Skill
-        newSkill = Skill.HIGH
-        Dim newStudent As New Student("TestJ", newSkill)
-        newStudent.timeList.Add("Time1")
-        NameTextBox.Text = newStudent.studentName
-        studentList.Add(newStudent)
-        Dim newStudent2 As New Student("TestK", newSkill)
-        newStudent2.timeList.Add("Time2")
-        studentList.Add(newStudent2)
-    End Sub
+
 
     Private Sub TestButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestButton.Click
         'Test to verify students could be populated in the ListBox
@@ -139,5 +128,132 @@
             End If
         End If
     End Sub
+
+    Private Sub SchedulerForm_Load(ByVal sender As Object, _
+    ByVal e As System.EventArgs) Handles MyBase.Load
+        'Performs actions once the form has been loaded
+        'Load file and populate lists here
+
+        Const filepath As String = "c:\student_scheduler\students\"
+
+        If (Not Directory.Exists(filepath)) Then
+            Directory.CreateDirectory(filepath)
+        End If
+
+        If Not My.Computer.FileSystem.FileExists(filepath & "students.txt") Then
+            'Uses the file system to create the students file if it does not exist
+            Dim fs As FileStream = File.Create(filepath & "students.txt")
+            fs.Close()
+
+        End If
+
+
+        Dim fileRead As New IO.StreamReader(filepath & "students.txt")
+        Dim input As String
+        Dim tempName As String
+        Dim tempSkill As Skill
+
+        'First line is either empty, or a * character which means a student's data is available
+
+        input = fileRead.ReadLine()
+
+        While Not (input Is Nothing)
+            If (input Is Nothing) Then
+                Exit While
+            End If
+            'reads the name first
+            input = fileRead.ReadLine()
+            tempName = input
+            'reads the skill level string
+            input = fileRead.ReadLine()
+            If (input = "HIGH") Then
+                'High skill students require proper string, while low skill students are default
+                tempSkill = Skill.HIGH
+            Else
+                tempSkill = Skill.LOW
+            End If
+            Dim newStudent As New Student(tempName, tempSkill)
+
+            While Not (input Is Nothing)
+                input = fileRead.ReadLine()
+                If (input = "*") Then
+                    Exit While
+                ElseIf (input Is Nothing) Then
+                    Exit While
+                End If
+
+                newStudent.timeList.Add(input)
+
+            End While
+
+
+
+            'while for times
+
+
+
+            'NameTextBox.Text = newStudent.studentName
+            studentList.Add(newStudent)
+
+        End While
+
+
+        'read in students from file
+
+
+
+
+        fileRead.Close()
+        StudentListBox.Items.Clear()
+        For Each Student In studentList
+            StudentListBox.Items.Add(Student.studentName)
+        Next (Student)
+
+
+
+    End Sub
+
+    'Implement the ability to save students to file
+    Private Sub SchedulerForm_UnLoad(ByVal sender As Object, _
+        ByVal e As System.EventArgs) Handles MyBase.Disposed
+        Const filepath As String = "c:\student_scheduler\students\"
+
+        If (Not Directory.Exists(filepath)) Then
+            Directory.CreateDirectory(filepath)
+        End If
+
+        If Not My.Computer.FileSystem.FileExists(filepath & "students.txt") Then
+            'Uses the file system to create the students file if it does not exist
+            Dim fs As FileStream = File.Create(filepath & "students.txt")
+            fs.Close()
+
+        End If
+
+        'Write to file without append. Change false to true for append.
+        Dim fileSave As New IO.StreamWriter(filepath & "students.txt", False)
+        
+        For Each Student In studentList
+            'Asterisk is used as a file marker
+            fileSave.WriteLine("*")
+            'Writes name
+            fileSave.WriteLine(Student.studentName)
+            'Writes skill level
+            If (Student.skillLevel = Skill.HIGH) Then
+                fileSave.WriteLine("HIGH")
+            Else
+                fileSave.WriteLine("LOW")
+            End If
+            'Writes student times
+            For Each sItem As String In Student.timeList
+                fileSave.WriteLine(sItem)
+            Next (sItem)
+        Next (Student)
+
+        fileSave.Close()
+
+    End Sub
+
+
+    'Implement Scheduling Algorithm
 
 End Class
