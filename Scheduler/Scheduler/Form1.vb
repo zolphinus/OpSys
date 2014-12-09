@@ -5,6 +5,7 @@ Public Class SchedulerForm
     'Skill levels for students
     Public Enum Skill
         LOW
+        AVERAGE
         HIGH
     End Enum
 
@@ -48,9 +49,9 @@ Public Class SchedulerForm
 
                 If TempStudent.skillLevel = Skill.HIGH Then
                     HighSkillRadio.Checked = True
-                    LowSkillRadio.Checked = False
+                ElseIf TempStudent.skillLevel = Skill.AVERAGE Then
+                    AverageRadioButton.Checked = True
                 Else
-                    HighSkillRadio.Checked = False
                     LowSkillRadio.Checked = True
                 End If
             End If
@@ -73,8 +74,10 @@ Public Class SchedulerForm
                 TempStudent.studentName = NameTextBox.Text
                 If (HighSkillRadio.Checked = True) Then
                     TempStudent.skillLevel = Skill.HIGH
-                ElseIf (LowSkillRadio.Checked = True) Then
-                    TempStudent.skillLevel = Skill.LOW
+                ElseIf (AverageRadioButton.Checked = True) Then
+                    TempStudent.skillLevel = Skill.AVERAGE
+                Else
+                    TempStudent.skillLevel = Skill.AVERAGE
                 End If
                 StudentListBox.Items.Clear()
                 For Each Student In studentList
@@ -154,6 +157,7 @@ Public Class SchedulerForm
         RemoveButton.Enabled = False
         UpdateStudentButton.Enabled = False
         CalculateButton.Enabled = False
+        CompetenceRadioButton.Checked = True
 
         Dim fileRead As New IO.StreamReader(filepath & "students.txt")
         Dim input As String
@@ -173,9 +177,11 @@ Public Class SchedulerForm
             tempName = input
             'reads the skill level string
             input = fileRead.ReadLine()
-            If (input = "HIGH") Then
+            If (input = "High") Then
                 'High skill students require proper string, while low skill students are default
                 tempSkill = Skill.HIGH
+            ElseIf (input = "Average") Then
+                tempSkill = Skill.AVERAGE
             Else
                 tempSkill = Skill.LOW
             End If
@@ -246,9 +252,11 @@ Public Class SchedulerForm
             fileSave.WriteLine(Student.studentName)
             'Writes skill level
             If (Student.skillLevel = Skill.HIGH) Then
-                fileSave.WriteLine("HIGH")
+                fileSave.WriteLine("High")
+            ElseIf (Student.skillLevel = Skill.AVERAGE) Then
+                fileSave.WriteLine("Average")
             Else
-                fileSave.WriteLine("LOW")
+                fileSave.WriteLine("Low")
             End If
             'Writes student times
             For Each sItem As String In Student.timeList
@@ -270,6 +278,8 @@ Public Class SchedulerForm
 
         If (HighSkillRadio.Checked = True) Then
             tempSkill = Skill.HIGH
+        ElseIf (AverageRadioButton.Checked = True) Then
+            tempSkill = Skill.AVERAGE
         Else
             tempSkill = Skill.LOW
         End If
@@ -334,12 +344,42 @@ Public Class SchedulerForm
 
     Private Sub CalculateButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalculateButton.Click
         'Verify group size is at least 1
-        'Verify interval size is a 15/30/45/60 
+        'Verify interval size is a 15/30/45/60
 
 
-        'Create list of high skilled students
 
-        'Create list of low skilled students
+        Dim selectedMode As Integer = 0
+
+        If (CompetenceRadioButton.Checked = True) Then
+            selectedMode = 1
+        ElseIf (RandomRadioButton.Checked = True) Then
+            selectedMode = 2
+        ElseIf (TimeMatchRadioButton.Checked = True) Then
+            selectedMode = 3
+        ElseIf (OverviewRadioButton.Checked = True) Then
+            selectedMode = 4
+        End If
+
+        'clears the error label to test if selection worked
+        ErrorLabel.Text = ""
+        Select Case selectedMode
+            Case 0
+
+            Case 1
+                'Competence Results
+            Case 2
+                'Random Results
+            Case 3
+                'Time Match Results
+            Case 4
+                'Overview Results
+
+        End Select
+
+
+
+
+        'Sort list of students by skill
 
         'Create list of time interval nodes for the day, based on the selected time interval
 
@@ -362,4 +402,5 @@ Public Class SchedulerForm
 
 
     End Sub
+
 End Class
