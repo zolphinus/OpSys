@@ -30,22 +30,8 @@ Public Class SchedulerForm
     End Class
 
 
-    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Need to add file loading/parsing to fill the student list from saved data
-    End Sub
 
 
-
-
-
-
-    Private Sub TestButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TestButton.Click
-        'Test to verify students could be populated in the ListBox
-        StudentListBox.Items.Clear()
-        For Each Student In studentList
-            StudentListBox.Items.Add(Student.studentName)
-        Next (Student)
-    End Sub
 
     Private Sub StudentListBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StudentListBox.SelectedIndexChanged
         'Automatically pulls student data from the list as different students are selected in the listBox
@@ -70,19 +56,31 @@ Public Class SchedulerForm
             End If
         End If
 
+        If (StudentListBox.SelectedItems.Count = 1) Then
+            RemoveButton.Enabled = True
+        End If
+
+
     End Sub
 
 
     Private Sub UpdateStudentButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateStudentButton.Click
         If (Not (studentList.Count = 0)) Then
+            If Not (StudentListBox.SelectedItems.Count = 0) Then
 
-            Dim TempStudent As Student
-            TempStudent = studentList(StudentListBox.SelectedIndex)
-            TempStudent.studentName = NameTextBox.Text
-            If (HighSkillRadio.Checked = True) Then
-                TempStudent.skillLevel = Skill.HIGH
-            ElseIf (LowSkillRadio.Checked = True) Then
-                TempStudent.skillLevel = Skill.LOW
+                Dim TempStudent As Student
+                TempStudent = studentList(StudentListBox.SelectedIndex)
+                TempStudent.studentName = NameTextBox.Text
+                If (HighSkillRadio.Checked = True) Then
+                    TempStudent.skillLevel = Skill.HIGH
+                ElseIf (LowSkillRadio.Checked = True) Then
+                    TempStudent.skillLevel = Skill.LOW
+                End If
+                StudentListBox.Items.Clear()
+                For Each Student In studentList
+                    StudentListBox.Items.Add(Student.studentName)
+                Next (Student)
+                UpdateStudentButton.Enabled = False
             End If
 
         End If
@@ -134,8 +132,11 @@ Public Class SchedulerForm
         'Performs actions once the form has been loaded
         'Load file and populate lists here
 
+        
+
         Const filepath As String = "c:\student_scheduler\students\"
 
+        'Checks to see if the directory is present, and if not, creates it
         If (Not Directory.Exists(filepath)) Then
             Directory.CreateDirectory(filepath)
         End If
@@ -147,6 +148,12 @@ Public Class SchedulerForm
 
         End If
 
+        'defaults the name text box to zero length, for GUI purposes
+        NameTextBox.Text = ""
+        NewStudentButton.Enabled = False
+        RemoveButton.Enabled = False
+        UpdateStudentButton.Enabled = False
+        CalculateButton.Enabled = False
 
         Dim fileRead As New IO.StreamReader(filepath & "students.txt")
         Dim input As String
@@ -222,15 +229,15 @@ Public Class SchedulerForm
             Directory.CreateDirectory(filepath)
         End If
 
-        If Not My.Computer.FileSystem.FileExists(filepath & "students.txt") Then
+        If Not My.Computer.FileSystem.FileExists(filepath & "students77.txt") Then
             'Uses the file system to create the students file if it does not exist
-            Dim fs As FileStream = File.Create(filepath & "students.txt")
+            Dim fs As FileStream = File.Create(filepath & "students77.txt")
             fs.Close()
 
         End If
 
         'Write to file without append. Change false to true for append.
-        Dim fileSave As New IO.StreamWriter(filepath & "students.txt", False)
+        Dim fileSave As New IO.StreamWriter(filepath & "students77.txt", False)
         
         For Each Student In studentList
             'Asterisk is used as a file marker
@@ -256,4 +263,103 @@ Public Class SchedulerForm
 
     'Implement Scheduling Algorithm
 
+
+
+    Private Sub NewStudentButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewStudentButton.Click
+        Dim tempSkill As Skill
+
+        If (HighSkillRadio.Checked = True) Then
+            tempSkill = Skill.HIGH
+        Else
+            tempSkill = Skill.LOW
+        End If
+
+        Dim newStudent As New Student(NameTextBox.Text, tempSkill)
+        studentList.Add(newStudent)
+        StudentListBox.Items.Clear()
+        For Each Student In studentList
+            StudentListBox.Items.Add(Student.studentName)
+        Next (Student)
+    End Sub
+
+    Private Sub RemoveButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RemoveButton.Click
+        If (StudentListBox.SelectedItems.Count = 1) Then
+            'If a student is selected
+            studentList.Remove(studentList(StudentListBox.SelectedIndex))
+            StudentListBox.Items.Clear()
+            For Each Student In studentList
+                StudentListBox.Items.Add(Student.studentName)
+            Next (Student)
+
+            If (studentList.Count = 0) Then
+                CalculateButton.Enabled = False
+            End If
+
+        End If
+    End Sub
+
+    Private Sub NameTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NameTextBox.TextChanged
+        If (NameTextBox.Text.Length = 0) Then
+            NewStudentButton.Enabled = False
+            UpdateStudentButton.Enabled = False
+        Else
+            NewStudentButton.Enabled = True
+            UpdateStudentButton.Enabled = True
+        End If
+    End Sub
+
+    Private Sub GroupSizeTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupSizeTextBox.TextChanged
+        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
+            CalculateButton.Enabled = True
+        Else
+            CalculateButton.Enabled = False
+        End If
+    End Sub
+
+    Private Sub IntervalTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IntervalTextBox.TextChanged
+        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
+            CalculateButton.Enabled = True
+        Else
+            CalculateButton.Enabled = False
+        End If
+    End Sub
+
+    Private Sub TeamsFileBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TeamsFileBox.TextChanged
+        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
+            CalculateButton.Enabled = True
+        Else
+            CalculateButton.Enabled = False
+        End If
+    End Sub
+
+    Private Sub CalculateButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalculateButton.Click
+        'Verify group size is at least 1
+        'Verify interval size is a 15/30/45/60 
+
+
+        'Create list of high skilled students
+
+        'Create list of low skilled students
+
+        'Create list of time interval nodes for the day, based on the selected time interval
+
+        'Calculate number of teams and Create list of teams
+
+        'Create list of students not belonging to a time
+
+        'Assign students to Time Interval Nodes
+
+        'Sweep over list of Interval Nodes, deleting nodes with zero students
+
+        'Algorithm to assign teams
+
+        'Save teams to file
+
+        'Save non-team students to file
+
+
+
+
+
+    End Sub
 End Class
