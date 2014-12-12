@@ -1,0 +1,10 @@
+*
+Student Testington
+High
+0430 1230
+1600 1800
+*
+Testing Testington
+Low
+1100 1230
+0700 0800

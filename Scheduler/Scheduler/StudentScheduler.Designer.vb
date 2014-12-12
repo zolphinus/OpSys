@@ -39,9 +39,7 @@ Partial Class SchedulerForm
         Me.RemoveButton = New System.Windows.Forms.Button()
         Me.CalculateButton = New System.Windows.Forms.Button()
         Me.GroupSizeLabel = New System.Windows.Forms.Label()
-        Me.TimeIntervalLabel = New System.Windows.Forms.Label()
         Me.GroupSizeTextBox = New System.Windows.Forms.TextBox()
-        Me.IntervalTextBox = New System.Windows.Forms.TextBox()
         Me.SaveFileLabel = New System.Windows.Forms.Label()
         Me.TeamsFileBox = New System.Windows.Forms.TextBox()
         Me.DotTXTLabel = New System.Windows.Forms.Label()
@@ -50,23 +48,31 @@ Partial Class SchedulerForm
         Me.TimeControlsGroupBox = New System.Windows.Forms.GroupBox()
         Me.StudentControlsGroupBox = New System.Windows.Forms.GroupBox()
         Me.ModeGroupBox = New System.Windows.Forms.GroupBox()
+        Me.OverviewRadioButton = New System.Windows.Forms.RadioButton()
         Me.TimeMatchRadioButton = New System.Windows.Forms.RadioButton()
         Me.RandomRadioButton = New System.Windows.Forms.RadioButton()
         Me.CompetenceRadioButton = New System.Windows.Forms.RadioButton()
-        Me.OverviewRadioButton = New System.Windows.Forms.RadioButton()
         Me.ErrorLabel = New System.Windows.Forms.Label()
+        Me.IntervalGroupBox = New System.Windows.Forms.GroupBox()
+        Me.SixtyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.FortyFiveRadioButton = New System.Windows.Forms.RadioButton()
+        Me.ThirtyRadioButton = New System.Windows.Forms.RadioButton()
+        Me.FifteenRadioButton = New System.Windows.Forms.RadioButton()
+        Me.StudentsGroupBox = New System.Windows.Forms.GroupBox()
         Me.SkillGroupBox.SuspendLayout()
         Me.TimeControlsGroupBox.SuspendLayout()
         Me.StudentControlsGroupBox.SuspendLayout()
         Me.ModeGroupBox.SuspendLayout()
+        Me.IntervalGroupBox.SuspendLayout()
+        Me.StudentsGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'StudentListBox
         '
         Me.StudentListBox.FormattingEnabled = True
-        Me.StudentListBox.Location = New System.Drawing.Point(209, 12)
+        Me.StudentListBox.Location = New System.Drawing.Point(6, 19)
         Me.StudentListBox.Name = "StudentListBox"
-        Me.StudentListBox.Size = New System.Drawing.Size(200, 108)
+        Me.StudentListBox.Size = New System.Drawing.Size(188, 82)
         Me.StudentListBox.TabIndex = 1
         '
         'StudentNameLabel
@@ -210,15 +216,6 @@ Partial Class SchedulerForm
         Me.GroupSizeLabel.TabIndex = 19
         Me.GroupSizeLabel.Text = "Group Size"
         '
-        'TimeIntervalLabel
-        '
-        Me.TimeIntervalLabel.AutoSize = True
-        Me.TimeIntervalLabel.Location = New System.Drawing.Point(206, 297)
-        Me.TimeIntervalLabel.Name = "TimeIntervalLabel"
-        Me.TimeIntervalLabel.Size = New System.Drawing.Size(68, 13)
-        Me.TimeIntervalLabel.TabIndex = 20
-        Me.TimeIntervalLabel.Text = "Time Interval"
-        '
         'GroupSizeTextBox
         '
         Me.GroupSizeTextBox.Location = New System.Drawing.Point(283, 269)
@@ -226,17 +223,10 @@ Partial Class SchedulerForm
         Me.GroupSizeTextBox.Size = New System.Drawing.Size(126, 20)
         Me.GroupSizeTextBox.TabIndex = 21
         '
-        'IntervalTextBox
-        '
-        Me.IntervalTextBox.Location = New System.Drawing.Point(283, 294)
-        Me.IntervalTextBox.Name = "IntervalTextBox"
-        Me.IntervalTextBox.Size = New System.Drawing.Size(126, 20)
-        Me.IntervalTextBox.TabIndex = 22
-        '
         'SaveFileLabel
         '
         Me.SaveFileLabel.AutoSize = True
-        Me.SaveFileLabel.Location = New System.Drawing.Point(206, 322)
+        Me.SaveFileLabel.Location = New System.Drawing.Point(206, 298)
         Me.SaveFileLabel.Name = "SaveFileLabel"
         Me.SaveFileLabel.Size = New System.Drawing.Size(51, 13)
         Me.SaveFileLabel.TabIndex = 23
@@ -244,7 +234,7 @@ Partial Class SchedulerForm
         '
         'TeamsFileBox
         '
-        Me.TeamsFileBox.Location = New System.Drawing.Point(283, 319)
+        Me.TeamsFileBox.Location = New System.Drawing.Point(283, 295)
         Me.TeamsFileBox.Name = "TeamsFileBox"
         Me.TeamsFileBox.Size = New System.Drawing.Size(99, 20)
         Me.TeamsFileBox.TabIndex = 24
@@ -252,7 +242,7 @@ Partial Class SchedulerForm
         'DotTXTLabel
         '
         Me.DotTXTLabel.AutoSize = True
-        Me.DotTXTLabel.Location = New System.Drawing.Point(388, 322)
+        Me.DotTXTLabel.Location = New System.Drawing.Point(388, 298)
         Me.DotTXTLabel.Name = "DotTXTLabel"
         Me.DotTXTLabel.Size = New System.Drawing.Size(21, 13)
         Me.DotTXTLabel.TabIndex = 25
@@ -321,6 +311,17 @@ Partial Class SchedulerForm
         Me.ModeGroupBox.TabStop = False
         Me.ModeGroupBox.Text = "Mode Select"
         '
+        'OverviewRadioButton
+        '
+        Me.OverviewRadioButton.AutoSize = True
+        Me.OverviewRadioButton.Location = New System.Drawing.Point(7, 85)
+        Me.OverviewRadioButton.Name = "OverviewRadioButton"
+        Me.OverviewRadioButton.Size = New System.Drawing.Size(117, 17)
+        Me.OverviewRadioButton.TabIndex = 3
+        Me.OverviewRadioButton.TabStop = True
+        Me.OverviewRadioButton.Text = "Time Slot Overview"
+        Me.OverviewRadioButton.UseVisualStyleBackColor = True
+        '
         'TimeMatchRadioButton
         '
         Me.TimeMatchRadioButton.AutoSize = True
@@ -354,17 +355,6 @@ Partial Class SchedulerForm
         Me.CompetenceRadioButton.Text = "Competence"
         Me.CompetenceRadioButton.UseVisualStyleBackColor = True
         '
-        'OverviewRadioButton
-        '
-        Me.OverviewRadioButton.AutoSize = True
-        Me.OverviewRadioButton.Location = New System.Drawing.Point(7, 85)
-        Me.OverviewRadioButton.Name = "OverviewRadioButton"
-        Me.OverviewRadioButton.Size = New System.Drawing.Size(117, 17)
-        Me.OverviewRadioButton.TabIndex = 3
-        Me.OverviewRadioButton.TabStop = True
-        Me.OverviewRadioButton.Text = "Time Slot Overview"
-        Me.OverviewRadioButton.UseVisualStyleBackColor = True
-        '
         'ErrorLabel
         '
         Me.ErrorLabel.AutoSize = True
@@ -373,11 +363,80 @@ Partial Class SchedulerForm
         Me.ErrorLabel.Size = New System.Drawing.Size(0, 13)
         Me.ErrorLabel.TabIndex = 30
         '
+        'IntervalGroupBox
+        '
+        Me.IntervalGroupBox.Controls.Add(Me.SixtyRadioButton)
+        Me.IntervalGroupBox.Controls.Add(Me.FortyFiveRadioButton)
+        Me.IntervalGroupBox.Controls.Add(Me.ThirtyRadioButton)
+        Me.IntervalGroupBox.Controls.Add(Me.FifteenRadioButton)
+        Me.IntervalGroupBox.Location = New System.Drawing.Point(431, 126)
+        Me.IntervalGroupBox.Name = "IntervalGroupBox"
+        Me.IntervalGroupBox.Size = New System.Drawing.Size(200, 106)
+        Me.IntervalGroupBox.TabIndex = 31
+        Me.IntervalGroupBox.TabStop = False
+        Me.IntervalGroupBox.Text = "Interval (minutes)"
+        '
+        'SixtyRadioButton
+        '
+        Me.SixtyRadioButton.AutoSize = True
+        Me.SixtyRadioButton.Location = New System.Drawing.Point(6, 85)
+        Me.SixtyRadioButton.Name = "SixtyRadioButton"
+        Me.SixtyRadioButton.Size = New System.Drawing.Size(37, 17)
+        Me.SixtyRadioButton.TabIndex = 3
+        Me.SixtyRadioButton.TabStop = True
+        Me.SixtyRadioButton.Text = "60"
+        Me.SixtyRadioButton.UseVisualStyleBackColor = True
+        '
+        'FortyFiveRadioButton
+        '
+        Me.FortyFiveRadioButton.AutoSize = True
+        Me.FortyFiveRadioButton.Location = New System.Drawing.Point(6, 62)
+        Me.FortyFiveRadioButton.Name = "FortyFiveRadioButton"
+        Me.FortyFiveRadioButton.Size = New System.Drawing.Size(37, 17)
+        Me.FortyFiveRadioButton.TabIndex = 2
+        Me.FortyFiveRadioButton.TabStop = True
+        Me.FortyFiveRadioButton.Text = "45"
+        Me.FortyFiveRadioButton.UseVisualStyleBackColor = True
+        '
+        'ThirtyRadioButton
+        '
+        Me.ThirtyRadioButton.AutoSize = True
+        Me.ThirtyRadioButton.Location = New System.Drawing.Point(6, 39)
+        Me.ThirtyRadioButton.Name = "ThirtyRadioButton"
+        Me.ThirtyRadioButton.Size = New System.Drawing.Size(37, 17)
+        Me.ThirtyRadioButton.TabIndex = 1
+        Me.ThirtyRadioButton.TabStop = True
+        Me.ThirtyRadioButton.Text = "30"
+        Me.ThirtyRadioButton.UseVisualStyleBackColor = True
+        '
+        'FifteenRadioButton
+        '
+        Me.FifteenRadioButton.AutoSize = True
+        Me.FifteenRadioButton.Location = New System.Drawing.Point(6, 16)
+        Me.FifteenRadioButton.Name = "FifteenRadioButton"
+        Me.FifteenRadioButton.Size = New System.Drawing.Size(37, 17)
+        Me.FifteenRadioButton.TabIndex = 0
+        Me.FifteenRadioButton.TabStop = True
+        Me.FifteenRadioButton.Text = "15"
+        Me.FifteenRadioButton.UseVisualStyleBackColor = True
+        '
+        'StudentsGroupBox
+        '
+        Me.StudentsGroupBox.Controls.Add(Me.StudentListBox)
+        Me.StudentsGroupBox.Location = New System.Drawing.Point(209, 12)
+        Me.StudentsGroupBox.Name = "StudentsGroupBox"
+        Me.StudentsGroupBox.Size = New System.Drawing.Size(200, 108)
+        Me.StudentsGroupBox.TabIndex = 32
+        Me.StudentsGroupBox.TabStop = False
+        Me.StudentsGroupBox.Text = "Students"
+        '
         'SchedulerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 351)
+        Me.ClientSize = New System.Drawing.Size(642, 348)
+        Me.Controls.Add(Me.StudentsGroupBox)
+        Me.Controls.Add(Me.IntervalGroupBox)
         Me.Controls.Add(Me.ErrorLabel)
         Me.Controls.Add(Me.ModeGroupBox)
         Me.Controls.Add(Me.StudentControlsGroupBox)
@@ -386,15 +445,12 @@ Partial Class SchedulerForm
         Me.Controls.Add(Me.DotTXTLabel)
         Me.Controls.Add(Me.TeamsFileBox)
         Me.Controls.Add(Me.SaveFileLabel)
-        Me.Controls.Add(Me.IntervalTextBox)
         Me.Controls.Add(Me.GroupSizeTextBox)
-        Me.Controls.Add(Me.TimeIntervalLabel)
         Me.Controls.Add(Me.GroupSizeLabel)
         Me.Controls.Add(Me.CalculateButton)
         Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.TimesListBox)
         Me.Controls.Add(Me.StudentNameLabel)
-        Me.Controls.Add(Me.StudentListBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "SchedulerForm"
         Me.Text = "Student Scheduler"
@@ -405,6 +461,9 @@ Partial Class SchedulerForm
         Me.StudentControlsGroupBox.ResumeLayout(False)
         Me.ModeGroupBox.ResumeLayout(False)
         Me.ModeGroupBox.PerformLayout()
+        Me.IntervalGroupBox.ResumeLayout(False)
+        Me.IntervalGroupBox.PerformLayout()
+        Me.StudentsGroupBox.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -426,9 +485,7 @@ Partial Class SchedulerForm
     Friend WithEvents RemoveButton As System.Windows.Forms.Button
     Friend WithEvents CalculateButton As System.Windows.Forms.Button
     Friend WithEvents GroupSizeLabel As System.Windows.Forms.Label
-    Friend WithEvents TimeIntervalLabel As System.Windows.Forms.Label
     Friend WithEvents GroupSizeTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents IntervalTextBox As System.Windows.Forms.TextBox
     Friend WithEvents SaveFileLabel As System.Windows.Forms.Label
     Friend WithEvents TeamsFileBox As System.Windows.Forms.TextBox
     Friend WithEvents DotTXTLabel As System.Windows.Forms.Label
@@ -442,5 +499,11 @@ Partial Class SchedulerForm
     Friend WithEvents CompetenceRadioButton As System.Windows.Forms.RadioButton
     Friend WithEvents OverviewRadioButton As System.Windows.Forms.RadioButton
     Friend WithEvents ErrorLabel As System.Windows.Forms.Label
+    Friend WithEvents IntervalGroupBox As System.Windows.Forms.GroupBox
+    Friend WithEvents SixtyRadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents FortyFiveRadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents ThirtyRadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents FifteenRadioButton As System.Windows.Forms.RadioButton
+    Friend WithEvents StudentsGroupBox As System.Windows.Forms.GroupBox
 
 End Class

@@ -14,23 +14,45 @@ Public Class SchedulerForm
 
     Dim studentList As New List(Of Student)
 
+    Dim Generator As System.Random = New System.Random()
+
 
     Public Class Student
         Public studentName As String
         Public skillLevel As Skill
+        Public randomID As Integer
+
+
         Public timeList As New List(Of String)
 
         'Needs to maintain a list of times in string form
 
-        Public Sub New(ByVal newName As String, ByVal newSkill As Skill)
+        Public Sub New(ByVal newName As String, ByVal newSkill As Skill, ByVal newID As Integer)
             Me.studentName = newName
             Me.skillLevel = newSkill
+            randomID = newID
         End Sub
-
-
     End Class
 
+    Public Class Team
+        Public TeamNumber As Integer
+        Public MembersList As New List(Of Student)
 
+        Public Sub New(ByVal NewTeamNumber As Integer)
+            Me.TeamNumber = NewTeamNumber
+        End Sub
+    End Class
+
+    Public Class TimeNode
+        Public timeInt As Integer
+        Public timeString As String
+        Public studentList As New List(Of Student)
+
+        Public Sub New(ByVal timeInt As Integer)
+            Me.timeInt = timeInt
+            Me.timeString = Convert.ToString(timeInt)
+        End Sub
+    End Class
 
 
 
@@ -158,12 +180,13 @@ Public Class SchedulerForm
         UpdateStudentButton.Enabled = False
         CalculateButton.Enabled = False
         CompetenceRadioButton.Checked = True
+        FifteenRadioButton.Checked = True
 
         Dim fileRead As New IO.StreamReader(filepath & "students.txt")
         Dim input As String
         Dim tempName As String
         Dim tempSkill As Skill
-
+        Dim tempRandom As Integer
         'First line is either empty, or a * character which means a student's data is available
 
         input = fileRead.ReadLine()
@@ -185,7 +208,8 @@ Public Class SchedulerForm
             Else
                 tempSkill = Skill.LOW
             End If
-            Dim newStudent As New Student(tempName, tempSkill)
+            tempRandom = Generator.Next(0, 1000)
+            Dim newStudent As New Student(tempName, tempSkill, tempRandom)
 
             While Not (input Is Nothing)
                 input = fileRead.ReadLine()
@@ -235,15 +259,15 @@ Public Class SchedulerForm
             Directory.CreateDirectory(filepath)
         End If
 
-        If Not My.Computer.FileSystem.FileExists(filepath & "students77.txt") Then
+        If Not My.Computer.FileSystem.FileExists(filepath & "students.txt") Then
             'Uses the file system to create the students file if it does not exist
-            Dim fs As FileStream = File.Create(filepath & "students77.txt")
+            Dim fs As FileStream = File.Create(filepath & "students.txt")
             fs.Close()
 
         End If
 
         'Write to file without append. Change false to true for append.
-        Dim fileSave As New IO.StreamWriter(filepath & "students77.txt", False)
+        Dim fileSave As New IO.StreamWriter(filepath & "students.txt", False)
         
         For Each Student In studentList
             'Asterisk is used as a file marker
@@ -269,8 +293,6 @@ Public Class SchedulerForm
     End Sub
 
 
-    'Implement Scheduling Algorithm
-
 
 
     Private Sub NewStudentButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NewStudentButton.Click
@@ -284,7 +306,9 @@ Public Class SchedulerForm
             tempSkill = Skill.LOW
         End If
 
-        Dim newStudent As New Student(NameTextBox.Text, tempSkill)
+        Dim tempRandom As Integer
+        tempRandom = Generator.Next(0, 1000)
+        Dim newStudent As New Student(NameTextBox.Text, tempSkill, tempRandom)
         studentList.Add(newStudent)
         StudentListBox.Items.Clear()
         For Each Student In studentList
@@ -319,15 +343,7 @@ Public Class SchedulerForm
     End Sub
 
     Private Sub GroupSizeTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupSizeTextBox.TextChanged
-        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
-            CalculateButton.Enabled = True
-        Else
-            CalculateButton.Enabled = False
-        End If
-    End Sub
-
-    Private Sub IntervalTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IntervalTextBox.TextChanged
-        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
+        If (studentList.Count > 0 And TeamsFileBox.Text.Length > 0) Then
             CalculateButton.Enabled = True
         Else
             CalculateButton.Enabled = False
@@ -335,7 +351,7 @@ Public Class SchedulerForm
     End Sub
 
     Private Sub TeamsFileBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TeamsFileBox.TextChanged
-        If (studentList.Count > 0 And GroupSizeTextBox.Text.Length > 0 And IntervalTextBox.Text.Length > 0 And TeamsFileBox.Text.Length > 0) Then
+        If (studentList.Count > 0 And TeamsFileBox.Text.Length > 0) Then
             CalculateButton.Enabled = True
         Else
             CalculateButton.Enabled = False
@@ -343,13 +359,21 @@ Public Class SchedulerForm
     End Sub
 
     Private Sub CalculateButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CalculateButton.Click
-        'Verify group size is at least 1
-        'Verify interval size is a 15/30/45/60
+        
 
+        Dim teamSize As Integer
+        teamSize = Convert.ToInt32(GroupSizeTextBox.Text)
 
+        Dim numTeams As Integer = studentList.Count / teamSize
+        If (numTeams < 1) Then
+            numTeams = 1
+        End If
 
+        'Set to zero to allow for error checking later, if desired
+        Dim timeInterval As Integer = 0
         Dim selectedMode As Integer = 0
 
+        'Determines which calculation mode to use
         If (CompetenceRadioButton.Checked = True) Then
             selectedMode = 1
         ElseIf (RandomRadioButton.Checked = True) Then
@@ -360,15 +384,137 @@ Public Class SchedulerForm
             selectedMode = 4
         End If
 
+        'Determines Time Intervals
+        If (FifteenRadioButton.Checked = True) Then
+            timeInterval = 15
+        ElseIf (ThirtyRadioButton.Checked = True) Then
+            timeInterval = 30
+        ElseIf (FortyFiveRadioButton.Checked = True) Then
+            timeInterval = 45
+        ElseIf (SixtyRadioButton.Checked = True) Then
+            timeInterval = 60
+        End If
+
+        If (teamSize < 1) Then
+            teamSize = 1
+        End If
+
+        'Setup information lists
+        Dim TeamList As New List(Of Team)
+        Dim unmatchedStudents As New List(Of Student)
+        Dim timeSlots As New List(Of TimeNode)
+
+        'Creates the teams and populates the list of teams
+        For value As Integer = 0 To numTeams - 1
+            Dim newTeam As New Team(value)
+            TeamList.Add(newTeam)
+        Next
+
+        Dim tempTeam As Team
+        Dim tempSkill As String
         'clears the error label to test if selection worked
         ErrorLabel.Text = ""
         Select Case selectedMode
             Case 0
-
+                ErrorLabel.Text = "ERROR"
             Case 1
                 'Competence Results
+                'Sorts list based on skill, high to low
+                studentList.Sort(Function(x, y) y.skillLevel.CompareTo(x.skillLevel))
+                Dim teamNumber As Integer = 0
+                For Each Student In studentList
+                    teamNumber = teamNumber Mod numTeams
+                    tempTeam = TeamList(teamNumber)
+                    tempTeam.MembersList.Add(Student)
+                    teamNumber += 1
+                Next (Student)
+
+                'Output to the file
+                Dim filepath As String = "c:\student_scheduler\students\Results\"
+
+                If (Not Directory.Exists(filepath)) Then
+                    Directory.CreateDirectory(filepath)
+                End If
+
+                filepath = filepath & TeamsFileBox.Text & ".txt"
+
+                If Not My.Computer.FileSystem.FileExists(filepath) Then
+                    'Uses the file system to create the students file if it does not exist
+                    Dim fs As FileStream = File.Create(filepath)
+                    fs.Close()
+
+                End If
+
+
+                'Write to file without append. Change false to true for append.
+                Dim fileSave As New IO.StreamWriter(filepath, False)
+
+
+                For Each Team In TeamList
+                    fileSave.WriteLine("Team " & Convert.ToString(Team.TeamNumber))
+                    For Each Student In Team.MembersList
+                        If (Student.skillLevel = Skill.HIGH) Then
+                            tempSkill = "High"
+                        ElseIf (Student.skillLevel = Skill.AVERAGE) Then
+                            tempSkill = "Average"
+                        Else
+                            tempSkill = "Low"
+                        End If
+                        fileSave.WriteLine(Student.studentName & " - " & tempSkill)
+                    Next
+                    fileSave.WriteLine("")
+                Next
+
+                fileSave.Close()
+
             Case 2
                 'Random Results
+                'Sorts list based on randomID, high to low. IDs are assigned at random
+                studentList.Sort(Function(x, y) y.randomID.CompareTo(x.randomID))
+                Dim teamNumber As Integer = 0
+                For Each Student In studentList
+                    teamNumber = teamNumber Mod numTeams
+                    tempTeam = TeamList(teamNumber)
+                    tempTeam.MembersList.Add(Student)
+                    teamNumber += 1
+                Next (Student)
+
+                'Output to the file
+                Dim filepath As String = "c:\student_scheduler\students\Results\"
+
+                If (Not Directory.Exists(filepath)) Then
+                    Directory.CreateDirectory(filepath)
+                End If
+
+                filepath = filepath & TeamsFileBox.Text & ".txt"
+
+                If Not My.Computer.FileSystem.FileExists(filepath) Then
+                    'Uses the file system to create the students file if it does not exist
+                    Dim fs As FileStream = File.Create(filepath)
+                    fs.Close()
+
+                End If
+
+
+                'Write to file without append. Change false to true for append.
+                Dim fileSave As New IO.StreamWriter(filepath, False)
+
+                For Each Team In TeamList
+                    fileSave.WriteLine("Team " & Convert.ToString(Team.TeamNumber))
+                    For Each Student In Team.MembersList
+                        If (Student.skillLevel = Skill.HIGH) Then
+                            tempSkill = "High"
+                        ElseIf (Student.skillLevel = Skill.AVERAGE) Then
+                            tempSkill = "Average"
+                        Else
+                            tempSkill = "Low"
+                        End If
+                        fileSave.WriteLine(Student.studentName)
+                    Next
+                    fileSave.WriteLine("")
+                Next
+
+                fileSave.Close()
             Case 3
                 'Time Match Results
             Case 4
@@ -403,4 +549,5 @@ Public Class SchedulerForm
 
     End Sub
 
+    
 End Class
