@@ -91,6 +91,9 @@ Partial Class AddSalutationForm
         Me.Controls.Add(Me.SalTextBox)
         Me.Controls.Add(Me.SalNameTextBox)
         Me.Controls.Add(Me.SalutationNameLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AddSalutationForm"
         Me.Text = "Add Salutation"
         Me.ResumeLayout(False)

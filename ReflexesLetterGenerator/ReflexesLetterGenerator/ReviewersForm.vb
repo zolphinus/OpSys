@@ -62,7 +62,24 @@
     End Sub
 
     Private Sub EditReviewerButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditReviewerButton.Click
+        If (ReviewerListBox.Items.Count > 0) Then
+            If ReviewerListBox.SelectedIndex > -1 Then
+                Dim EditSalForm As New EditReviewersForm(tempReviewerList, ReviewerListBox.SelectedIndex)
+                EditSalForm.ShowDialog()
 
+
+                ReviewerListBox.Items.Clear()
+                For Each Item In tempReviewerList
+                    ReviewerListBox.Items.Add(Item.ReviewerName)
+                Next Item
+
+            Else
+                MsgBox("Select a reviewer to edit!")
+
+            End If
+        Else
+            MsgBox("There are no reviewers to edit!")
+        End If
 
         ReviewerListBox.Items.Clear()
         For Each Item In tempReviewerList

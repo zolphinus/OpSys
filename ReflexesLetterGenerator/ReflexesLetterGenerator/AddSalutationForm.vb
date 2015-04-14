@@ -14,6 +14,8 @@
 
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
+
+        'Can be cleaned up to avoid using flags
         If (SalNameTextBox.Text = "") Then
             SalName = False
         Else

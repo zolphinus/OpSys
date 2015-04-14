@@ -13,6 +13,7 @@ Public Class ReflexesForm
 
     Dim CurrentSalutation As Salutation
     Dim CurrentReviewer As Reviewer
+    Dim CurrentReason As Reason
 
 
     Public Structure Salutation
@@ -29,9 +30,12 @@ Public Class ReflexesForm
         Public ReasonName As String
         Public ReasonBody As List(Of String)
 
-        'Function to add to the body
 
         'function to delete the body
+        Public Sub deleteBody()
+            ReasonBody.Clear()
+        End Sub
+
 
     End Structure
 
@@ -184,24 +188,94 @@ Public Class ReflexesForm
         End If
 
 
-        'Load Reviewers from file
+        Dim readTitle As Boolean = True
 
-        'Populate ReviewerComboBox
+        If File.Exists(REASONS_FILE_NAME) = True Then
+            'Creates a backup of the last known good Salutations file
+            FileCopy(REASONS_FILE_NAME, REASONS_BACKUP_FILE)
+            Dim objReader As New System.IO.StreamReader(REASONS_FILE_NAME)
 
-        'Load Salutations
+            Dim line As String = ""
 
-        'Populate SalutationComboBox
+            While True
+                line = objReader.ReadLine()
+                'If the file reads in the EOF, line will be empty, and break the loop
+                If line Is Nothing Then
+                    Exit While
+                End If
+
+                'creates reviewers list
+                Dim TempReason As New Reason
+                TempReason.ReasonName = line
+                TempReason.ReasonBody = New List(Of String)
+
+                While Not line.Equals("*")
+                    line = objReader.ReadLine()
+                    If line Is Nothing Then
+                        Exit While
+                    End If
+
+                    If line = "*" Then
+                        Exit While
+                    End If
 
 
+                    TempReason.ReasonBody.Add(line)
+                End While
 
-        'Save Reason/Reviewer/Salutations backup files
+                CurrentReason = TempReason
+                ReasonList.Add(CurrentReason)
+                'add reviewers to the combo box
+                ReasonComboBox.Items.Add(CurrentReason.ReasonName)
 
+            End While
+            objReader.Close()
+        Else
+            File.Create(REASONS_FILE_NAME)
+            'If the primary file doesn't exist but the backup does, restore it
+            'and then read the info in
+            If File.Exists(REASONS_BACKUP_FILE) = True Then
+                FileClose(REASONS_BACKUP_FILE, REASONS_FILE_NAME)
+                Dim objReader As New System.IO.StreamReader(REASONS_FILE_NAME)
 
+                Dim line As String = ""
+
+                While True
+                    line = objReader.ReadLine()
+                    'If the file reads in the EOF, line will be empty, and break the loop
+                    If line Is Nothing Then
+                        Exit While
+                    End If
+
+                    'creates reviewers list
+                    Dim TempReason As New Reason
+                    TempReason.ReasonName = line
+                    TempReason.ReasonBody = New List(Of String)
+
+                    While True
+                        If line.Equals("*") Then
+                            Exit While
+                        End If
+                        line = objReader.ReadLine()
+                        TempReason.ReasonBody.Add(line)
+                    End While
+
+                    CurrentReason = TempReason
+                    ReasonList.Add(CurrentReason)
+                    'add reviewers to the combo box
+                    ReasonComboBox.Items.Add(CurrentReason.ReasonName)
+
+                End While
+                objReader.Close()
+            End If
+        End If
     End Sub
 
     'Saves the updated Reason/Reviewer/Salutations files on form close
 
-
+    Private Sub ReasonComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReasonComboBox.SelectedIndexChanged
+        ReasonSelected = True
+    End Sub
 
     Private Sub SalutationComboBox_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SalutationComboBox.SelectedIndexChanged
         SalutationSelected = True
@@ -219,15 +293,29 @@ Public Class ReflexesForm
             RecipientSelected = True
         End If
 
-        'Should not close out, but here for testing
-        Me.Close()
         If (RecipientSelected = True) Then
             If (ReasonSelected = True) Then
                 If (SalutationSelected = True) Then
                     If (ReviewerSelected = True) Then
+                        'Prompt to Save the letter
                         'Save to a text file [RecipientName]Letter.txt
 
                         'Format the Letter
+
+                        'Reflexes Header
+                        'School Address
+                        'City/State/Zip
+
+                        'Spacing, then "Dear Recipient,"
+
+                        'Spacing and then letter body
+
+                        'Spacing and then Salutation
+
+
+                        'Spacing and then Reviewer Name
+
+
 
                     Else
                         MsgBox("Please select a reviewer.")
@@ -242,4 +330,17 @@ Public Class ReflexesForm
             MsgBox("Please select a recipient.")
         End If
     End Sub
+
+    Private Sub EditReasonsButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditReasonsButton.Click
+        Dim ReasonsForm As New ReasonsForm(ReasonList)
+        ReasonsForm.ShowDialog()
+
+        ReasonComboBox.Items.Clear()
+        For Each Item In ReasonList
+            ReasonComboBox.Items.Add(Item.ReasonName)
+        Next Item
+
+        ReasonSelected = False
+    End Sub
+
 End Class

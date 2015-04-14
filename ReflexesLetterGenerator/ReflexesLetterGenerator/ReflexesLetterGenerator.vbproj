@@ -78,6 +78,30 @@
     <Compile Include="AddSalutationForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddReasonForm.Designer.vb">
+      <DependentUpon>AddReasonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddReasonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReasonsForm.Designer.vb">
+      <DependentUpon>EditReasonsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditReasonsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReasonsForm.Designer.vb">
+      <DependentUpon>ReasonsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReasonsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReviewersForm.Designer.vb">
+      <DependentUpon>EditReviewersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditReviewersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditSalutationForm.Designer.vb">
       <DependentUpon>EditSalutationForm.vb</DependentUpon>
     </Compile>
@@ -131,6 +155,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddReviewerForm.resx">
       <DependentUpon>AddReviewerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReasonForm.resx">
+      <DependentUpon>AddReasonForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditReasonsForm.resx">
+      <DependentUpon>EditReasonsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReasonsForm.resx">
+      <DependentUpon>ReasonsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditReviewersForm.resx">
+      <DependentUpon>EditReviewersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSalutationForm.resx">
+      <DependentUpon>EditSalutationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReviewersForm.resx">
       <DependentUpon>ReviewersForm.vb</DependentUpon>

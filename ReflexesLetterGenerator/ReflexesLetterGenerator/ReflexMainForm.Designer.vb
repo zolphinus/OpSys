@@ -166,6 +166,7 @@ Partial Class ReflexesForm
         Me.Controls.Add(Me.ReasonLabel)
         Me.Controls.Add(Me.RecipientNameTextBox)
         Me.Controls.Add(Me.RecipientLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "ReflexesForm"
         Me.Text = "Reflexes Letter Generator"
         Me.ResumeLayout(False)

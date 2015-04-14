@@ -11,3 +11,8 @@ C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetter
 C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.SalutationsForm.resources
 C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.AddReviewerForm.resources
 C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.ReviewersForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.EditSalutationForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.EditReviewersForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.AddReasonForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.EditReasonsForm.resources
+C:\Users\zolphinus\Documents\GitHub\OpSys\ReflexesLetterGenerator\ReflexesLetterGenerator\obj\x86\Debug\ReflexesLetterGenerator.ReasonsForm.resources

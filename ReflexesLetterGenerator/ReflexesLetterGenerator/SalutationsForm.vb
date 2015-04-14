@@ -22,6 +22,7 @@
         Dim AddSalutationForm As New AddSalutationForm(tempSalutationList)
         AddSalutationForm.ShowDialog()
 
+
         SalutationListBox.Items.Clear()
         For Each Item In tempSalutationList
             SalutationListBox.Items.Add(Item.SalutationName)
@@ -59,5 +60,30 @@
 
         objWriter.Close()
         Me.Close()
+    End Sub
+
+    Private Sub EditSalutationButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditSalutationButton.Click
+
+        'Make sure an item is selected in the list
+        If (SalutationListBox.Items.Count > 0) Then
+            If SalutationListBox.SelectedIndex > -1 Then
+                Dim EditSalForm As New EditSalutationForm(tempSalutationList, SalutationListBox.SelectedIndex)
+                EditSalForm.ShowDialog()
+
+
+                SalutationListBox.Items.Clear()
+                For Each Item In tempSalutationList
+                    SalutationListBox.Items.Add(Item.SalutationName)
+                Next Item
+
+            Else
+                MsgBox("Select a salutation to edit!")
+
+            End If
+        Else
+            MsgBox("There are no salutations to edit!")
+        End If
+
+
     End Sub
 End Class

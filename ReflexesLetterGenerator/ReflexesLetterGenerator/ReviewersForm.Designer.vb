@@ -83,6 +83,9 @@ Partial Class ReviewersForm
         Me.Controls.Add(Me.DeleteReviewerButton)
         Me.Controls.Add(Me.AddReviewerButton)
         Me.Controls.Add(Me.ReviewerListBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "ReviewersForm"
         Me.Text = "Reviewer Options"
         Me.ResumeLayout(False)

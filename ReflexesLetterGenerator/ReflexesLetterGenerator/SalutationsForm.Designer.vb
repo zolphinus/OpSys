@@ -77,12 +77,15 @@ Partial Class SalutationsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 169)
+        Me.ClientSize = New System.Drawing.Size(283, 172)
         Me.Controls.Add(Me.OKButton)
         Me.Controls.Add(Me.EditSalutationButton)
         Me.Controls.Add(Me.DeleteSalutationButton)
         Me.Controls.Add(Me.AddSalutationButton)
         Me.Controls.Add(Me.SalutationListBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "SalutationsForm"
         Me.Text = "Salutation Options"
         Me.ResumeLayout(False)
